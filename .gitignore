@@ -1,0 +1,12 @@
+# Captain's Log, Mate's Log, we don't want it.
+*.log
+
+# Job's files
+.DS_Store
+
+# doodles
+.scratch
+.idea
+
+# no PSDs!
+*.psd

@@ -1,0 +1,2 @@
+<div id="drop--thisPage" class="merchandizing-owl merch-home" data-cms-area="merch-merchants-pick-dynamic" data-cms-area-filters="path"></div>
+                        <div id="drop--allPages" class="merchandizing-owl merch-home" data-cms-area="main" data-cms-area-filters="global"></div>
