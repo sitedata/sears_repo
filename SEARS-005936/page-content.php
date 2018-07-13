@@ -77,7 +77,7 @@ $copy = htmlspecialchars( $row['copy'] );
 $cta = htmlspecialchars( $row['cta'] );
 ?>
 
-            <div class="SEARS-005936--card row padding-vert-xl cursor--pointer" data-4href="<?php echo $row['url'] ?>">
+            <div class="SEARS-005936--card row padding-vert-xl cursor--pointer" data-href="<?php echo $row['url'] ?>">
                 <div class="col-sm-12 col-md-6 col-left">
                     <img src="<?php echo $img ?>" class="width100percent" alt="<?php echo $heading ?>">
                 </div>
