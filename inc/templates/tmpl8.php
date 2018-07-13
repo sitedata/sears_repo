@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-US" class="no-touch js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths hts">
 <head>
-    <script src="//www.searshometownstores.com/c.3721178/hometown/shopping.user.environment.ssp?lang=en_US&amp;cur=USD&amp;t=1531316781218" type="text/javascript" async="" defer=""></script>
+    <!-- <script src="//www.searshometownstores.com/c.3721178/hometown/shopping.user.environment.ssp?lang=en_US&amp;cur=USD&amp;t=1531316781218" type="text/javascript" async="" defer=""></script> -->
     <!--[if !IE]><!-->
 <?php
 /**
@@ -12,6 +12,14 @@ Use local CSS so we can override the font URLs!
 */
 ?>
     <link rel="stylesheet" href="/css/shopping.css?t=1530163286759">
+<?php
+/**
+Add CSS file, if any.
+*/
+?>
+<?php if ( isset( $css ) && false !== $css && !empty( $css ) ): ?>
+    <link rel="stylesheet" href="<?php echo $css ?>">
+<?php endif; ?>
     <!--<![endif]-->
     <!--[if lte IE 9]>
 		<link rel="stylesheet" href="http://www.searshometownstores.com/c.3721178/hometown/css_ie/shopping_2.css?t=1530163286759">
@@ -27,7 +35,8 @@ Use local CSS so we can override the font URLs!
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="http://www.searshometownstores.com/c.3721178/hometown/img/favicon.ico">
     <title>Sears Hometown Stores in Champaign, IL 61820</title>
-    <link id="cms-css" rel="stylesheet" type="text/css" href="//www.searshometownstores.com/cms/2/assets/cms.css">
+    <!-- <link id="cms-css" rel="stylesheet" type="text/css" href="//www.searshometownstores.com/cms/2/assets/cms.css"> -->
+    <link id="cms-css" rel="stylesheet" type="text/css" href="/cms/2/assets/cms.css">
     <link rel="canonical" href="http://www.searshometownstores.com">
     <meta name="keywords" content="">
     <meta name="description" content="Shop the Sears Hometown Store in Champaign, IL for all of the top home appliance brands, consumer electronics, tools and lawn and garden equipment. Buy online or in your local store today!">
@@ -397,14 +406,14 @@ Actually, it doesn't.
     </div>
     </div>
 
-<?php if (false): ?>
 <?php
 /**
 This is where all the BS from the bottom of the page lived.
 */
 ?>
+<?php if ( isset( $js ) && false !== $js && !empty( $js ) ) : ?>
+<script src="<?php echo $js ?>"></script>
 <?php endif; ?>
-
 </body>
 
 </html>

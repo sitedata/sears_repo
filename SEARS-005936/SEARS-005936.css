@@ -1,0 +1,59 @@
+/**
+My kingdom for a preprocessor...
+*/
+/* math  the old fashioned way.. */
+.SEARS-005936 .row {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+.SEARS-005936 .row h3 {
+  /* 44px / 14px = 3.14em */
+  font-size: 3.14em;
+}
+.SEARS-005936 .row .col-right {
+  /* 28px in PSD; doesn't account for line-height */
+  padding-top: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.SEARS-005936 .row p,
+.SEARS-005936 .row a {
+   /* 18px / 14px = 1.29em */
+  font-size: 1.29em;
+  margin-bottom: 0 !important;
+}
+/* have to fake a bottom border because of how the borders in the design sit */
+.SEARS-005936 .row .fake-bottom-border {
+  border-bottom: 2px solid #e0e0e0;
+  clear: both;
+  /* 30px / 14px = 2.14em */
+  height: 2.14em;
+  margin-left: 25px;
+  max-width: 90%;
+}
+
+/* large tablet/ desktop-ish */
+@media (min-width: 993px ) {
+  .SEARS-005936 .row {
+  }
+  .SEARS-005936 .row .col-right {
+    padding-top: 2%;
+  }
+  .SEARS-005936 .row .fake-bottom-border {
+    /* to match the padding on the parent */
+    margin-left: 15px;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .SEARS-005936 .row .col-right {
+    padding-top: 6.66%;
+  }
+}
+@media (min-width: 1350px) {
+  .SEARS-005936 .row h3 {
+  }
+}
+
+}

@@ -3,6 +3,16 @@
  Utitlity Functions
  */
 
+/**
+get path relative to webroot for the given absolute file path
+*/
+function get_relative_path( $path ) {
+  return str_replace( $_SERVER['DOCUMENT_ROOT'], '', $path );
+}
+
+/**
+prints or returns a print_r statement wrapped in a <pre>
+*/
 if ( !function_exists( 'pr' ) ) {
   function pr( $data, $return = false ) {
     $out = "\n<pre style=\"text-align: left;\">\n" . print_r( $data, true ) . "\n</pre>\n";

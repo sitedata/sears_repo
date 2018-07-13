@@ -11,14 +11,29 @@ define( 'SEARS_MODULE_PATH', SEARS_INC_PATH . '/modules' );
 
 define( 'SEARS_TEMPLATE_PATH', SEARS_INC_PATH . '/templates' );
 
+define( 'SEARS_IMG_BASE_PATH', '/assets/cms' );
+
+define( 'SEARS_CSS_PATH', '/css' );
+
 // debuggin' utilities
 require_once( SEARS_INC_PATH . '/util.php' );
 
-function make_page( $content_file, $breadcrumb_text = 'This Page', $tmpl8 = 'tmpl8.php' ) {
+// makes a page from the given options
+function make_page( $content_file, $options = array() ) {
 
+	$_defaults = array(
+		'breadcrumb_text' => basename( dirname( $content_file ) ),
+		'css' => false,
+		'js' => false,
+		'template' => 'tmpl8.php',
+	);
 
-	if ( !file_exists( SEARS_TEMPLATE_PATH . '/' . $tmpl8 ) ) {
-		echo "Template file '{$tmpl8}' does not exist. Aborting.";
+	$opts = array_merge( $_defaults, $options );
+
+	extract( $opts ); // bring array elements into the local symbol table
+
+	if ( !file_exists( SEARS_TEMPLATE_PATH . '/' . $template ) ) {
+		echo "Template file '{$template}' does not exist. Aborting.";
 		exit;
 	}
 
@@ -30,7 +45,7 @@ function make_page( $content_file, $breadcrumb_text = 'This Page', $tmpl8 = 'tmp
 	ob_end_clean(); // stop buffering and empty the buffer
 
 	// now build the page for the browser
-	include( SEARS_TEMPLATE_PATH . '/' . $tmpl8 );
+	include( SEARS_TEMPLATE_PATH . '/' . $template );
 
 }
 
@@ -42,4 +57,9 @@ function get_output_file_name( $content_file ) {
 
 	// and we want to write it back to the same directory as $content_file
 	return dirname( $content_file ) . '/' . $output_file_name;
+}
+
+// gets image directory relative to webroot for images based on a content file's absolute path
+function get_image_dir( $abs_path ) {
+	return SEARS_IMG_BASE_PATH . '/' . basename( dirname( $abs_path ) ) . '/';
 }
