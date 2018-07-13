@@ -1,5 +1,11 @@
 <?php
-$breadcrumb_text = !empty($breadcrumb_text) ? $breadcrumb_text : 'no breadcrumb text defined';
+if ( !isset( $breadcrumb_text ) || empty( $breadcrumb_text ) ) {
+  $breadcrumb_text = 'Mmmm, Bread';
+}
+if ( isset( $breadcrumb_text ) && !is_array( $breadcrumb_text ) ) {
+  $breadcrumb_text = array( $breadcrumb_text );
+}
+
 
 $content_file = !empty( $content_file ) ? $content_file : SEARS_MODULE_PATH . '/content__appliance-buying-guides.php';
 
@@ -22,10 +28,17 @@ $content_file = !empty( $content_file ) ? $content_file : SEARS_MODULE_PATH . '/
                     <i class="fa fa-angle-right font--gray3 padding-horiz-xs"></i>
                     <meta itemprop="position" content="0">
                 </span>
+<?php foreach ( $breadcrumb_text as $i => $breadcrumb ): ?>
                 <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                    <span itemprop="name"><?php echo $breadcrumb_text ?></span>
-                    <meta itemprop="position" content="1">
+                  <?php if ( $breadcrumb == end( $breadcrumb_text ) ): ?>
+                    <span itemprop="name"><?php echo $breadcrumb ?></span>
+                  <?php else: ?>
+                    <a itemprop="item" href="#" data-touchpoint="home" data-hashtag="#"><strong itemprop="name"><?php echo $breadcrumb ?></strong></a>
+                    <i class="fa fa-angle-right font--gray3 padding-horiz-xs"></i>
+                  <?php endif; ?>
+                    <meta itemprop="position" content="<?php echo $i + 1 ?>">
                 </span>
+<?php endforeach; ?>
             </span>
 
             <div class="row">
