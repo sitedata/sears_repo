@@ -1,6 +1,10 @@
 /**
 My kingdom for a preprocessor...
 */
+/* make sure link text responds to parent hover state */
+.SEARS-005936 .cursor--pointer:hover a {
+  color: #f3433a;
+}
 /* math  the old fashioned way.. */
 .SEARS-005936 .row {
   padding-top: 30px;
