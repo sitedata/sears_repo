@@ -77,26 +77,8 @@ Add CSS file, if any.
         <div id="main-container">
 <!-- BREADCRUMBS GO HERE! -->
 <?php
-// require_once( SEARS_MODULE_PATH . '/module__Global.Breadcrumb.php' );
-?>
-<?php //echo '<h1>' . $content_file . '</h1>'; ?>
-<?php
 require_once( SEARS_MODULE_PATH . '/module__full-width-cms__wrapper.php' );
 ?>
-
-<?php if (false): ?>
-            <div id="content" class="shopping-layout-content" style="min-height: 0px;">
-<?php
-/**
-
- LANDING PAGE CONTENT GOES HERE!!!
-
-Actually, it doesn't.
-
-*/
-?>
-            </div><!-- #content.shopping-layout-content -->
-<?php endif; ?>
 
         </div><!-- #main-container -->
 
