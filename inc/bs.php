@@ -63,3 +63,63 @@ function get_output_file_name( $content_file ) {
 function get_image_dir( $abs_path ) {
 	return SEARS_IMG_BASE_PATH . '/' . basename( dirname( $abs_path ) ) . '/';
 }
+
+
+// build top-level index page
+function build_index( $options = array() ) {
+	$_defaults = array(
+		'path' => $_SERVER['DOCUMENT_ROOT'],
+		'breadcrumb_text' => 'Landing Pages',
+		'output_file' => $_SERVER['DOCUMENT_ROOT'] . '/pages.php',
+		'page_title' => 'Sears Landing Pages',
+		'exclude' => array(
+		  '.',
+		  '..',
+		  '.git',
+		  'assets',
+		  'cms',
+		  'css',
+		  'example',
+		  'font-awesome',
+		  'inc',
+		  'notes',
+		  'scraped-pages',
+		),
+	);
+
+	$opts = array_merge_recursive( $_defaults, $options );
+
+	// bring options into local symbol table
+	extract( $opts );
+
+	$nodes = scandir( $path );
+
+	$dirs = array();
+
+	foreach( $nodes as $node ) {
+	  if ( !is_dir( $node ) || in_array( $node, $exclude ) ) {
+	    continue;
+	  }
+	  $subnodes = scandir( $node );
+	  if ( in_array( $node . '.html', $subnodes ) && in_array( 'index.php', $subnodes ) ) {
+	    $dirs[] = $node;
+	  }
+	}
+
+	ob_start();
+	?>
+	  <div class="container">
+	    <h1>Landing Pages</h1>
+	    <ul>
+	    <?php foreach ( $dirs as $dir ): ?>
+	      <li><a href="/<?php echo $dir ?>"><?php echo $dir ?></a></li>
+	    <?php endforeach; ?>
+	    </ul>
+	  </div>
+	<?php
+	$content = ob_get_contents();
+	ob_end_clean();
+
+	return file_put_contents( './pages.php', $content );
+
+}
