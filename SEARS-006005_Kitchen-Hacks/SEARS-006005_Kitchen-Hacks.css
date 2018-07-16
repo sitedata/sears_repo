@@ -1,0 +1,26 @@
+/**
+SEARS-006005_Kitchen-Hacks.css
+*/
+
+.SEARS-006005_Kitchen-Hacks h2,
+.SEARS-006005_Kitchen-Hacks h3 {
+  /* 44px/14px = 3.14em */
+  font-size: 3.14em;
+}
+
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks h5,
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks li span,
+.SEARS-006005_Kitchen-Hacks .bonus-round li span {
+  color: #000;
+  /* 18px / 14px = 1.29em */
+  font-size: 1.29em;
+}
+
+.SEARS-006005_Kitchen-Hacks .bonus-round li h4 {
+  /* 24px / 14px = 1.71em */
+  font-size: 1.71em;
+}
+
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks .col-right {
+  padding-top: 7%;
+}

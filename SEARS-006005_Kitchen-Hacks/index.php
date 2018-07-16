@@ -12,7 +12,7 @@ $options = array(
     'Cooking Hacks',
   ),
   'css' =>  get_relative_path( dirname( __FILE__ ) . '/' . $slug . '.css' ),
-  'js' => get_relative_path( dirname( __FILE__ ) . '/' . $slug . '.js' ),
+  'js' => false, // get_relative_path( dirname( __FILE__ ) . '/' . $slug . '.js' ),
 );
 
 

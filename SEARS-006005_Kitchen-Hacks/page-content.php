@@ -58,7 +58,7 @@ $content = array(
   	'subheading' => "Liven up everything from mixed drinks to water.",
     'youll_need' => true,
     'list' => array(
-  		"A muffin pan (silicone or tin), chopped citrus fruit, mint or cucumber",
+  		"\nA muffin pan (silicone or tin), chopped citrus fruit, mint or cucumber",
   		"Place your favorite combo of fruit and herbs in the pan",
   		"Pour in some boiled-then-cooled water",
   		"Freeze then serve",
@@ -81,27 +81,37 @@ $content = array(
 
 
 $bonus_round = array(
-/*
-Bonus Round
-
-	Stop boil over
-by placing a wooden spoon across the pot.
-	Dry fresh herbs fast
-using the microwave.
-	Defrost meat 30% faster
-by placing on an aluminum tray.
-	Spray measuring cups with nonstick cooking spray
-when working with sticky ingredients like honey or peanut butter.
-	Get 20% more juice from your lemons
-when you microwave them for 20 seconds each.
-	Use an ice cream scoop
-to craft the perfect meatball and keep your hands clean.
-	Prevent spoiling
-by storing your onions and potatoes separately.
-
-*/
+	array(
+		'head' => "Stop boil over",
+		'body' => "by placing a wooden spoon across the pot.",
+	),
+	array(
+		'head' => "Dry fresh herbs fast",
+		'body' => "using the microwave.",
+	),
+	array(
+		'head' => "Defrost meat 30% faster",
+		'body' => "by placing on an aluminum tray.",
+	),
+	array(
+		'head' => "Spray measuring cups with nonstick cooking spray",
+		'body' => "when working with sticky ingredients like honey or peanut butter.",
+	),
+	array(
+		'head' => "Get 20% more juice from your lemons",
+		'body' => "when you microwave them for 20 seconds each.",
+	),
+	array(
+		'head' => "Use an ice cream scoop",
+		'body' => "to craft the perfect meatball and keep your hands clean.",
+	),
+	array(
+		'head' => "Prevent spoiling",
+		'body' => "by storing your onions and potatoes separately.",
+	),
 );
 
+$logos_heading = "Shop the latest appliances for the best in kitchen solutions. We have unbeatable prices on the best brands available.";
 
 $logos = array(
   '01_Kenmore.png',
@@ -139,21 +149,24 @@ $img = $img_dir . $row['img'];
 $heading = htmlspecialchars( $row['heading'] );
 $subheading = htmlspecialchars( $row['subheading'] );
 $list = array_map( 'htmlspecialchars', $row['list'] );
+$list = array_map( 'nl2br', $list );
 
 ?>
-            <div class="row padding-vert-xl">
+            <div class="row padding-vert-xl kitchen-hacks">
                 <div class="col-sm-12 col-md-6 col-left">
                     <img src="<?php echo $img ?>" class="width100percent" alt="<?php echo $heading ?>">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
-                    <h3 class="font--400"><?php echo $heading ?></h3>
-                    <h5><?php echo $subheading ?></h5>
-<?php if ( $row['youll_need'] ): ?>
-                    <strong>You&rsquo;ll Need:</strong>
-<?php endif; ?>
+                    <h3 class="font--400 font--primary2"><?php echo $heading ?></h3>
+                    <h5 class="font--600"><?php echo $subheading ?></h5>
                     <ul>
 <?php foreach( $list as $i => $li ): ?>
-                    <li><?php echo $li ?></li>
+                    <li>
+  <?php if ( $i === 0 && $row['youll_need'] ): ?>
+                      <strong>You&rsquo;ll Need:</strong>
+  <?php endif; ?>
+                      <span><?php echo $li ?></span>
+                    </li>
 <?php endforeach; ?>
                     </ul>
                 </div>
@@ -164,15 +177,30 @@ $list = array_map( 'htmlspecialchars', $row['list'] );
               <?php endif; ?>
             </div>
 <?php endforeach; ?>
+
 <!-- BONUS ROUND -->
             <div class="row padding-vert-xl bonus-round">
-              <h2>Bonus Round:</h2>
+              <h2 class="font--400 font--primary2">Bonus Round:</h2>
+<?php foreach ( $bonus_round as $i => $round ): ?>
+  <?php if ( $i === 0 || $i == 4 ): ?>
+              <div class="col-xs-12 col-sm-6">
+                <ul>
+  <?php endif; ?>
+                  <li>
+                    <h4 class="font--400 font--primary2"><?php echo $round['head'] ?></h4>
+                    <span><?php echo $round['body'] ?></span>
+                  </li>
+  <?php if ( $i === 3 || $round == end( $bonus_round ) ): ?>
+                </ul>
+              </div>
+  <?php endif; ?>
+<?php endforeach; ?>
               <div class="col-xs-11 col-sm-12 bordered--bottom bordered--sm padding-horiz-xl fake-bottom-border"></div>
             </div>
 
 <!-- LOGOS -->
           <div class="row padding-vert-xl brand-logos">
-            <strong></strong>
+            <strong><?php echo $logos_heading ?></strong>
             <div class="">
               LOGOS
             </div>
