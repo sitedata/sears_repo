@@ -31,7 +31,7 @@ $content = array(
   ),
   array(
     'img' => '03_DestemStrawberries.jpg',
-  	'heading' => "2.	De-stem Strawberries",
+  	'heading' => "2. De-stem Strawberries",
   	'subheading' => "Delicious muddled in drinks or tossed in a fruit salad.",
     'youll_need' => true,
     'list' => array(
@@ -111,17 +111,17 @@ $bonus_round = array(
 	),
 );
 
-$logos_heading = "Shop the latest appliances for the best in kitchen solutions. We have unbeatable prices on the best brands available.";
+$logos_heading = "Shop the latest <span class=\"font--primary2\">appliances</span> for the best in kitchen solutions. We have unbeatable prices on the best brands available.";
 
 $logos = array(
-  '01_Kenmore.png',
-	'02_Whirlpool.png',
-	'03_Frigidaire.png',
-	'03_GE.png',
-	'04_LG.png',
-	'05_Samsung.png',
-	'06_Bosch.png',
-	'07_KitchenAid.png',
+  'Kenmore' => '01_Kenmore.png',
+	'Whirlpool' => '02_Whirlpool.png',
+  'GE' => '03_GE.png',
+	'Frigidaire' => '03_Frigidaire.png',
+	'LG' => '04_LG.png',
+	'Samsung' => '05_Samsung.png',
+	'Bosch' => '06_Bosch.png',
+	'KitchenAid' => '07_KitchenAid.png',
 );
 
 /**
@@ -141,7 +141,7 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
 
     <div id="<?php echo $slug ?>" class="container <?php echo $slug ?>">
 
-        <div class="col-xs-12">
+        <div class="col-xs-12 padding-vert-lg">
 <?php foreach( $content as $row ): ?>
 <?php
 // lazy
@@ -152,7 +152,7 @@ $list = array_map( 'htmlspecialchars', $row['list'] );
 $list = array_map( 'nl2br', $list );
 
 ?>
-            <div class="row padding-vert-xl kitchen-hacks">
+            <div class="row Xpadding-vert-xl kitchen-hacks">
                 <div class="col-sm-12 col-md-6 col-left">
                     <img src="<?php echo $img ?>" class="width100percent" alt="<?php echo $heading ?>">
                 </div>
@@ -161,7 +161,7 @@ $list = array_map( 'nl2br', $list );
                     <h5 class="font--600"><?php echo $subheading ?></h5>
                     <ul>
 <?php foreach( $list as $i => $li ): ?>
-                    <li>
+                    <li class="padding-bottom-sm">
   <?php if ( $i === 0 && $row['youll_need'] ): ?>
                       <strong>You&rsquo;ll Need:</strong>
   <?php endif; ?>
@@ -179,15 +179,15 @@ $list = array_map( 'nl2br', $list );
 <?php endforeach; ?>
 
 <!-- BONUS ROUND -->
-            <div class="row padding-vert-xl bonus-round">
-              <h2 class="font--400 font--primary2">Bonus Round:</h2>
+            <div class="row padding-bottom-xl padding-horiz-md bonus-round">
+              <h2 class="font--400 font--primary2 padding-bottom-xl">Bonus Round:</h2>
 <?php foreach ( $bonus_round as $i => $round ): ?>
   <?php if ( $i === 0 || $i == 4 ): ?>
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-12">
                 <ul>
   <?php endif; ?>
-                  <li>
-                    <h4 class="font--400 font--primary2"><?php echo $round['head'] ?></h4>
+                  <li class="padding-bottom-xl">
+                    <h4 class="font--400 font--primary2 margin--none"><?php echo $round['head'] ?></h4>
                     <span><?php echo $round['body'] ?></span>
                   </li>
   <?php if ( $i === 3 || $round == end( $bonus_round ) ): ?>
@@ -200,11 +200,30 @@ $list = array_map( 'nl2br', $list );
 
 <!-- LOGOS -->
           <div class="row padding-vert-xl brand-logos">
-            <strong><?php echo $logos_heading ?></strong>
-            <div class="">
-              LOGOS
+            <div class="col-xs-12 padding-bottom-xl">
+              <strong><?php echo $logos_heading ?></strong>
             </div>
-            <a href="#">CTA</a>
+<?php
+// place to store index since $logos is an associative array
+$i = 0;
+?>
+<?php foreach ( $logos as $brand => $logo ): ?>
+  <?php if ( $i == 0 || $i == (count( $logos ) / 2) ): ?>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 brand-logos--col<?php if ( $i !== 0 ): echo ' brand-logos--col_right'; endif; ?>">
+              <div class="brand-logos--wrapper">
+  <?php endif; ?>
+                <div class="brand-logo">
+                  <img src="<?php echo $logo_dir . $logo ?>" alt="<?php echo $brand ?>" class="">
+                </div>
+  <?php if ( $logo === end( $logos ) || $i == (( count( $logos ) / 2 ) - 1) ): ?>
+              </div>
+            </div>
+  <?php endif; ?>
+  <?php $i++; ?>
+<?php endforeach; ?>
+            <div class="col-xs-12 padding-vert-xl text-align-center">
+              <a href="#" class="btn btn-lg btn--shop-now"><span>shop</span>now</a>
+            </div>
           </div>
         </div><!-- .col-xs-12 -->
     </div><!-- .container -->
