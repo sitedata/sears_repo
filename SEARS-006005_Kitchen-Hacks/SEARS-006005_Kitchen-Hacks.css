@@ -15,7 +15,7 @@ SEARS-006005_Kitchen-Hacks.css
 
 .SEARS-006005_Kitchen-Hacks .kitchen-hacks .col-right {
   /* this will probably need to be adjusted at various breakpoints... */
-  padding-top: 7%;
+  padding-top: 15px;
 }
 
 /* black text */
@@ -30,6 +30,9 @@ SEARS-006005_Kitchen-Hacks.css
 .SEARS-006005_Kitchen-Hacks .kitchen-hacks h5 {
   /* 20px / 14px = 1.43em */
   font-size: 1.43em;
+}
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks ul {
+  padding-left: 20px;
 }
 .SEARS-006005_Kitchen-Hacks .kitchen-hacks li {
   padding-bottom: 5px;
@@ -49,6 +52,12 @@ SEARS-006005_Kitchen-Hacks.css
   padding-left: 16px;
 }
 
+/********************************
+BONUS ROUND
+********************************/
+.SEARS-006005_Kitchen-Hacks .bonus-round ul {
+  padding-left: 30px;
+}
 .SEARS-006005_Kitchen-Hacks .bonus-round li {
   /* padding-bottom: 1em; */
 }
@@ -102,6 +111,7 @@ SEARS-006005_Kitchen-Hacks.css
   letter-spacing: 0.04em;
   /* 40px / 25.16px = 1.59em */
   line-height: 1.59em;
+  /* 36px / 25.16px = 1.43em */
   padding: 0 36px 0 18px;
   position: relative;
 }
@@ -121,6 +131,10 @@ SEARS-006005_Kitchen-Hacks.css
 }
 
 @media (min-width: 1200px) {
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks .col-right {
+    /* this will probably need to be adjusted at various breakpoints... */
+    padding-top: 5%;
+  }
   .SEARS-006005_Kitchen-Hacks .brand-logos {
     text-align: center;
   }

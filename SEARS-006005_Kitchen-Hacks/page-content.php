@@ -183,7 +183,7 @@ $list = array_map( 'nl2br', $list );
               <h2 class="font--400 font--primary2 padding-bottom-xl">Bonus Round:</h2>
 <?php foreach ( $bonus_round as $i => $round ): ?>
   <?php if ( $i === 0 || $i == 4 ): ?>
-              <div class="col-xs-12 col-sm-12">
+              <div class="col-xs-12 col-sm-6">
                 <ul>
   <?php endif; ?>
                   <li class="padding-bottom-xl">
