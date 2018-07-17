@@ -17,9 +17,24 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
   </section><!-- #hero -->
   <!-- END #hero -->
 
+  <section class="container headline">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="headline--copy text-align-center font--primary2 font--600">
+            <?php echo htmlspecialchars( $headline ) ?>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 fake-bottom-border">
+          <hr class="bordered--bottom bordered--sm">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="container kitchen-hacks">
 
-    <div class="col-xs-12 Xpadding-vert-lg">
+    <div class="col-xs-12">
 <?php foreach( $content as $row ): ?>
 <?php
 // lazy
