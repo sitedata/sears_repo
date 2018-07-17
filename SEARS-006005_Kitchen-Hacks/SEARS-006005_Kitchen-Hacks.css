@@ -1,0 +1,292 @@
+/**
+SEARS-006005_Kitchen-Hacks.css
+*/
+
+.SEARS-006005_Kitchen-Hacks {
+  font-size: calc(
+    10px + (20 - 10) * ((100vw - 320px) / (991 - 320))
+    );
+}
+@media screen and (min-width: 992px) {
+  .SEARS-006005_Kitchen-Hacks {
+    font-size: calc(
+      14px + (21 - 14) * ((100vw - 992px) / (1920 - 992))
+      );
+  }
+}
+@media screen and (min-width: 1921px) {
+  .SEARS-006005_Kitchen-Hacks {
+    font-size: 21px;
+  }
+}
+
+.SEARS-006005_Kitchen-Hacks h3 {
+  /* 44px/18px = 2.44em */
+  font-size: 2.44em;
+  line-height: 1.2em; /* based on this critter's font-size, not the ancestor! */
+  margin-right: -2em; /* to allow too big text to sit on one line! */
+}
+.SEARS-006005_Kitchen-Hacks hr {
+  border-color: #e0e0e0;
+}
+
+/**************************
+ KITCHEN HACKS
+ **************************/
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks {
+  padding-top: 25px;
+  padding-bottom: 0;
+}
+
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks .col-right {
+  /* this will probably need to be adjusted at various breakpoints... */
+  padding-top: 15px;
+}
+
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks h5 {
+  /* 17px / 18px = 0.944em */
+  font-size: 0.944em;
+  line-height: 1.2em;
+}
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks ul {
+  padding-left: 20px;
+  /* 20px / 18px = 1.11em */
+  padding-left: 1.11em;
+}
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks li {
+  padding-bottom: 5px;
+  /* 5px / 18px = 0.278em */
+  padding-bottom: 0.278em;
+}
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks li span,
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks li strong {
+  /* 21px / 18px = 1.5em */
+  /* the base font-size is for this element */
+  font-size: 1em;
+  line-height: 1em; /* 1em for this critter! */
+}
+
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks li strong {
+  text-transform: uppercase;
+}
+
+.SEARS-006005_Kitchen-Hacks .kitchen-hacks .fake-bottom-border {
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-bottom: 10px;
+}
+
+/********************************
+BONUS ROUND
+********************************/
+.SEARS-006005_Kitchen-Hacks .bonus-round {
+  /* set font size on parent to be the most used font-size in this block */
+}
+.SEARS-006005_Kitchen-Hacks .bonus-round h3 {
+  /* font-size: 44px; */
+  /* 44px / 18px = 2.44em */
+  /* 44px / 21px = 2.1em */
+  font-size: 2.44em;
+}
+.SEARS-006005_Kitchen-Hacks .bonus-round ul {
+  /* 30px / 18px = 1.67em */
+  padding-left: 30px;
+  padding-left: 1.67em;
+}
+.SEARS-006005_Kitchen-Hacks .bonus-round li {
+  padding-bottom: 1em;
+}
+.SEARS-006005_Kitchen-Hacks .bonus-round li .font--primary2 {
+  /* 24px / 18px = 1.33em */
+  font-size: 1.33em;
+}
+.SEARS-006005_Kitchen-Hacks .bonus-round li .font--black,
+.SEARS-006005_Kitchen-Hacks .brand-logos strong {
+  /* 18px / 18px = 1em */
+  font-size: 1em;
+}
+
+/*******************************
+ BRAND LOGOS
+********************************/
+.SEARS-006005_Kitchen-Hacks .brand-logos {
+  text-align: left;
+}
+.SEARS-006005_Kitchen-Hacks .brand-logos .brand-logos--col {
+  padding: 0 0 0 0;
+}
+.SEARS-006005_Kitchen-Hacks .brand-logos .brand-logos--wrapper {
+  display: table;
+  margin: 0 auto;
+}
+/* .SEARS-006005_Kitchen-Hacks .brand-logos .brand-logos--col_right .brand-logos--wrapper {
+  margin: 0 auto 0 0;
+} */
+
+.SEARS-006005_Kitchen-Hacks .brand-logos .brand-logo {
+  display: table-cell;
+  padding: 10px 20px;
+  width: 25%;
+  text-align: center;
+}
+.SEARS-006005_Kitchen-Hacks .brand-logos .brand-logo img {
+  /* display: block; */
+  /* width: 100%; */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.SEARS-006005_Kitchen-Hacks .brand-logos .btn--shop-now {
+  background-color: #e0001e;
+  border-radius: 0;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  /* font-size is 54.73px in PSD */
+  /* 54px / 18px = 3em */
+  font-size: 3em;
+  position: relative; /* so we can absolutely position the arrow! */
+
+  letter-spacing: 0.02em;
+
+  /* 86px / 54.73px = 1.59em */
+  line-height: 1.59em;
+
+  /* 88px / 54px = 1.63em */
+  padding: 0 1.63em 0 0.815em;
+
+}
+.SEARS-006005_Kitchen-Hacks .brand-logos .btn--shop-now span {
+  color: #fff;
+  font-weight: 600;
+}
+.SEARS-006005_Kitchen-Hacks .brand-logos .btn--shop-now :after {
+  content: " ";
+  position: absolute;
+  border-right: none;
+  top: 50%;
+  transform: translate( 0, -50% );
+  /* 20px / 54px = 0.370em */
+  border: 9px solid transparent;
+  border: 0.37em solid transparent;
+
+  border-left-color: #FFF;
+  /* 38px / 54px = 0.703em */
+  border-left-width: 15px;
+  border-left-width: 0.703em;
+  /* 14px / 54px = 0.259em */
+  right: 14px;
+  right: 0.259em;
+}
+
+/* @media screen and (min-width: 1200px) { */
+@media screen and (min-width: 992px) {
+
+  .SEARS-006005_Kitchen-Hacks h3 {
+    /* 44px / 21px = 2.095em */
+    font-size: 2.1em;
+  }
+
+
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks .col-right {
+    /* font-size: calc(
+        12px + (21 - 12) * ((100vw - 992px) / (1920 - 992))
+      ); */
+
+    padding-top: 5%;
+    padding-top: 10vw;
+    /* 129px / 21px =  6.14em */
+    padding-top: 6.14em;
+    padding-top: 5em;
+  }
+
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks h3 {
+    /* 44px / 21px = 2.095em */
+    /* font-size: 2.1em; */
+    /* font-size: calc(
+      22px + (44 - 22) * ((100vw - 992px) / (1920 - 992))
+    ); */
+  }
+
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks h5 {
+    /* 20px / 21px = 0.952em */
+    font-size: 0.952em;
+    /* font-size: calc(
+      12px + (20 - 12) * ((100vw - 992px) / (1920 - 992))
+    ); */
+  }
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks ul {
+    /* 20px / 21px = 0.952em */
+    padding-left: 20px;
+    /* padding-left: 0.952em; */
+    padding-left: 1em; /* looks more like PSD */
+  }
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks li {
+    /* 26px / 21px = 1.238em */
+    line-height: 1.238em;
+    /* 5px / 21px = 0.238em */
+    padding-bottom: 0.238em;
+    /* padding-bottom: 5px; */
+
+  }
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks li span,
+  .SEARS-006005_Kitchen-Hacks .kitchen-hacks li strong {
+    /* 21px / 14px = 1.5em */
+    font-size: 1em;
+  }
+
+  /**********************************
+   BONUS ROUND
+   **********************************/
+  .SEARS-006005_Kitchen-Hacks .bonus-round li .font--primary2 {
+    /* 24px / 21px = 1.14em */
+    font-size: 1.14em;
+    /* 24px / 21px = 1.14em */
+    line-height: 1.2em;
+
+  }
+  .SEARS-006005_Kitchen-Hacks .bonus-round li .font--black,
+  .SEARS-006005_Kitchen-Hacks .brand-logos strong {
+   /* 18px / 21px = 0.857em */
+   font-size: 0.857em;
+   line-height: 1.2em;
+  }
+
+  .SEARS-006005_Kitchen-Hacks .brand-logos {
+    text-align: center;
+  }
+  .SEARS-006005_Kitchen-Hacks .brand-logos .brand-logos--wrapper {
+    margin: 0 0 0 auto;
+  }
+  .SEARS-006005_Kitchen-Hacks .brand-logos .brand-logos--col_right .brand-logos--wrapper {
+    margin: 0 auto 0 0;
+  }
+  .SEARS-006005_Kitchen-Hacks .brand-logos .brand-logo {
+    width: auto;
+  }
+  .SEARS-006005_Kitchen-Hacks .brand-logos .brand-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .SEARS-006005_Kitchen-Hacks .brand-logos .btn--shop-now {
+    /* 25.16px / 21px = 1.198em */
+    font-size: 25.16px;
+    font-size: 1.198em;
+    /* 18px / 25.16px = 0.715em */
+    padding-left: 18px;
+    padding-left: 0.715em;
+    /* 36px / 25.16px = 1.431em */
+    padding-right: 36px;
+    padding-right: 1.431em;
+  }
+
+  .SEARS-006005_Kitchen-Hacks .brand-logos .btn--shop-now :after {
+    /* 9px / 25.16px = 0.358em */
+    border-width: 9px;
+    border-width: 0.358em;
+    /* 15px / 25.16px = 0.596em */
+    border-left-width: 15px;
+    border-left-width: 0.596em;
+    /* right: 14px; */
+  }
+}
