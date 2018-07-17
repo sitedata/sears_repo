@@ -30,6 +30,15 @@ SEARS-006005_Kitchen-Hacks.css
   border-color: #e0e0e0;
 }
 
+/*************
+ HEADLINE
+ ************/
+.SEARS-006005_Kitchen-Hacks .headline .headline--copy {
+  /* 25px / 21px = 1.19em */
+  font-size: 1.19em;
+  padding: 30px 2em 15px 2em;
+}
+
 /**************************
  KITCHEN HACKS
  **************************/

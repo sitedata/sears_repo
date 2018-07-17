@@ -12,6 +12,8 @@ $hero = array(
   'alt' => htmlentities("Cooking Essentials: Can't-Miss Cooking Hacks"),
 );
 
+$headline = "Try our favorite kitchen hacks and make cooking for friends and family a breeze.";
+
 $content = array(
   array(
     'img' => '02_PittingCherries.jpg',
