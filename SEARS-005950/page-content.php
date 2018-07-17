@@ -36,7 +36,7 @@ $content = array(
   ),
   array(
     'img' => '06_ComeOutInTheWash.jpg',
-    'heading' => "It’ll Come Out in the Wash",
+    'heading' => "It'll Come Out in the Wash",
     'copy' => "Messes will happen, but stains don't stand a chance when you use these stain removal tricks. Print out this guide and post in your laundry area for easy reference.",
     'cta' => 'Learn More',
     'url' => '#',
@@ -61,11 +61,11 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
     <!-- BEGIN #hero -->
     <!-- TEMPLATE STARTS: n-->
     <section id="hero">
-        <img alt="Laundry essentials Appliance Overviews & TOP Tips" src="<?php echo $img_dir ?>01_masthead_LaundryMain.jpg" class="img-responsive mqImage width100percent">
+        <img alt="Laundry essentials: Appliance Overviews & TOP Tips" src="<?php echo $img_dir ?>01_masthead_LaundryMain.jpg" class="img-responsive mqImage width100percent">
     </section><!-- #hero -->
     <!-- END #hero -->
 
-    <div id="SEARS-5950" class="container SEARS-5950">
+    <div id="SEARS-005950" class="container SEARS-005950">
 
         <div class="col-xs-12">
 <?php foreach( $content as $row ): ?>
@@ -77,7 +77,7 @@ $copy = htmlspecialchars( $row['copy'] );
 $cta = htmlspecialchars( $row['cta'] );
 ?>
 
-            <div class="SEARS-5950--card row padding-vert-xl cursor--pointer" data-href="<?php echo $row['url'] ?>">
+            <div class="SEARS-005950--card row padding-vert-xl cursor--pointer" data-href="<?php echo $row['url'] ?>">
                 <div class="col-sm-12 col-md-6 col-left">
                     <img src="<?php echo $img ?>" class="width100percent" alt="<?php echo $heading ?>">
                 </div>

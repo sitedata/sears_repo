@@ -2,32 +2,32 @@
 My kingdom for a preprocessor...
 */
 /* make sure link text responds to parent hover state */
-.SEARS-05950 .cursor--pointer:hover a {
+.SEARS-005950 .cursor--pointer:hover a {
   color: #f3433a;
 }
 /* math  the old fashioned way.. */
-.SEARS-05950 .row {
+.SEARS-005950 .row {
   padding-top: 30px;
   padding-bottom: 0;
 }
-.SEARS-05950 .row h3 {
+.SEARS-005950 .row h3 {
   /* 44px / 14px = 3.14em */
   font-size: 3.14em;
 }
-.SEARS-05950 .row .col-right {
+.SEARS-005950 .row .col-right {
   /* 28px in PSD; doesn't account for line-height */
   padding-top: 14px;
   padding-left: 25px;
   padding-right: 25px;
 }
-.SEARS-05950 .row p,
-.SEARS-05950 .row a {
+.SEARS-005950 .row p,
+.SEARS-005950 .row a {
    /* 18px / 14px = 1.29em */
   font-size: 1.29em;
   margin-bottom: 0 !important;
 }
 /* have to fake a bottom border because of how the borders in the design sit */
-.SEARS-05950 .row .fake-bottom-border {
+.SEARS-005950 .row .fake-bottom-border {
   border-bottom: 2px solid #e0e0e0;
   clear: both;
   /* 30px / 14px = 2.14em */
@@ -38,13 +38,13 @@ My kingdom for a preprocessor...
 
 /* intermediate screen sizes to appease QA and designers */
 @media (min-width: 450px ) {
-  .SEARS-05950 .row .fake-bottom-border {
+  .SEARS-005950 .row .fake-bottom-border {
     max-width: 90%;
   }
 }
 
 @media (min-width: 550px ) {
-  .SEARS-05950 .row .fake-bottom-border {
+  .SEARS-005950 .row .fake-bottom-border {
     max-width: 94%;
   }
 }
@@ -52,10 +52,10 @@ My kingdom for a preprocessor...
 
 /* large tablet/ desktop-ish */
 @media (min-width: 993px ) {
-  .SEARS-05950 .row .col-right {
+  .SEARS-005950 .row .col-right {
     padding-top: 2%;
   }
-  .SEARS-05950 .row .fake-bottom-border {
+  .SEARS-005950 .row .fake-bottom-border {
     /* to match the padding on the parent */
     margin-left: 15px;
     max-width: none;
@@ -63,7 +63,7 @@ My kingdom for a preprocessor...
 }
 
 @media (min-width: 1200px) {
-  .SEARS-05950 .row .col-right {
+  .SEARS-005950 .row .col-right {
     padding-top: 6.66%;
   }
 }
