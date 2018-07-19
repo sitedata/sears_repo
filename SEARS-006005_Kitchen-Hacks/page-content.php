@@ -103,6 +103,9 @@ $list = array_map( 'nl2br', $list );
           </div>
         </section>
 
+<?php include( SEARS_ELEMENT_PATH . '/brand-logos.php' ); ?>
+
+<?php if (false): ?>
 <!-- LOGOS -->
         <section class="container brand-logos">
           <div class="row">
@@ -135,5 +138,6 @@ $i = 0;
               <a href="#" class="btn btn-lg btn--shop-now"><span>shop</span>now</a>
             </div>
           </div>
-  </section><!-- .col-xs-12 -->
+        </section><!-- .col-xs-12 -->
+<?php endif; ?>
 </div><!-- #cms-content-1920-1920.cms-content.cms-content-html -->
