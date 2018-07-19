@@ -103,41 +103,9 @@ $list = array_map( 'nl2br', $list );
           </div>
         </section>
 
-<?php include( SEARS_ELEMENT_PATH . '/brand-logos.php' ); ?>
-
-<?php if (false): ?>
-<!-- LOGOS -->
-        <section class="container brand-logos">
-          <div class="row">
-            <div class="col-xs-12 padding-vert-xl">
-              <strong class="font--black"><?php echo $logos_heading ?></strong>
-            </div>
-          </div>
-          <div class="row">
 <?php
-// place to store index since $logos is an associative array
-$i = 0;
+// use element to include reusable page-element snippet!
+element( 'brand-logos.php' );
 ?>
-<?php foreach ( $logos as $brand => $logo ): ?>
-  <?php if ( $i == 0 || $i == ceil(count( $logos ) / 2) ): ?>
-            <div class="col-xs-12 col-sm-12 col-md-6 Xcol-lg-6 brand-logos--col<?php if ( $i !== 0 ): echo ' brand-logos--col_right'; endif; ?>">
-              <div class="brand-logos--wrapper">
-  <?php endif; ?>
-                <div class="brand-logo">
-                  <img src="<?php echo $logo_dir . $logo ?>" alt="<?php echo $brand ?>" class="">
-                </div>
-  <?php if ( $logo === end( $logos ) || $i == (( count( $logos ) / 2 ) - 1) ): ?>
-              </div>
-            </div>
-  <?php endif; ?>
-  <?php $i++; ?>
-<?php endforeach; ?>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 padding-vert-xl text-align-center">
-              <a href="#" class="btn btn-lg btn--shop-now"><span>shop</span>now</a>
-            </div>
-          </div>
-        </section><!-- .col-xs-12 -->
-<?php endif; ?>
+
 </div><!-- #cms-content-1920-1920.cms-content.cms-content-html -->
