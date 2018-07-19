@@ -1,0 +1,255 @@
+// /**
+//  * Font REM
+//  * -- convert and output px and rem
+//  * -- font-rem( $font-size-px )
+//  */
+@mixin font-rem( $font-size-px ) {
+	// strip units off font-size-px just to be sure
+	$font-size-px: strip-units( $font-size-px );
+	$rem-font-size: ( $font-size-px / $reset-font-divider );
+
+	font-size: #{$font-size-px}#{'px'};
+	font-size: #{$rem-font-size}#{'rem'};
+}
+
+// for a given property and pixel value,
+// creates a rule using rems with a pixel fallback
+@mixin rule-rem( $rule, $size-px ) {
+	#{ $rule }: $size-px;
+	#{ $rule }: rem-it( $size-px );
+}
+
+
+// /**
+//  * Responsive Media Query Helpers
+//  * -- responsiveQuery(xs)
+//  * -- responsiveQuery("(min-width: 100em)")
+//  */
+@mixin responsiveQuery($media: null,$number: null) {
+	@if $number != null {
+		@media only screen and (min-width: $number){ @content; }
+	}
+
+	// MOBILE
+	@else if $media == xs or $media == 480 {
+		@media only screen and (min-width: 30em)   { @content; } // 480
+	}
+
+	// PHABLET / SMALL TABLET / NETBOOK / SMALL SCREEN
+	@else if $media == s or $media == 600 {
+		@media only screen and (min-width: 37.5em) { @content; } // 600
+	}
+	@else if $media == m or $media == 768 {
+		@media only screen and (min-width: 48em)   { @content; } // 768
+	}
+
+	// Extra medium
+	@else if $media == xm or $media == 960 {
+		@media only screen and (min-width: 60em) { @content; } // 960
+	}
+
+	// DESKTOP / LARGE TABLET
+	@else if $media == l or $media == 1024 {
+		@media only screen and (min-width: 64em)   { @content; } // 1024
+	}
+
+	// MASSIVE SCREEN
+	@else if $media == xl or $media == 1280 {
+		@media only screen and (min-width: 80em)   { @content; } // 1280
+	}
+	@else if $media == xxl or $media == 1440 {
+		@media only screen and (min-width: 90em)   { @content; } // 1440
+	}
+	@else if $media == final or $media == 1920 {
+		@media only screen and (min-width: 120em)  { @content; } // 1920
+	}
+	@else if $media == retina {
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { @content; } // retina
+	}
+
+	// OTHER
+	@else {
+		@media only screen and #{$media} { @content; } // anything else
+	}
+}
+
+// /**
+//  * Clearfix as a mixin
+//  */
+@mixin clearfix() {
+	@extend %clearfix;
+}
+
+
+// /**
+//  * Horizontally and vertically centers block elements
+//  *
+//  * Important: you must have a parent element with `position: relative`.
+//  */
+@mixin center-both {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+// /**
+//  * Retina Image Helper
+//  *
+//  * A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+//  * by Nathan Crank (nathancrank.com)
+//  */
+@mixin at2x($path, $ext: "jpg") {
+	$at1x_path: "#{$path}.#{$ext}";
+	$at2x_path: "#{$path}@2x.#{$ext}";
+
+	background-image: url("#{$at1x_path}");
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (   min--moz-device-pixel-ratio: 1.5),
+	only screen and (     -o-min-device-pixel-ratio: 3/2),
+	only screen and (        min-device-pixel-ratio: 1.5),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 1.5dppx) {
+		background-image: url("#{$at2x_path}");
+	}
+}
+
+// /**
+//  * Helpers
+//  */
+
+//-- font mixin to do the heavy lifting...
+@mixin font($weight, $size, $italic:false) {
+	@include font-rem($size);
+	font-family:$primary-font-family;
+	@if $weight == reg {
+		font-weight:400;
+	}
+	@else if $weight == semi {
+		font-weight:600;
+	}
+	@else if $weight == bold {
+		font-weight:700;
+	}
+	@else if $weight == xbold {
+		font-weight:800;
+	}
+	@else if $weight == light {
+		font-weight:300;
+	}
+	@if $italic == true {
+		font-style:italic;
+	}
+}
+
+//-- for CSS transitions...
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//-- for CSS transform...
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+//-- for CSS box-shadow...
+@mixin boxshadow($x,$y,$blur,$r,$g,$b,$a) {
+  -webkit-box-shadow:$x+px $y+px $blur+px rgba($r,$g,$b,$a);
+  -moz-box-shadow:$x+px $y+px $blur+px rgba($r,$g,$b,$a);
+  -ms-box-shadow:$x+px $y+px $blur+px rgba($r,$g,$b,$a);
+  -o-box-shadow:$x+px $y+px $blur+px rgba($r,$g,$b,$a);
+  box-shadow:$x+px $y+px $blur+px rgba($r,$g,$b,$a);
+}
+
+// hides an element until a given breakpoint is reached
+$hide-display: block !default;
+@mixin hideAtBp( $bp, $display: $hide-display ) {
+	@include responsiveQuery( $bp ) {
+		display: none;
+	}
+}
+
+$show-display: block !default;
+@mixin showAtBp( $bp, $display: $show-display ){
+	display: none;
+	@include responsiveQuery( $bp ) {
+		display: $display;
+	}
+}
+
+// Applies fluid scaling and media queries to the list of properties given
+// the min-max for screen and the min-max for the metric you want to scale fluidly
+//
+// Requires the calc-interpolation function which can also be used independently
+// from https://www.madebymike.com.au/writing/fluid-type-calc-examples/
+// and https://codepen.io/MadeByMike/pen/vNrvdZ
+//
+// $properties can be a list of properties like so
+// ( font-size, line-height, height, ..., things )
+//
+@mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value) {
+	& {
+		@each $property in $properties {
+			#{$property}: $min-value;
+		}
+
+		@media screen and (min-width: $min-screen) {
+			@each $property in $properties {
+				#{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value);
+			}
+		}
+
+		@media screen and (min-width: $max-screen) {
+			@each $property in $properties {
+				#{$property}: $max-value;
+			}
+		}
+	}
+}
+
+// shorthand version of interpolate for mobile & tablet!
+// i.e., it allows omitting the screen min-max
+$mbtrpl8-min-screen: 320px !default;
+$mbtrpl8-max-screen: 767px !default;
+@mixin mobterpolate( $properties, $min-value, $max-value, $min-screen: $mbtrpl8-min-screen, $max-screen: $mbtrpl8-max-screen ) {
+	@include interpolate( $properties, $min-screen, $max-screen, $min-value, $max-value );
+}
+
+// shorthand version of interpolate for larger than tablet!
+$dsktrpl8-min-screen: 768px !default;
+$dsktrpl8-max-screen: 1920px !default;
+@mixin deskterpolate( $properties, $min-value, $max-value, $min-screen: $dsktrpl8-min-screen, $max-screen: $dsktrpl8-max-screen ) {
+	@include interpolate( $properties, $min-screen, $max-screen, $min-value, $max-value );
+}
+
+// Even lazier!
+// let the min value optional by calculating the minimum based on the ratio
+// of min-max screen
+// e.g. screen-ratio = 320 / 767 = .4172
+//			max-value = 60
+//			min-value = max-value * screen-ratio = 60 * .4172 = 25.03
+@mixin mbtrpl8( $properties, $max-value, $min-value: null, $min-screen: $mbtrpl8-min-screen, $max-screen: $mbtrpl8-max-screen ) {
+	@if ( $min-value == null ) {
+		$min-value: ( $min-screen / $max-screen ) * $max-value;
+	}
+	@include interpolate( $properties, $min-screen, $max-screen, $min-value, $max-value );
+}
+
+@mixin dsktrpl8( $properties, $max-value, $min-value: null, $min-screen: $dsktrpl8-min-screen, $max-screen: $dsktrpl8-max-screen ) {
+	@if ( $min-value == null ) {
+		$min-value: ( $min-screen / $max-screen ) * $max-value;
+	}
+	@include interpolate( $properties, $min-screen, $max-screen, $min-value, $max-value );
+}

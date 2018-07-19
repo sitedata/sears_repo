@@ -1,6 +1,10 @@
 <?php
 
+define( 'SEARS_PROJECT_PATH', dirname( __FILE__ ) );
+
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/inc/bs.php' );
+
+// pr( $_SERVER ); exit;
 
 $slug = basename( dirname( __FILE__ ) );
 

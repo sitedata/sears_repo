@@ -20,3 +20,6 @@ pages.php
 
 # no go-live directories
 go-live/
+
+# no node modules
+node_modules/

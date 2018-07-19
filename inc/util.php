@@ -1,14 +1,8 @@
 <?php
 /**
  Utitlity Functions
+ mostly for debuggin'
  */
-
-/**
-get path relative to webroot for the given absolute file path
-*/
-function get_relative_path( $path ) {
-  return str_replace( $_SERVER['DOCUMENT_ROOT'], '', $path );
-}
 
 /**
 prints or returns a print_r statement wrapped in a <pre>

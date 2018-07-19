@@ -1,0 +1,31 @@
+{
+  "name": "sears-landing-pages",
+  "version": "0.0.7",
+  "description": "Simple page templating system.",
+  "main": "index.php",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "keywords": [
+    "Sears",
+    "landing",
+    "pages"
+  ],
+  "author": "PurerED",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1",
+    "pump": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  }
+}
