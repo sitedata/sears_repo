@@ -1,0 +1,83 @@
+@import '../scss/_main';
+
+
+// my stuff here!
+.SEARS-005948 {
+
+  // to achieve the 20px padding on each side of hero in PSD
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .headline--copy {
+    br {
+      display: none;
+    }
+  }
+
+  .footer-ish--headline {
+    .fake-bottom-border {
+      padding: 0; // to allow larger than container
+      margin-left: em(-20px, $max-font-size_m); // to push the jerk left
+
+      hr {
+        width: 102.5%; // to push it out of the right side of the box to match PSD
+      }
+
+    } // .fake-bottom-border
+
+  }
+
+}
+
+// make the inconsistent footer headline shit more managable
+@media screen and (max-width: $max-screen-size_m) {
+
+  .SEARS-005948 {
+
+    .footer-ish--headline {
+
+      .headline--copy {
+        // hr above it has 20px margin-bottom so we only need 20px to match PSD
+        padding-top: em( 20px, $max-font-size_m );
+        padding-left: 0;
+        padding-right: 0;
+        color: #000;
+        text-align: left;
+        font-size: em( 18px, $max-font-size_m );
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (min-width: $min-screen-size_d) {
+  .SEARS-005948 {
+
+    .headline--copy {
+      br {
+        display: block;
+      }
+    }
+
+    .laundry-essentials {
+      .row {
+        .col-sm-6 {
+          padding-left: 20px;
+          &:first-child {
+            padding-right: 20px;
+            padding-left: 15px; // reset to original
+          }
+        }
+      }
+    } // .laundry-essentials
+
+    .footer-ish--headline {
+      .headline--copy {
+        padding-top: em( 100px, $max-font-size_d );
+      }
+    }
+
+  } // .SEARS-005948
+}

@@ -133,3 +133,25 @@ function element( $element_file_name, $vars = array() ) {
 		include( SEARS_ELEMENT_PATH . '/'. $element_file_name );
 	}
 }
+
+/**
+Clean text by removing non-display characters, replacing special characters with
+HTML entities, and replacing newlines with <br>s.
+*/
+function clean_text( $text ) {
+	// replace non-display characters
+	$text = replace_non_display_chars( $text );
+	$text = htmlspecialchars( $text );
+	$text = nl2br( $text );
+	return $text;
+}
+
+/**
+Replace non-display characters (with some exceptions)
+*/
+function replace_non_display_chars( $text ) {
+	// replace non-display characters
+	// EXCEPT NEW LINES! \x0A
+	$text = preg_replace( '/[\x00-\x09\x0B\x1F\x7F]/u', '', $text );
+	return $text;
+}
