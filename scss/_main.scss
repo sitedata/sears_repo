@@ -1,3 +1,213 @@
 @import '_vars';
 @import '_functions';
 @import '_mixins';
+
+// --------------------------
+// Set base font sizes for our two breakpoints using CSS calc() so that
+// font-size will scale based on the screen width!
+// From here we can then just set the sizes of everything with EMs.
+// There's even a function in _functions.scss that will calculate the EMs
+// for you given a pixel measurement and the base font size!
+// --------------------------
+// #cms-content-1920-1920 {
+#{$base-selector} {
+  // font-size: calc(
+  //   $min-font-size_m + (20 - 10) * ((100vw - $min-screen-size_m) / (991 - 320))
+  //   );
+  font-size: calc-interpolation(
+    $min-screen-size_m,
+    $min-font-size_m,
+    $max-screen-size_m,
+    $max-font-size_m
+  );
+}
+@media screen and (min-width: $min-screen-size_d) {
+  // #cms-content-1920-1920 {
+  #{$base-selector} {
+    // font-size: calc(
+    //   $min-font-size_d + (21 - 14) * ((100vw - $min-screen-size_d) / ($max-screen-size_d - $min-screen-size_d))
+    // );
+    font-size: calc-interpolation(
+      $min-screen-size_d,
+      $min-font-size_d,
+      $max-screen-size_d,
+      $max-font-size_d
+    );
+  }
+}
+// @media screen and (min-width: 1921px}) {
+@media screen and (min-width: #{$max-screen-size_d + 1}) {
+  #{ $base-selector } {
+    font-size: $max-font-size_d;
+  }
+}
+
+
+// NOTE:
+// be sure to add this class to the parent container in your page_content.php!
+// otherwise, the shared style rules won't get applied
+// .SEARS--landing-page,
+// adding this id just in case so that anyone not reading the above will be fine
+#{ $base-selector } {
+
+  // text below hero
+  .headline {
+    .headline--copy {
+      //  25px / 21px = 1.19em
+      font-size: 1.19em;
+      padding: em( 30px, $max-font-size_m ) 2em em( 15px, $max-font-size_m ) 2em;
+    }
+  }
+
+  h3 {
+    // 44px/18px = 2.44em
+    font-size: 2.44em;
+    line-height: 1.2em; // based on this critter's font-size, not the ancestor! */
+    margin-right: -2em; // to allow too big text to sit on one line! */
+    margin-top: 0;
+  }
+
+  hr {
+    border-color: #e0e0e0;
+  }
+
+  // those damn borders that don't obey conventional border rules
+  .fake-bottom-border {
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 10px;
+  }
+
+
+  // *******************************
+  // BRAND LOGOS
+  // ********************************
+  .brand-logos {
+    text-align: left;
+
+    .brand-logos--col {
+      padding: 0 0 0 0;
+    }
+    .brand-logos--wrapper {
+      display: table;
+      margin: 0 auto;
+    }
+
+    .brand-logo {
+      display: table-cell;
+      padding: 10px 20px;
+      width: 25%;
+      text-align: center;
+
+      img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      }
+    }
+
+    .btn--shop-now {
+      background-color: #e0001e;
+      border-radius: 0;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      //  font-size is 54.73px in PSD
+      //  54px / 18px = 3em
+      font-size: 3em;
+      position: relative; //  so we can absolutely position the arrow!
+
+      letter-spacing: 0.02em;
+
+      //  86px / 54.73px = 1.59em
+      line-height: 1.59em;
+
+      //  88px / 54px = 1.63em
+      padding: 0 1.63em 0 0.815em;
+
+      span {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      :after {
+        content: " ";
+        position: absolute;
+        border-right: none;
+        top: 50%;
+        transform: translate( 0, -50% );
+        //  20px / 54px = 0.370em
+        border: 0.37em solid transparent;
+
+        border-left-color: #FFF;
+        //  38px / 54px = 0.703em
+        border-left-width: 0.703em;
+        //  14px / 54px = 0.259em
+        right: 0.259em;
+      }
+
+    } // .btn--shop-now
+
+  } // .brand-logos
+
+} // #{ $base-selector }
+
+
+
+@media screen and (min-width: 992px) {
+
+  #{ $base-selector } {
+
+    h3 {
+      //  44px / 21px = 2.095em
+      font-size: 2.1em;
+    }
+
+    .brand-logos {
+      text-align: center;
+
+      .brand-logos--heading {
+       //  18px / 21px = 0.857em
+       font-size: 0.857em;
+       line-height: 1.2em;
+      }
+
+      .brand-logos--wrapper {
+        margin: 0 0 0 auto;
+      }
+
+      .brand-logos--col_right {
+        .brand-logos--wrapper {
+          margin: 0 auto 0 0;
+        }
+      }
+
+      .brand-logo {
+        width: auto;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .btn--shop-now {
+        //  25.16px / 21px = 1.198em
+        font-size: 1.198em;
+        //  18px / 25.16px = 0.715em
+        padding-left: 0.715em;
+        //  36px / 25.16px = 1.431em
+        padding-right: 1.431em;
+      }
+
+      .btn--shop-now :after {
+        //  9px / 25.16px = 0.358em
+        border-width: 0.358em;
+        //  15px / 25.16px = 0.596em
+        border-left-width: 0.596em;
+      }
+
+    } // .brand-logos
+
+  } // cms-content-1920-1920
+
+} // @media screen and (min-width: 992px)

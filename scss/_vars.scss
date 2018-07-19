@@ -1,1 +1,28 @@
 // stuff like sears colors and other property values go here!
+
+// base selector for the parent container of all our content!
+// add a class beginning with SEARS- to the parent container of yr content!
+$base-selector: "[class*=SEARS-]" !default;
+
+// set minimum and maximum sizes for things on mobile and desktop
+
+// font sizes
+$min-font-size_m: 10px !default;
+$max-font-size_m: 20px !default;
+$min-font-size_d: 14px !default;
+$max-font-size_d: 21px !default;
+
+// screen sizes
+$min-screen-size_m: 320px !default;
+$max-screen-size_m: 991px !default;
+$min-screen-size_d: 992px !default;
+$max-screen-size_d: 1920px !default;
+
+
+// COLORS
+// there's a class in shopping.css for applying this to fonts, .font--primary2
+// but seems useful to have here as well, just in case
+$sears-blue: #102869;
+
+$btn-color: #e0001e;
+$hr-color: #e0e0e0;

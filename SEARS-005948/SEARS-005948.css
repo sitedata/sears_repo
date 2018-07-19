@@ -1,0 +1,125 @@
+[class*=SEARS-] {
+  font-size: calc(1.49031vw + 5.231px); }
+
+@media screen and (min-width: 992px) {
+  [class*=SEARS-] {
+    font-size: calc(0.75431vw + 6.51724px); } }
+
+@media screen and (min-width: 1921px) {
+  [class*=SEARS-] {
+    font-size: 21px; } }
+
+[class*=SEARS-] .headline .headline--copy {
+  font-size: 1.19em;
+  padding: 1.5em 2em 0.75em 2em; }
+
+[class*=SEARS-] h3 {
+  font-size: 2.44em;
+  line-height: 1.2em;
+  margin-right: -2em;
+  margin-top: 0; }
+
+[class*=SEARS-] hr {
+  border-color: #e0e0e0; }
+
+[class*=SEARS-] .fake-bottom-border {
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-bottom: 10px; }
+
+[class*=SEARS-] .brand-logos {
+  text-align: left; }
+  [class*=SEARS-] .brand-logos .brand-logos--col {
+    padding: 0 0 0 0; }
+  [class*=SEARS-] .brand-logos .brand-logos--wrapper {
+    display: table;
+    margin: 0 auto; }
+  [class*=SEARS-] .brand-logos .brand-logo {
+    display: table-cell;
+    padding: 10px 20px;
+    width: 25%;
+    text-align: center; }
+    [class*=SEARS-] .brand-logos .brand-logo img {
+      width: auto;
+      max-width: 100%;
+      height: auto; }
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e0001e;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 1.59em;
+    padding: 0 1.63em 0 0.815em; }
+    [class*=SEARS-] .brand-logos .btn--shop-now span {
+      color: #fff;
+      font-weight: 600; }
+    [class*=SEARS-] .brand-logos .btn--shop-now :after {
+      content: " ";
+      position: absolute;
+      border-right: none;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 0.37em solid transparent;
+      border-left-color: #FFF;
+      border-left-width: 0.703em;
+      right: 0.259em; }
+
+@media screen and (min-width: 992px) {
+  [class*=SEARS-] h3 {
+    font-size: 2.1em; }
+  [class*=SEARS-] .brand-logos {
+    text-align: center; }
+    [class*=SEARS-] .brand-logos .brand-logos--heading {
+      font-size: 0.857em;
+      line-height: 1.2em; }
+    [class*=SEARS-] .brand-logos .brand-logos--wrapper {
+      margin: 0 0 0 auto; }
+    [class*=SEARS-] .brand-logos .brand-logos--col_right .brand-logos--wrapper {
+      margin: 0 auto 0 0; }
+    [class*=SEARS-] .brand-logos .brand-logo {
+      width: auto; }
+      [class*=SEARS-] .brand-logos .brand-logo img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    [class*=SEARS-] .brand-logos .btn--shop-now {
+      font-size: 1.198em;
+      padding-left: 0.715em;
+      padding-right: 1.431em; }
+    [class*=SEARS-] .brand-logos .btn--shop-now :after {
+      border-width: 0.358em;
+      border-left-width: 0.596em; } }
+
+.SEARS-005948 {
+  padding-left: 5px;
+  padding-right: 5px; }
+  .SEARS-005948 .headline--copy br {
+    display: none; }
+  .SEARS-005948 .footer-ish--headline .fake-bottom-border {
+    padding: 0;
+    margin-left: -1em; }
+    .SEARS-005948 .footer-ish--headline .fake-bottom-border hr {
+      width: 102.5%; }
+
+@media screen and (max-width: 991px) {
+  .SEARS-005948 .footer-ish--headline .headline--copy {
+    padding-top: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    color: #000;
+    text-align: left;
+    font-size: 0.9em; } }
+
+@media screen and (min-width: 992px) {
+  .SEARS-005948 .headline--copy br {
+    display: block; }
+  .SEARS-005948 .laundry-essentials .row .col-sm-6 {
+    padding-left: 20px; }
+    .SEARS-005948 .laundry-essentials .row .col-sm-6:first-child {
+      padding-right: 20px;
+      padding-left: 15px; }
+  .SEARS-005948 .footer-ish--headline .headline--copy {
+    padding-top: 4.7619em; } }

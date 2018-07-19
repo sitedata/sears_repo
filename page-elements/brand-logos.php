@@ -7,9 +7,12 @@ else {
   $logo_dir = '/assets/cms/brand-logos/';
 }
 
+$brand_logos_heading = isset( $brand_logos_heading ) ?
+  replace_non_display_chars( $brand_logos_heading ) :
+  "Shop the latest <a href=\"#\" class=\"font--primary2\">appliances</a> for the best in kitchen solutions. We have unbeatable prices on the best brands available.";
 
-$logos_heading = isset( $logos_heading ) ? $logos_heading :
-  "Shop the latest <span class=\"font--primary2\">appliances</span> for the best in kitchen solutions. We have unbeatable prices on the best brands available.";
+$brand_logos_heading_wrapper_classes = isset( $brand_logos_heading_wrapper_classes ) ?
+  ' ' . $brand_logos_heading_wrapper_classes : '';
 
 $logos = isset( $logos ) ? $logos :
   array(
@@ -26,11 +29,14 @@ $logos = isset( $logos ) ? $logos :
 ?>
 <!-- BRAND LOGOS -->
         <section class="container brand-logos">
-          <div class="row">
+
+          <!-- BRAND LOGOS HEADING -->
+          <div class="row<?php echo $brand_logos_heading_wrapper_classes ?>">
             <div class="col-xs-12 padding-vert-xl">
-              <strong class="font--black"><?php echo $logos_heading ?></strong>
+              <strong class="brand-logos--heading font--black"><?php echo $brand_logos_heading ?></strong>
             </div>
           </div>
+          
           <div class="row">
 <?php
 // place to store index since $logos is an associative array

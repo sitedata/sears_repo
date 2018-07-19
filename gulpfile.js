@@ -23,7 +23,7 @@ var cwd = process.env.INIT_CWD; // directory where we invoked gulp
 gulp.task('sass', function(callback){
 	console.log( 'Sassin\'...' );
 	pump([
-		gulp.src( cwd + '/style.scss'),
+		gulp.src( cwd + '/*.scss'),
 		sass(),
 		gulp.dest( cwd )
 		],
