@@ -66,7 +66,8 @@ $extra_img = isset( $row['extra_img'] ) ? $img_dir . $row['extra_img'] : false;
 
 <?php
 // use element to include reusable page-element snippet!
-element( 'brand-logos.php' );
+element( 'brand-logos.php',
+  compact( 'brand_logos_heading' )
+);
 ?>
-
 </div><!-- #cms-content-1920-1920.cms-content.cms-content-html -->
