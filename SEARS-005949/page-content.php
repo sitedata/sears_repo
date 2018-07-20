@@ -20,7 +20,7 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
     <div class="col-xs-12">
       <div class="row">
         <div class="col-xs-12">
-          <div class="headline--copy text-align-center font--primary2 font--600">
+          <div class="headline--copy text-align-center font--primary2 font--700">
             <?php echo htmlspecialchars( $headline ) ?>
           </div>
         </div>
