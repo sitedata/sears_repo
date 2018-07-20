@@ -47,3 +47,8 @@ $content = array(
 		'copy' => clean_text("Soak your shrunk, washed garments in lukewarm water with ordinary hair conditioner for 15 minutes. Rinse the conditioner for 5 minutes, then wring the residual water out. Stretch the garments and allow them to air dry."),
     ),
 );
+
+/**
+Brand Logos
+*/
+$brand_logos_heading = "Shop the latest <a href=\"#\" class=\"font--700 font--primary2\">appliances</a> for the best in laundry solutions. We have unbeatable prices on the best brands available.";
