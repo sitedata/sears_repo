@@ -1,0 +1,166 @@
+@import '../scss/_main';
+
+// this is already the color used for blue in shopping.css
+$sticker-link-blue: #1a42ad;
+
+// used on laundry-hack right columns and their fake bottom borders
+$col-right-horz-padding: em( 25px, $max-font-size_m );
+
+// my stuff here!
+.SEARS-005949 {
+
+  // to achieve the 20px padding on each side of hero in PSD
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .headline--copy {
+    line-height: 1.4em;
+    br {
+      display: none;
+    }
+  }
+
+  .laundry-hacks {
+
+    .laundry-hack {
+
+      h3 {
+        margin-top: em( 10px, $max-font-size_m );
+        margin-bottom: em( 5px, $max-font-size_m );
+      }
+
+      p {
+        line-height: 1.8em;
+        .sticker--link {
+          text-decoration: underline;
+        }
+      }
+
+      .col-right {
+        padding-left: $col-right-horz-padding;
+        padding-right: $col-right-horz-padding;
+      }
+
+      // .fake-bottom-border {
+      //   padding-top: em( 0px, $max-font-size_m );
+      //   padding-bottom: em( 12px, $max-font-size_m );
+      //   // padding-left: em( 24px, $max-font-size_m );
+      //   // padding-right: em( 24px, $max-font-size_m );
+      //   padding-left: $col-right-horz-padding;
+      //   padding-right: $col-right-horz-padding;
+      // }
+
+    } // .laundry-hack
+
+  } // .laundry-hacks
+
+  .brand-logos {
+    .brand-logos--wrapper {
+      width: 100%;
+    }
+  }
+
+}
+
+// Stuff that's easier to deal with if it stops at a max size!
+@media screen and (max-width: $max-screen-size_m) {
+
+  .SEARS-005949 {
+
+    .headline {
+      .fake-bottom-border {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: -4em;
+        width: 1000%;
+      }
+    }
+
+    .laundry-hacks {
+      .laundry-hack {
+        .fake-bottom-border {
+          padding-top: em( 0px, $max-font-size_m );
+          padding-bottom: em( 12px, $max-font-size_m );
+          padding-left: $col-right-horz-padding;
+          padding-right: $col-right-horz-padding;
+        }
+      }
+    }
+
+  }
+
+}
+
+@media screen and (min-width: $min-screen-size_d) {
+  .SEARS-005949 {
+
+    .headline--copy {
+      br {
+        display: block;
+      }
+    }
+
+    .laundry-hacks {
+      .laundry-hack {
+        .col-sm-6 {
+          padding-left: 20px;
+          &:first-child {
+            padding-right: 20px;
+            padding-left: 15px; // reset to original
+          }
+        } // .col-sm-6
+
+        //-------------------------------
+        // individualized top padding because they're all different
+        //-------------------------------
+        &--01 {
+          .col-right {
+            padding-top: em( 32px, $max-font-size_d );
+          }
+        }
+        &--02 {
+          .col-right {
+            padding-top: em( 48px, $max-font-size_d );
+          }
+        }
+        &--03 {
+          .col-right {
+            padding-top: em( 118px, $max-font-size_d );
+          }
+        }
+        &--04 {
+          .col-right {
+            padding-top: em( 112px, $max-font-size_d );
+          }
+        }
+        &--05 {
+          .col-right {
+            padding-top: em( 85px, $max-font-size_d );
+          }
+        }
+        &--06 {
+          .col-right {
+            padding-top: em( 75px, $max-font-size_d );
+          }
+        }
+
+        .fake-bottom-border {
+          padding-top: 15px;
+
+        }
+
+
+      } // .laundry-hack
+
+
+    } // .laundry-hacks
+
+
+    .brand-logos {
+      .brand-logos--wrapper {
+        width: auto;
+      }
+    }
+
+  } // .SEARS-005949
+}
