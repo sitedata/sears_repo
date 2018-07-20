@@ -17,7 +17,7 @@ $content = array(
 	array(
 		'img' => '02_HelpYourKids.jpg',
 		'heading' => "1. Help your kids remember where their clothes belong with DIY stickers",
-		'copy' => clean_text("Print out ") . "<a href=\"#\" class=\"font--600 font--black sticker--link\">this template</a>" . clean_text(" and create cute DIY stickers to label your kid’s furniture. Now, they have no excuse for not handling this most basic chore. Speaking of kids…"),
+		'copy' => clean_text("Print out ") . "<a href=\"#\" class=\"font--700 font--black sticker--link\">this template</a>" . clean_text(" and create cute DIY stickers to label your kid’s furniture. Now, they have no excuse for not handling this most basic chore. Speaking of kids…"),
 		'extra' => "Download Sticker Template",
 		'extra_img' => 'icon-document.png',
   ),
