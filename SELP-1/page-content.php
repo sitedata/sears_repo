@@ -42,11 +42,11 @@ $d = $data['keep-it-cool'];
         <img src="<?php echo $img_dir . $d['img'] ?>" alt="<?php echo $d['headline'] ?>" class="img-responsive width100percent">
       </div>
       <div class="col-xs-12 col-md-6">
-        <h3 class="font--400 font--primary2"><?php echo $d['headline'] ?></h2>
+        <h2 class="font--400 font--primary2"><?php echo $d['headline'] ?></h2>
         <p class="font--black"><?php echo $d['copy'] ?></p>
-        <aside class="tipBoxContainer">
-          <div class="col-xs-2 tipBoxDarkerBlue">Tip</div>
-          <div class="col-xs-10 tipBoxLighterBlue">
+        <aside class="tip-box tipBoxContainer">
+          <div class="Xcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
+          <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">
             <?php echo $d['tip'] ?>
           </div>
         </aside>
@@ -95,9 +95,9 @@ $img = $img_dir . $row['img'];
     </div><!-- div.row -->
     <div class="row">
       <div class="col-xs-6">
-        <aside class="tipBoxContainer">
-          <div class="col-xs-2 tipBoxDarkerBlue">Tip</div>
-          <div class="col-xs-10 tipBoxLighterBlue">
+        <aside class="tip-box tipBoxContainer">
+          <div class="Zcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
+          <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">
             <?php echo $d['tip'] ?>
           </div>
         </aside>
@@ -137,9 +137,9 @@ $d = $data['refrigerator-features'];
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <aside class="tipBoxContainer2">
-          <div class="col-xs-2 tipBoxDarkerBlue">Tip</div>
-          <div class="col-xs-10 tipBoxLighterBlue">
+        <aside class="tip-box tip-box__tall tipBoxContainer2">
+          <div class="Xcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
+          <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">
             <?php echo $d['tip'] ?>
           </div>
         </aside>

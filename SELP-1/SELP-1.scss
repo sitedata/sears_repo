@@ -55,37 +55,11 @@ $guide_h3_d: 41px;
 
   .refrigerator-essentials {
 
-    .laundry-hack {
+    .tip-box {
+      margin-top: 7%;
+    }
 
-      h3 {
-        margin-top: em( 10px, $max-font-size_m );
-        margin-bottom: em( 5px, $max-font-size_m );
-      }
-
-      p {
-        line-height: 1.8em;
-        .sticker--link {
-          text-decoration: underline;
-        }
-      }
-
-      .col-right {
-        padding-left: $col-right-horz-padding;
-        padding-right: $col-right-horz-padding;
-      }
-
-      // .fake-bottom-border {
-      //   padding-top: em( 0px, $max-font-size_m );
-      //   padding-bottom: em( 12px, $max-font-size_m );
-      //   // padding-left: em( 24px, $max-font-size_m );
-      //   // padding-right: em( 24px, $max-font-size_m );
-      //   padding-left: $col-right-horz-padding;
-      //   padding-right: $col-right-horz-padding;
-      // }
-
-    } // .laundry-hack
-
-  } // .laundry-hacks
+  } // .refrigerator-essentials
 
   .refrigerator-styles {
 
@@ -104,8 +78,8 @@ $guide_h3_d: 41px;
       padding-bottom: 20px;
     }
 
-    .refrigerator-feature__name {
-      // font-size: 24px;
+    .tip-box {
+      margin-top: 10px;
     }
   }
 
@@ -136,48 +110,56 @@ $guide_h3_d: 41px;
     }
   }
 
-    .tip-box,
-    .tipBoxContainer{
-      height: 130px;
-      margin-top: 10%;
-    }
-    .tip-box__tall,
-    .tipBoxContainer2{
-      height: 170px;
-    }
-    .tip-box__left,
-    .tipBoxDarkerBlue{
-      text-transform: uppercase;
-      background-color: #102869;
-      /*width: 15%;*/
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      height: inherit;
-      font-size: 31px;
-      padding-top: 50px;
-    }
-    .tipBoxDarkerBlue2{
-        text-transform: uppercase;
-      background-color: #102869;
-      /*width: 15%;*/
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      height: inherit;
-      font-size: 31px;
-      padding-top: 60px;
-    }
-    .tip-box__right,
-    .tipBoxLighterBlue{
-      background-color: #d2daee;
-      color: #000;
-      /*width: 85%;*/
-      height: inherit;
-      padding: 3% 25px 0px;
-      font-weight: bold;
+  .tip-box,
+  .tipBoxContainer{
+    min-height: 130px;
+    margin-top: 25px;
+    display: table;
+  }
+  .tip-box__tall,
+  .tipBoxContainer2{
+    $tip-box-tall_height: 170px;
+    min-height: 170px;
 
+    .tip-box__left,
+    .tipBoxDarkerBlue {
+      // padding-top: 0px;
+      // line-height: 170px;
     }
+
+  }
+  .tip_box__left,
+  .tip_box__right {
+    display: table-cell;
+  }
+  .tip-box__left,
+  .tipBoxDarkerBlue {
+    display: table-cell;
+    text-transform: uppercase;
+    background-color: #102869;
+    /*width: 15%;*/
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: inherit;
+    font-size: 31px;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    vertical-align: middle;
+  }
+  .tip-box__right,
+  .tipBoxLighterBlue{
+    display: table-cell;
+    background-color: #d2daee;
+    color: #000;
+    /*width: 85%;*/
+    height: inherit;
+    padding: 25px;
+    font-weight: bold;
+    vertical-align: middle;
+  }
 
 
 }
