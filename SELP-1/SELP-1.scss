@@ -1,0 +1,291 @@
+@import '../scss/_main';
+
+$wrap-class: '.SELP-1';
+
+// this is already the color used for blue in shopping.css
+// $link-blue: #1a42ad;
+// font--primary3
+
+
+// used on laundry-hack right columns and their fake bottom borders
+$col-right-horz-padding: em( 25px, $max-font-size_m );
+
+$content-padding_d: 57px; // playing in the browser; PSD has 85px from edge
+
+$h2_d: 44px;
+$h3_d: 24px;
+
+$guide_pre_d: 36px;
+$guide_h3_d: 41px;
+
+// my stuff here!
+#{$wrap-class} {
+
+  // to achieve the 20px padding on each side of hero in PSD
+  padding-left: 5px;
+  padding-right: 5px;
+
+  // force content column
+  article,
+  #hero .container {
+    padding-left: $content-padding_d;
+    padding-right: $content-padding_d;
+  }
+
+  h2 {
+    font-size: $h2_d;
+  }
+
+  h3,
+  .h3 {
+    font-size: $h3_d;
+  }
+
+  .font--900 {
+    font-weight: 900;
+  }
+
+  .headline--copy {
+    line-height: 1.4em;
+    br {
+      display: none;
+    }
+  }
+
+
+  .refrigerator-essentials {
+
+    .laundry-hack {
+
+      h3 {
+        margin-top: em( 10px, $max-font-size_m );
+        margin-bottom: em( 5px, $max-font-size_m );
+      }
+
+      p {
+        line-height: 1.8em;
+        .sticker--link {
+          text-decoration: underline;
+        }
+      }
+
+      .col-right {
+        padding-left: $col-right-horz-padding;
+        padding-right: $col-right-horz-padding;
+      }
+
+      // .fake-bottom-border {
+      //   padding-top: em( 0px, $max-font-size_m );
+      //   padding-bottom: em( 12px, $max-font-size_m );
+      //   // padding-left: em( 24px, $max-font-size_m );
+      //   // padding-right: em( 24px, $max-font-size_m );
+      //   padding-left: $col-right-horz-padding;
+      //   padding-right: $col-right-horz-padding;
+      // }
+
+    } // .laundry-hack
+
+  } // .laundry-hacks
+
+  .refrigerator-styles {
+
+    ul {
+      padding-top: 5px;
+      padding-left: 20px;
+    }
+
+  }
+
+  .refrigerator-features {
+
+    &__list {
+      padding-left: 25px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .refrigerator-feature__name {
+      // font-size: 24px;
+    }
+  }
+
+  .refrigerator-guides {
+
+    .refrigerator-guide__idea {
+      font-size: $guide_pre_d;
+    }
+
+    h3 {
+      font-size: $guide_h3_d;
+    }
+
+    .refrigerator-guide {
+      footer {
+        margin-top: 30px;
+        .refrigerator-guide__link {
+          font-size: $h3_d;
+        }
+      }
+    }
+
+  }
+
+  .brand-logos {
+    .brand-logos--wrapper {
+      width: 100%;
+    }
+  }
+
+    .tip-box,
+    .tipBoxContainer{
+      height: 130px;
+      margin-top: 10%;
+    }
+    .tip-box__tall,
+    .tipBoxContainer2{
+      height: 170px;
+    }
+    .tip-box__left,
+    .tipBoxDarkerBlue{
+      text-transform: uppercase;
+      background-color: #102869;
+      /*width: 15%;*/
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      height: inherit;
+      font-size: 31px;
+      padding-top: 50px;
+    }
+    .tipBoxDarkerBlue2{
+        text-transform: uppercase;
+      background-color: #102869;
+      /*width: 15%;*/
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      height: inherit;
+      font-size: 31px;
+      padding-top: 60px;
+    }
+    .tip-box__right,
+    .tipBoxLighterBlue{
+      background-color: #d2daee;
+      color: #000;
+      /*width: 85%;*/
+      height: inherit;
+      padding: 3% 25px 0px;
+      font-weight: bold;
+
+    }
+
+
+}
+
+// Stuff that's easier to deal with if it stops at a max size!
+@media screen and (max-width: $max-screen-size_m) {
+
+  #{$wrap-class} {
+
+    .headline {
+      .fake-bottom-border {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: -4em;
+        width: 1000%;
+      }
+    }
+
+    .laundry-hacks {
+      .laundry-hack {
+        .fake-bottom-border {
+          padding-top: em( 0px, $max-font-size_m );
+          padding-bottom: em( 12px, $max-font-size_m );
+          padding-left: $col-right-horz-padding;
+          padding-right: $col-right-horz-padding;
+        }
+      }
+    }
+
+  }
+
+}
+
+@media screen and (min-width: $min-screen-size_d) {
+  #{$wrap-class} {
+
+    .headline--copy {
+      br {
+        display: block;
+      }
+    }
+    // force content column
+    article {
+      padding-left: $content-padding_d;
+      padding-right: $content-padding_d;
+    }
+
+    .laundry-hacks {
+      .laundry-hack {
+        .col-sm-6 {
+          padding-left: 20px;
+          &:first-child {
+            padding-right: 20px;
+            padding-left: 15px; // reset to original
+          }
+        } // .col-sm-6
+
+        //-------------------------------
+        // individualized top padding because they're all different
+        //-------------------------------
+        &--01 {
+          .col-right {
+            padding-top: em( 32px, $max-font-size_d );
+          }
+        }
+        &--02 {
+          .col-right {
+            padding-top: em( 48px, $max-font-size_d );
+          }
+        }
+        &--03 {
+          .col-right {
+            padding-top: em( 118px, $max-font-size_d );
+          }
+        }
+        &--04 {
+          .col-right {
+            padding-top: em( 112px, $max-font-size_d );
+          }
+        }
+        &--05 {
+          .col-right {
+            padding-top: em( 85px, $max-font-size_d );
+          }
+        }
+        &--06 {
+          .col-right {
+            padding-top: em( 75px, $max-font-size_d );
+          }
+        }
+
+        .fake-bottom-border {
+          padding-top: 15px;
+
+        }
+
+
+      } // .laundry-hack
+
+
+    } // .laundry-hacks
+
+
+    .brand-logos {
+      .brand-logos--wrapper {
+        width: auto;
+      }
+    }
+
+  } // #{$wrap-class}
+}

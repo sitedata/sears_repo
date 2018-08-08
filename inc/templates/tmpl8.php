@@ -41,9 +41,9 @@ Add CSS file, if any.
     <meta name="keywords" content="">
     <meta name="description" content="Shop the Sears Hometown Store in Champaign, IL for all of the top home appliance brands, consumer electronics, tools and lawn and garden equipment. Buy online or in your local store today!">
     <meta name="google-site-verification">
-    <link rel="stylesheet" type="text/css" href="//cdn.nextopia.net/v1.5.1/f3943ede84adf08369ffe7f2505c8753.css">
-    <script type="text/javascript" async="" src="//d1m6l9dfulcyw7.cloudfront.net/uxa/d52001a09fcf9.js"></script>
-    <script async="" src="https://script.hotjar.com/modules-cf5028eda4f4b4aeb82e5b7555a3b16e.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.nextopia.net/v1.5.1/f3943ede84adf08369ffe7f2505c8753.css"> -->
+    <!-- <script type="text/javascript" async="" src="//d1m6l9dfulcyw7.cloudfront.net/uxa/d52001a09fcf9.js"></script> -->
+    <!-- <script async="" src="https://script.hotjar.com/modules-cf5028eda4f4b4aeb82e5b7555a3b16e.js"></script> -->
     <style type="text/css">
     iframe#_hjRemoteVarsFrame {
         display: none !important;
@@ -53,8 +53,8 @@ Add CSS file, if any.
         pointer-events: none !important;
     }
     </style>
-    <script type="text/javascript" async="" src="//d1m6l9dfulcyw7.cloudfront.net/uxa/d52001a09fcf9.js"></script>
-    <link type="text/css" rel="stylesheet" href="//staticw2.yotpo.com/c6uBGoPzVIClm5p8CzodfAv43cn9Vblqq28znm3V/widget.css?widget_version=2018-07-11_08-23-59">
+    <!-- <script type="text/javascript" async="" src="//d1m6l9dfulcyw7.cloudfront.net/uxa/d52001a09fcf9.js"></script> -->
+    <!-- <link type="text/css" rel="stylesheet" href="//staticw2.yotpo.com/c6uBGoPzVIClm5p8CzodfAv43cn9Vblqq28znm3V/widget.css?widget_version=2018-07-11_08-23-59"> -->
 </head>
 
 <body class="seo-support" style="" data-bronto-carttarget="cartContainer">

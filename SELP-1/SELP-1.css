@@ -1,0 +1,215 @@
+[class*=SEARS-] {
+  font-size: calc(1.49031vw + 5.231px); }
+
+@media screen and (min-width: 992px) {
+  [class*=SEARS-] {
+    font-size: calc(0.75431vw + 6.51724px); } }
+
+@media screen and (min-width: 1921px) {
+  [class*=SEARS-] {
+    font-size: 21px; } }
+
+[class*=SEARS-] .headline .headline--copy {
+  font-size: 1.19em;
+  padding: 1.5em 2em 0.75em 2em; }
+
+[class*=SEARS-] h3 {
+  font-size: 2.44em;
+  line-height: 1.2em;
+  margin-top: 0; }
+
+[class*=SEARS-] hr {
+  border-color: #e0e0e0; }
+
+[class*=SEARS-] .fake-bottom-border {
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-bottom: 10px; }
+
+[class*=SEARS-] .brand-logos {
+  text-align: left; }
+  [class*=SEARS-] .brand-logos .brand-logos--col {
+    padding: 0 0 0 0; }
+  [class*=SEARS-] .brand-logos .brand-logos--wrapper {
+    display: table;
+    margin: 0 auto; }
+  [class*=SEARS-] .brand-logos .brand-logo {
+    display: table-cell;
+    padding: 10px 20px;
+    width: 25%;
+    text-align: center; }
+    [class*=SEARS-] .brand-logos .brand-logo img {
+      width: auto;
+      max-width: 100%;
+      height: auto; }
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e0001e;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 1.59em;
+    padding: 0 1.63em 0 0.815em; }
+    [class*=SEARS-] .brand-logos .btn--shop-now span {
+      color: #fff;
+      font-weight: 600; }
+    [class*=SEARS-] .brand-logos .btn--shop-now :after {
+      content: " ";
+      position: absolute;
+      border-right: none;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 0.37em solid transparent;
+      border-left-color: #FFF;
+      border-left-width: 0.703em;
+      right: 0.259em; }
+
+@media screen and (min-width: 992px) {
+  [class*=SEARS-] h3 {
+    font-size: 2.1em; }
+  [class*=SEARS-] .brand-logos {
+    text-align: center; }
+    [class*=SEARS-] .brand-logos .brand-logos--heading {
+      font-size: 0.857em;
+      line-height: 1.2em; }
+    [class*=SEARS-] .brand-logos .brand-logos--wrapper {
+      margin: 0 0 0 auto; }
+    [class*=SEARS-] .brand-logos .brand-logos--col_right .brand-logos--wrapper {
+      margin: 0 auto 0 0; }
+    [class*=SEARS-] .brand-logos .brand-logo {
+      width: auto; }
+      [class*=SEARS-] .brand-logos .brand-logo img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    [class*=SEARS-] .brand-logos .btn--shop-now {
+      font-size: 1.198em;
+      padding-left: 0.715em;
+      padding-right: 1.431em; }
+    [class*=SEARS-] .brand-logos .btn--shop-now :after {
+      border-width: 0.358em;
+      border-left-width: 0.596em; } }
+
+.SELP-1 {
+  padding-left: 5px;
+  padding-right: 5px; }
+  .SELP-1 article,
+  .SELP-1 #hero .container {
+    padding-left: 57px;
+    padding-right: 57px; }
+  .SELP-1 h2 {
+    font-size: 44px; }
+  .SELP-1 h3,
+  .SELP-1 .h3 {
+    font-size: 24px; }
+  .SELP-1 .font--900 {
+    font-weight: 900; }
+  .SELP-1 .headline--copy {
+    line-height: 1.4em; }
+    .SELP-1 .headline--copy br {
+      display: none; }
+  .SELP-1 .refrigerator-essentials .laundry-hack h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em; }
+  .SELP-1 .refrigerator-essentials .laundry-hack p {
+    line-height: 1.8em; }
+    .SELP-1 .refrigerator-essentials .laundry-hack p .sticker--link {
+      text-decoration: underline; }
+  .SELP-1 .refrigerator-essentials .laundry-hack .col-right {
+    padding-left: 1.25em;
+    padding-right: 1.25em; }
+  .SELP-1 .refrigerator-styles ul {
+    padding-top: 5px;
+    padding-left: 20px; }
+  .SELP-1 .refrigerator-features__list {
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .SELP-1 .refrigerator-guides .refrigerator-guide__idea {
+    font-size: 36px; }
+  .SELP-1 .refrigerator-guides h3 {
+    font-size: 41px; }
+  .SELP-1 .refrigerator-guides .refrigerator-guide footer {
+    margin-top: 30px; }
+    .SELP-1 .refrigerator-guides .refrigerator-guide footer .refrigerator-guide__link {
+      font-size: 24px; }
+  .SELP-1 .brand-logos .brand-logos--wrapper {
+    width: 100%; }
+  .SELP-1 .tip-box,
+  .SELP-1 .tipBoxContainer {
+    height: 130px;
+    margin-top: 10%; }
+  .SELP-1 .tip-box__tall,
+  .SELP-1 .tipBoxContainer2 {
+    height: 170px; }
+  .SELP-1 .tip-box__left,
+  .SELP-1 .tipBoxDarkerBlue {
+    text-transform: uppercase;
+    background-color: #102869;
+    /*width: 15%;*/
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: inherit;
+    font-size: 31px;
+    padding-top: 50px; }
+  .SELP-1 .tipBoxDarkerBlue2 {
+    text-transform: uppercase;
+    background-color: #102869;
+    /*width: 15%;*/
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: inherit;
+    font-size: 31px;
+    padding-top: 60px; }
+  .SELP-1 .tip-box__right,
+  .SELP-1 .tipBoxLighterBlue {
+    background-color: #d2daee;
+    color: #000;
+    /*width: 85%;*/
+    height: inherit;
+    padding: 3% 25px 0px;
+    font-weight: bold; }
+
+@media screen and (max-width: 991px) {
+  .SELP-1 .headline .fake-bottom-border {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -4em;
+    width: 1000%; }
+  .SELP-1 .laundry-hacks .laundry-hack .fake-bottom-border {
+    padding-top: 0em;
+    padding-bottom: 0.6em;
+    padding-left: 1.25em;
+    padding-right: 1.25em; } }
+
+@media screen and (min-width: 992px) {
+  .SELP-1 .headline--copy br {
+    display: block; }
+  .SELP-1 article {
+    padding-left: 57px;
+    padding-right: 57px; }
+  .SELP-1 .laundry-hacks .laundry-hack .col-sm-6 {
+    padding-left: 20px; }
+    .SELP-1 .laundry-hacks .laundry-hack .col-sm-6:first-child {
+      padding-right: 20px;
+      padding-left: 15px; }
+  .SELP-1 .laundry-hacks .laundry-hack--01 .col-right {
+    padding-top: 1.52381em; }
+  .SELP-1 .laundry-hacks .laundry-hack--02 .col-right {
+    padding-top: 2.28571em; }
+  .SELP-1 .laundry-hacks .laundry-hack--03 .col-right {
+    padding-top: 5.61905em; }
+  .SELP-1 .laundry-hacks .laundry-hack--04 .col-right {
+    padding-top: 5.33333em; }
+  .SELP-1 .laundry-hacks .laundry-hack--05 .col-right {
+    padding-top: 4.04762em; }
+  .SELP-1 .laundry-hacks .laundry-hack--06 .col-right {
+    padding-top: 3.57143em; }
+  .SELP-1 .laundry-hacks .laundry-hack .fake-bottom-border {
+    padding-top: 15px; }
+  .SELP-1 .brand-logos .brand-logos--wrapper {
+    width: auto; } }

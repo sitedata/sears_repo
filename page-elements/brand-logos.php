@@ -14,6 +14,8 @@ $brand_logos_heading = isset( $brand_logos_heading ) ?
 $brand_logos_heading_wrapper_classes = isset( $brand_logos_heading_wrapper_classes ) ?
   ' ' . $brand_logos_heading_wrapper_classes : '';
 
+$shop_now_url = isset( $shop_now_url ) ? $shop_now_url : '#';
+
 $logos = isset( $logos ) ? $logos :
   array(
     'Kenmore' => '01_Kenmore.png',
@@ -59,7 +61,7 @@ $i = 0;
           </div>
           <div class="row">
             <div class="col-xs-12 padding-vert-xl text-align-center">
-              <a href="#" class="btn btn-lg btn--shop-now"><span>shop</span>now</a>
+              <a href="<?php echo $shop_now_url ?>" data-href="<?php echo $shop_now_url ?>" class="btn btn-lg btn--shop-now"><span>shop</span>now</a>
             </div>
           </div>
         </section><!-- .col-xs-12 -->
