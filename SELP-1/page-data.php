@@ -145,7 +145,7 @@ $data = array(
 				'pre' => 'Refrigerated Recipe Idea:',
 				'headline' => 'No-Bake Berry Fridge Cake',
 				'copy' => 'Delicious doesn’t need to be baked! Use your refrigerator to whip up this tasty berry delight.',
-				'link-text' => 'Download DIY PDF',
+				'link-text' => 'Download Recipe PDF',
 			),
 			array(
 				'img' => 'chocolate-refrigerator-cookies-recipe.jpg',
@@ -154,7 +154,7 @@ $data = array(
 				'pre' => 'Refrigerated Recipe Idea:',
 				'headline' => 'Chocolate Refrigerator Cookies',
 				'copy' => 'Tasty chocolate and peanut butter cookies that are super simple to make. ',
-				'link-text' => 'Download DIY PDF',
+				'link-text' => 'Download Recipe PDF',
 			),
 		),
 	),
