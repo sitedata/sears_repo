@@ -98,6 +98,10 @@ $guide_h3_d: 41px;
         margin-top: 30px;
         .refrigerator-guide__link {
           font-size: $h3_d;
+
+          &--text {
+            vertical-align: middle;
+          }
         }
       }
     }

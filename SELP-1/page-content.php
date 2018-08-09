@@ -53,7 +53,7 @@ $d = $data['keep-it-cool'];
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-12 fake-bottom-border">
+      <div class="col-xs-12 fake-bottom-border">
         <hr class="bordered--bottom bordered--sm">
       </div>
     </div>
@@ -75,7 +75,7 @@ $d = $data['refrigerator-styles'];
 // lazy
 $img = $img_dir . $row['img'];
 ?>
-      <section class="col-xs-4 refrigerator-style refrigerator-style--<?php printf( "%02d", $i + 1 ) ?>">
+      <section class="col-xs-12 col-md-4 refrigerator-style refrigerator-style--<?php printf( "%02d", $i + 1 ) ?>">
 
           <header>
             <a href="<?php echo $row['url'] ?>" data-href="<?php echo $row['url'] ?>" class="refrigerator-style__link">
@@ -94,7 +94,7 @@ $img = $img_dir . $row['img'];
 <?php endforeach; ?>
     </div><!-- div.row -->
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-md-6">
         <aside class="tip-box tipBoxContainer">
           <div class="Zcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
           <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">
@@ -136,7 +136,7 @@ $d = $data['refrigerator-features'];
       </section>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-md-6">
         <aside class="tip-box tip-box__tall tipBoxContainer2">
           <div class="Xcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
           <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">

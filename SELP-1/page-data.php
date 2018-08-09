@@ -148,7 +148,7 @@ $data = array(
 				'link-text' => 'Download Recipe PDF',
 			),
 			array(
-				'img' => 'chocolate-refrigerator-cookies-recipe.jpg',
+				'img' => 'chocolate-refrigerator-cookies-recipe.png',
 				'alt' => 'Chocolate Refrigerator Cookies Recipe',
 				'url' => 'chocolate-refrigerator-cookies-recipe.pdf',
 				'pre' => 'Refrigerated Recipe Idea:',

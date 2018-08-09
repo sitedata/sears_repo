@@ -15,11 +15,11 @@ $type = isset( $type ) ? $type : 'recipe';
 
   <div class="row">
   <?php foreach ( $d['items'] as $row ): ?>
-    <section class="col-xs-12 col-md-6 refrigerator-guide">
-      <div class="col-xs-6">
+    <section class="col-xs-12 col-md-6 refrigerator-guide padding-vert-lg">
+      <div class="col-xs-12 col-md-6">
         <img src="<?php echo $img_dir . $row['img'] ?>" alt="<?php $row['alt'] ?>" class="img-responsive width100percent">
       </div>
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-md-6">
         <header>
           <span class="font--primary3 text-uppercase refrigerator-guide__idea"><?php echo $row['pre'] ?></span>
           <h3 class="font--black font--900 text-uppercase"><?php echo $row['headline'] ?></h3>

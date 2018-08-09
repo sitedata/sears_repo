@@ -10,6 +10,7 @@ function make_page( $content_file, $options = array() ) {
 		'css' => false,
 		'js' => false,
 		'template' => 'tmpl8.php',
+		'inline_css' => true,
 	);
 
 	$opts = array_merge( $_defaults, $options );
@@ -23,6 +24,13 @@ function make_page( $content_file, $options = array() ) {
 
 	// here's where we buffer output and output the content area to a file
 	ob_start(); // start buffering
+
+	if ( false !== $opts['css'] && false !== $opts['inline_css'] ) {
+		echo '<style type="text/css">' . "\n";
+		include( SEARS_BASE_PATH . $opts['css'] );
+		echo "\n</style>\n";
+	}
+
 	include( $content_file ); // include the content file
 	$output = ob_get_contents(); // store the buffered output
 	file_put_contents( get_output_file_name( $content_file ), $output ); // write it to a file (and fail silently)

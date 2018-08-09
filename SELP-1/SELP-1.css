@@ -129,6 +129,8 @@
     margin-top: 30px; }
     .SELP-1 .refrigerator-guides .refrigerator-guide footer .refrigerator-guide__link {
       font-size: 24px; }
+      .SELP-1 .refrigerator-guides .refrigerator-guide footer .refrigerator-guide__link--text {
+        vertical-align: middle; }
   .SELP-1 .brand-logos .brand-logos--wrapper {
     width: 100%; }
   .SELP-1 .tip-box,
