@@ -1,15 +1,24 @@
 <?php
 
-if ( defined( 'SEARS_PROJECT_PATH' ) ) {
+if ( defined( 'SEARS_USE_SANDBOX_ASSETS' ) && SEARS_USE_SANDBOX_ASSETS ) {
+  $logo_dir = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/logos/';
+}
+else if ( defined( 'SEARS_PROJECT_PATH' ) ) {
   $logo_dir = get_relative_path( SEARS_PROJECT_PATH . '/img/logos/' );
 }
 else {
   $logo_dir = '/assets/cms/brand-logos/';
 }
 
+$brand_logos_link_url = isset( $brand_logos_link_url ) ? $brand_logos_link_url : '#';
+
 $brand_logos_heading = isset( $brand_logos_heading ) ?
   replace_non_display_chars( $brand_logos_heading ) :
-  "Shop the latest <a href=\"#\" class=\"font--primary2 font--700\">appliances</a> for the best in kitchen solutions. We have unbeatable prices on the best brands available.";
+  'Shop the latest <a href="%1$s" data-href="%1$s"class="font--primary2 font--700">appliances</a> for the best in kitchen solutions. We have unbeatable prices on the best brands available.';
+
+if ( false !== strpos( $brand_logos_heading, '%1$s') ) {
+  $brand_logos_heading = sprintf( $brand_logos_heading, $brand_logos_link_url );
+}
 
 $brand_logos_heading_wrapper_classes = isset( $brand_logos_heading_wrapper_classes ) ?
   ' ' . $brand_logos_heading_wrapper_classes : '';
@@ -46,7 +55,7 @@ $i = 0;
 ?>
 <?php foreach ( $logos as $brand => $logo ): ?>
   <?php if ( $i == 0 || $i == ceil(count( $logos ) / 2) ): ?>
-            <div class="col-xs-12 col-sm-12 col-md-6 Xcol-lg-6 brand-logos--col<?php if ( $i !== 0 ): echo ' brand-logos--col_right'; endif; ?>">
+            <div class="col-xs-12 col-sm-12 col-md-6 brand-logos--col<?php if ( $i !== 0 ): echo ' brand-logos--col_right'; endif; ?>">
               <div class="brand-logos--wrapper">
   <?php endif; ?>
                 <div class="brand-logo">
