@@ -169,7 +169,7 @@ $data = array(
 			array(
 				'img' => 'framed-art-gallery-how-to.jpg',
 				'alt' => 'Framed Art Gallery How-To',
-				'url' => 'framed-art-gallery-how-to.pdf',
+				'url' => 'SEARS_DIY_Framed_Refrigerator_Gallery.pdf',
 				'pre' => 'DIY Idea:',
 				'headline' => 'Create a Framed Art Gallery',
 				'copy' => 'An easy framed gallery how-to for stainless steel (non–magnetic) refrigerators.',
@@ -178,7 +178,7 @@ $data = array(
 			array(
 				'img' => 'hanging-art-gallery-how-to.jpg',
 				'alt' => 'Hanging Art Gallery How-To',
-				'url' => 'hanging-art-gallery-how-to.pdf',
+				'url' => 'SEARS_DIY_Hanging_Refrigerator_Gallery.pdf',
 				'pre' => 'DIY Idea:',
 				'headline' => 'Create a Hanging Art Gallery',
 				'copy' => 'An easy hanging gallery how-to for stainless steel (non–magnetic) refrigerators.',
@@ -188,6 +188,7 @@ $data = array(
 	),
 
 );
+
 
 
 /**

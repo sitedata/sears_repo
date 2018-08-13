@@ -29,3 +29,11 @@ node_modules/
 
 # no unoptimized images
 */img/original/*
+
+# no archives or backups
+__ark/
+*/__ark/*
+bak_*
+bak\.*
+*\.bak
+*\.backup
