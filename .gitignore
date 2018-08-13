@@ -28,4 +28,4 @@ go-live/
 node_modules/
 
 # no unoptimized images
-img/original/
+*/img/original/*
