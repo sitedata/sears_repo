@@ -193,6 +193,9 @@ $data = array(
 /**
 Brand Logos
 */
-$brand_logos_heading = "Ready to learn more about fridges? Read our <a href=\"#\" data-href=\"#\" class=\"font--700 font--primary2\">buying guide</a>. Ready to shop fridges? We have unbeatable prices on the best brands available.";
+$brand_logos_link_url = '/buying-guide-refrigerators';
+$brand_logos_heading = 'Ready to learn more about fridges? Read our <a href="%1$s" data-href="%1$s" class="font--700 font--primary2">buying guide</a>. Ready to shop fridges? We have unbeatable prices on the best brands available.';
+
+$brand_logos_heading = sprintf( $brand_logos_heading, $brand_logos_link_url );
 
 $shop_now_url = 'http://www.searshometownstores.com/Refrigerators-Freezers';

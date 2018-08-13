@@ -13,10 +13,10 @@ else {
 $brand_logos_link_url = isset( $brand_logos_link_url ) ? $brand_logos_link_url : '#';
 
 $brand_logos_heading = isset( $brand_logos_heading ) ?
-  replace_non_display_chars( $brand_logos_heading ) :
+  $brand_logos_heading :
   'Shop the latest <a href="%1$s" data-href="%1$s"class="font--primary2 font--700">appliances</a> for the best in kitchen solutions. We have unbeatable prices on the best brands available.';
 
-if ( false !== strpos( $brand_logos_heading, '%1$s') ) {
+if ( false !== strpos( $brand_logos_heading, '%1$s' ) ) {
   $brand_logos_heading = sprintf( $brand_logos_heading, $brand_logos_link_url );
 }
 
