@@ -44,7 +44,7 @@ $logos = isset( $logos ) ? $logos :
           <!-- BRAND LOGOS HEADING -->
           <div class="row<?php echo $brand_logos_heading_wrapper_classes ?>">
             <div class="col-xs-12 padding-vert-xl">
-              <strong class="brand-logos--heading font--black"><?php echo $brand_logos_heading ?></strong>
+              <strong class="brand-logos--heading font--black font-18 lh-md"><?php echo $brand_logos_heading ?></strong>
             </div>
           </div>
 

@@ -42,11 +42,11 @@ $d = $data['keep-it-cool'];
         <img src="<?php echo $img_dir . $d['img'] ?>" alt="<?php echo $d['headline'] ?>" class="img-responsive width100percent">
       </div>
       <div class="col-xs-12 col-md-6">
-        <h2 class="font--400 font--primary2"><?php echo $d['headline'] ?></h2>
-        <p class="font--black"><?php echo $d['copy'] ?></p>
-        <aside class="tip-box tipBoxContainer">
-          <div class="Xcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
-          <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">
+        <h2 class="font--400 font--primary2 font-48"><?php echo $d['headline'] ?></h2>
+        <p class="font--black font-18 lh-sm"><?php echo $d['copy'] ?></p>
+        <aside class="tip-box">
+          <div class="tip-box__left">Tip</div>
+          <div class="tip-box__right font-18 ln-md">
             <?php echo $d['tip'] ?>
           </div>
         </aside>
@@ -65,7 +65,7 @@ $d = $data['refrigerator-styles'];
   <article class="container refrigerator-styles">
     <header class="row">
       <div class="col-xs-12">
-        <h2 class="font--400 font--primary2"><?php echo $d['headline'] ?></h2>
+        <h2 class="font--400 font--primary2 font-48"><?php echo $d['headline'] ?></h2>
         <p class="font--black"><?php echo $d['copy'] ?></p>
       </div>
     </header>
@@ -80,13 +80,13 @@ $img = $img_dir . $row['img'];
           <header>
             <a href="<?php echo $row['url'] ?>" data-href="<?php echo $row['url'] ?>" class="refrigerator-style__link">
               <img src="<?php echo $img ?>" class="width100percent" alt="<?php echo $row['alt'] ?>">
-              <h3 class="font--400 font--primary2"><?php echo $row['headline'] ?></h3>
+              <h3 class="font--400 font--primary2 font-24"><?php echo $row['headline'] ?></h3>
             </a>
           </header>
         <div class="refrigerator-style__list--wrap">
           <ul class="refrigerator-style__list">
           <?php foreach ( $row['list'] as $j => $li ): ?>
-            <li class="refrigerator-style__list--item"><?php echo $li ?></li>
+            <li class="refrigerator-style__list--item font-18 lh-md"><?php echo $li ?></li>
           <?php endforeach; ?>
           </ul>
         </div>
@@ -95,9 +95,9 @@ $img = $img_dir . $row['img'];
     </div><!-- div.row -->
     <div class="row">
       <div class="col-xs-12 col-md-6">
-        <aside class="tip-box tipBoxContainer">
-          <div class="Zcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
-          <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">
+        <aside class="tip-box">
+          <div class="tip-box__left">Tip</div>
+          <div class="tip-box__right font-18 lh-md">
             <?php echo $d['tip'] ?>
           </div>
         </aside>
@@ -120,7 +120,7 @@ $d = $data['refrigerator-features'];
   <article class="container refrigerator-features">
     <div class="row">
       <header class="col-xs-12">
-        <h2 class="font--400 font--primary2"><?php echo $d['headline'] ?></h2>
+        <h2 class="font--400 font--primary2 font-48"><?php echo $d['headline'] ?></h2>
       </header>
     </div>
     <div class="row">
@@ -128,8 +128,8 @@ $d = $data['refrigerator-features'];
         <ul class="refrigerator-features__list">
         <?php foreach( $d['features'] as $row ): ?>
           <li class="refrigerator-feature">
-            <span class="font--primary2 refrigerator-feature__name h3"><?php echo $row['headline'] ?></span>
-            <p class="font--black"><?php echo $row['copy'] ?></p>
+            <span class="font--primary2 refrigerator-feature__name font-24"><?php echo $row['headline'] ?></span>
+            <p class="font--black font-18 lh-md"><?php echo $row['copy'] ?></p>
           </li>
         <?php endforeach; ?>
         </ul>
@@ -137,9 +137,9 @@ $d = $data['refrigerator-features'];
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-6">
-        <aside class="tip-box tip-box__tall tipBoxContainer2">
-          <div class="Xcol-xs-2 tip-box__left tipBoxDarkerBlue">Tip</div>
-          <div class="Xcol-xs-10 tip-box__right tipBoxLighterBlue">
+        <aside class="tip-box Xtip-box__tall">
+          <div class="tip-box__left">Tip</div>
+          <div class="tip-box__right font-18 lh-md">
             <?php echo $d['tip'] ?>
           </div>
         </aside>

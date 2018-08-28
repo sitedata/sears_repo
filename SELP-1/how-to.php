@@ -9,7 +9,7 @@ $type = isset( $type ) ? $type : 'recipe';
   <header class="row">
     <div class="col-xs-12">
       <h2 class="font--400 font--primary2"><?php echo $d['headline'] ?></h2>
-      <p class="font--black"><?php echo $d['copy'] ?></p>
+      <p class="font--black font-18 lh-sm"><?php echo $d['copy'] ?></p>
     </div>
   </header>
 
@@ -21,8 +21,8 @@ $type = isset( $type ) ? $type : 'recipe';
       </div>
       <div class="col-xs-12 col-md-6">
         <header>
-          <span class="font--primary3 text-uppercase refrigerator-guide__idea"><?php echo $row['pre'] ?></span>
-          <h3 class="font--black font--900 text-uppercase"><?php echo $row['headline'] ?></h3>
+          <span class="font--primary3 text-uppercase refrigerator-guide__idea font-36"><?php echo $row['pre'] ?></span>
+          <h3 class="font--black font--900 text-uppercase font-40"><?php echo $row['headline'] ?></h3>
         </header>
         <p class="font--black"><?php echo $row['copy'] ?></p>
         <footer>
