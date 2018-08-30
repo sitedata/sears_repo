@@ -37,3 +37,6 @@ bak_*
 bak\.*
 *\.bak
 *\.backup
+
+# tmp directory for bundling assets
+purered/

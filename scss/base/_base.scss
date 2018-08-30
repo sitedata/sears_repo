@@ -1,0 +1,39 @@
+// --------------------------
+// Set base font sizes for our two breakpoints using CSS calc() so that
+// font-size will scale based on the screen width!
+// From here we can then just set the sizes of everything with EMs.
+// There's even a function in _functions.scss that will calculate the EMs
+// for you given a pixel measurement and the base font size!
+// --------------------------
+// #cms-content-1920-1920 {
+#{$base-selector} {
+  // font-size: calc(
+  //   $min-font-size_m + (20 - 10) * ((100vw - $min-screen-size_m) / (991 - 320))
+  //   );
+  font-size: calc-interpolation(
+    $min-screen-size_m,
+    $min-font-size_m,
+    $max-screen-size_m,
+    $max-font-size_m
+  );
+}
+@media screen and (min-width: $min-screen-size_d) {
+  // #cms-content-1920-1920 {
+  #{$base-selector} {
+    // font-size: calc(
+    //   $min-font-size_d + (21 - 14) * ((100vw - $min-screen-size_d) / ($max-screen-size_d - $min-screen-size_d))
+    // );
+    font-size: calc-interpolation(
+      $min-screen-size_d,
+      $min-font-size_d,
+      $max-screen-size_d,
+      $max-font-size_d
+    );
+  }
+}
+// @media screen and (min-width: 1921px}) {
+@media screen and (min-width: #{$max-screen-size_d + 1}) {
+  #{ $base-selector } {
+    font-size: $max-font-size_d;
+  }
+}

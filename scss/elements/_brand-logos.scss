@@ -1,0 +1,131 @@
+// NOTE:
+// be sure to add the $base-selector class to the parent container in your page_content.php!
+// otherwise, the shared style rules won't get applied
+#{ $base-selector } {
+
+  // *******************************
+  // BRAND LOGOS
+  // ********************************
+  .brand-logos {
+    text-align: left;
+
+    .brand-logos--col {
+      padding: 0 0 0 0;
+    }
+    .brand-logos--wrapper {
+      display: table;
+      margin: 0 auto;
+    }
+
+    .brand-logo {
+      display: table-cell;
+      padding: 10px 20px;
+      width: 25%;
+      text-align: center;
+
+      img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      }
+    }
+
+    .btn--shop-now {
+      background-color: $btn-color;
+      border-radius: 0;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      //  font-size is 54.73px in PSD
+      //  54px / 18px = 3em
+      font-size: 3em;
+      position: relative; //  so we can absolutely position the arrow!
+
+      letter-spacing: 0.02em;
+
+      //  86px / 54.73px = 1.59em
+      line-height: 1.59em;
+
+      //  88px / 54px = 1.63em
+      padding: 0 1.63em 0 0.815em;
+
+      span {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      :after {
+        content: " ";
+        position: absolute;
+        border-right: none;
+        top: 50%;
+        transform: translate( 0, -50% );
+        //  20px / 54px = 0.370em
+        border: 0.37em solid transparent;
+
+        border-left-color: #FFF;
+        //  38px / 54px = 0.703em
+        border-left-width: 0.703em;
+        //  14px / 54px = 0.259em
+        right: 0.259em;
+      }
+
+    } // .btn--shop-now
+
+  } // .brand-logos
+
+} // #{ $base-selector }
+
+
+@media screen and (min-width: 992px) {
+
+  #{ $base-selector } {
+
+    .brand-logos {
+      text-align: center;
+
+      .brand-logos--heading {
+       //  18px / 21px = 0.857em
+       font-size: 0.857em;
+       line-height: 1.2em;
+      }
+
+      .brand-logos--wrapper {
+        margin: 0 0 0 auto;
+      }
+
+      .brand-logos--col_right {
+        .brand-logos--wrapper {
+          margin: 0 auto 0 0;
+        }
+      }
+
+      .brand-logo {
+        width: auto;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .btn--shop-now {
+        //  25.16px / 21px = 1.198em
+        font-size: 1.198em;
+        //  18px / 25.16px = 0.715em
+        padding-left: 0.715em;
+        //  36px / 25.16px = 1.431em
+        padding-right: 1.431em;
+      }
+
+      .btn--shop-now :after {
+        //  9px / 25.16px = 0.358em
+        border-width: 0.358em;
+        //  15px / 25.16px = 0.596em
+        border-left-width: 0.596em;
+      }
+
+    } // .brand-logos
+
+  } // cms-content-1920-1920 a.k.a., $base-selector
+
+} // @media screen and (min-width: 992px)

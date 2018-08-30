@@ -1,0 +1,29 @@
+<div itemscope itemtype="http://schema.org/Recipe">
+  <link itemprop="url" href="http://allrecipes.com/recipe/12682/apple-pie-by-grandma-ople/" />
+  <meta itemprop="mainEntityOfPage" content="True" />
+  <img src="http://images.media-allrecipes.com/userphotos/720x405/736203.jpg" alt="Apple Pie by Grandma Ople" title="Apple Pie by Grandma Ople" itemprop="image" />
+  <h1 itemprop="name">Apple Pie by Grandma Ople</h1>
+  <div itemprop="description">"This was my grandmother's apple pie recipe.  I have never seen another one quite like it.  It will always be my favorite and has won me several first place prizes in local competitions.  I hope it becomes one of your favorites as well!"</div>
+
+Prep Time: <time itemprop="prepTime" datetime="PT30M">30 min</time>
+Cook Time: <time itemprop="cookTime" datetime="PT1H">1 hour</time>
+Total Time: <time itemprop="totalTime" datetime="PT1H30M">1 hour 30 min</time>
+Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span>
+
+Ingredients:
+<span itemprop="ingredients">1 recipe pastry for a 9 inch double crust pie</span>
+<span itemprop="ingredients">1/2 cup unsalted butter</span>
+<span itemprop="ingredients">3 tablespoons all-purpose flour</span>
+<span itemprop="ingredients">1/4 cup water</span>
+<span itemprop="ingredients">1/2 cup white sugar</span>
+<span itemprop="ingredients">1/2 cup packed brown sugar</span>
+<span itemprop="ingredients">8 Granny Smith apples - peeled, cored and sliced</span>
+
+  <ol itemprop="recipeInstructions">
+    <li>Preheat oven to 425 degrees F (220 degrees C).</li>
+    <li>Melt the butter in a saucepan. Stir in flour to form a paste.</li>
+
+  ...
+
+  </ol>
+</div>
