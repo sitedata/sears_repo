@@ -137,6 +137,9 @@ function element( $element_file_name, $vars = array() ) {
 	if ( !empty( $vars ) ) {
 		extract( $vars );
 	}
+	if ( !preg_match( '/.*\.php/', $element_file_name ) ) {
+		$element_file_name .= '.php';
+	}
 	if ( file_exists( SEARS_ELEMENT_PATH . '/' . $element_file_name ) ) {
 		include( SEARS_ELEMENT_PATH . '/'. $element_file_name );
 	}

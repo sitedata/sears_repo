@@ -2,6 +2,12 @@
 @import '_functions';
 @import '_mixins';
 
+// base
+
+// page elements
+
+
+
 // --------------------------
 // Set base font sizes for our two breakpoints using CSS calc() so that
 // font-size will scale based on the screen width!
@@ -72,7 +78,7 @@
   }
 
   hr {
-    border-color: #e0e0e0;
+    border-color: $hr-color;
   }
 
   // those damn borders that don't obey conventional border rules
@@ -111,7 +117,7 @@
     }
 
     .btn--shop-now {
-      background-color: #e0001e;
+      background-color: $btn-color;
       border-radius: 0;
       color: #fff;
       font-family: Arial, sans-serif;

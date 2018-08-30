@@ -15011,6 +15011,9 @@ a.thumbnail.active {
     border-radius: 3px
 }
 
+/**
+@font-size
+*/
 .font-8 {
     font-size: 8px !important
 }
@@ -15124,7 +15127,9 @@ a.thumbnail.active {
         font-size: 48px !important
     }
 }
-
+/**
+@line-height
+*/
 .lh-xs {
     line-height: 1em
 }
