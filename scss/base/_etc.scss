@@ -1,0 +1,62 @@
+// NOTE:
+// be sure to add this class to the parent container in your page_content.php!
+// otherwise, the shared style rules won't get applied
+// .SEARS--landing-page,
+// adding this id just in case so that anyone not reading the above will be fine
+#{ $base-selector } {
+
+  // text below hero
+  .headline {
+    .headline--copy {
+      //  25px / 21px = 1.19em
+      font-size: 1.19em;
+      padding: em( 30px, $max-font-size_m ) 2em em( 15px, $max-font-size_m ) 2em;
+    }
+  }
+
+  h3 {
+    // 44px/18px = 2.44em
+    font-size: 2.44em;
+    line-height: 1.2em; // based on this critter's font-size, not the ancestor! */
+    // NOTE: the following line was needed for SEARS-006005_Kitchen-Hacks but not
+    // necessarily needed for all pages
+    // leaving it here as a reminder that this technique may be needed on
+    // some pages
+    // margin-right: -2em; // to allow too big text to sit on one line! */
+    margin-top: 0;
+  }
+
+  hr {
+    border-color: $hr-color;
+  }
+
+  // those damn borders that don't obey conventional border rules
+  .fake-bottom-border {
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 10px;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  #{ $base-selector } {
+
+    h3 {
+      //  44px / 21px = 2.095em
+      font-size: 2.1em;
+    }
+
+  }
+
+}
+
+//=======================
+// Additional font-sizes
+//=======================
+
+// Nope, this font size doesn't change between desktop and mobile.
+.font-31 {
+  font-size: 31px !important;
+}
