@@ -31,16 +31,67 @@ if ( false !== strpos( $brand_logos['copy'], '%1$s' ) ) {
 
 $logos = isset( $logos ) ? $logos :
   array(
-    'Kenmore' => 'kenmore.svg',
-    'Kenmore Elite' => 'kenmore-elite.svg',
-  	'Whirlpool' => 'whirlpool.svg',
-  	'Frigidaire' => 'frigidaire.svg',
-  	'Samsung' => 'samsung.svg',
-    'Maytag' => 'maytag.png',
-    'LG' => 'lg.svg',
-    'KitchenAid' => 'kitchenAid.svg',
-    'GE' => 'ge.svg',
-  	'Bosch' => 'bosch.svg',
+    'Kenmore' => array(
+      'src' => 'kenmore.svg',
+      'w' => '118',
+      'h' => '25',
+    ),
+
+    'Kenmore Elite' => array(
+      'src' => 'kenmore-elite.svg',
+      'w' => '176',
+      'h' => '25',
+    ),
+
+  	'Whirlpool' => array(
+      'src' => '',
+      'w' => '123',
+      'h' => '38',
+    ),
+    'whirlpool.svg',
+  	'Frigidaire' => array(
+      'src' => 'frigidaire.svg',
+      'w' => '193',
+      'h' => '21',
+    ),
+
+  	'Samsung' => array(
+      'src' => 'samsung.svg',
+      'w' => '151',
+      'h' => '53',
+    ),
+
+    'Maytag' => array(
+      'src' => 'maytag.png',
+      'w' => '126',
+      'h' => '48',
+    ),
+
+    'LG' =>
+    array(
+      'src' => 'lg.svg',
+      'w' => '93',
+      'h' => '41',
+    ),
+
+    'KitchenAid' => array(
+      'src' => 'kitchenAid.svg',
+      'w' => '199',
+      'h' => '22',
+    ),
+
+    'GE' => array(
+      'src' => 'ge.svg',
+      'w' => '59',
+      'h' => '58',
+    ),
+
+  	'Bosch' => array(
+      'src' => 'bosch.svg',
+      'w' => '143',
+      'h' => '33',
+    ),
+
 
 // PNGs
     // 'Kenmore' => 'kenmore.png',
@@ -74,20 +125,18 @@ $logos = isset( $logos ) ? $logos :
 // place to store index since $logos is an associative array
 $i = 0;
 ?>
+            <div class="brand-logos--wrapper">
 <?php foreach ( $logos as $brand => $logo ): ?>
-  <?php if ( $i == 0 || $i == ceil(count( $logos ) / 2) ): ?>
-            <div class="col-xs-12 col-sm-12 col-md-6 brand-logos--col<?php if ( $i !== 0 ): echo ' brand-logos--col_right'; endif; ?>">
-              <div class="brand-logos--wrapper">
-  <?php endif; ?>
                 <div class="brand-logo">
-                  <img src="<?php echo $brand_logos['logo_dir'] . $logo ?>" alt="<?php echo $brand ?>" class="">
+                  <img src="<?php echo $brand_logos['logo_dir'] . $logo['src'] ?>"
+                  width="<?php echo $logo['w'] ?>"
+                  height="<?php echo $logo['h'] ?>"
+                  alt="<?php echo $brand ?>"
+                  class="">
                 </div>
-  <?php if ( $logo === end( $logos ) || $i == (( count( $logos ) / 2 ) - 1) ): ?>
-              </div>
-            </div>
-  <?php endif; ?>
   <?php $i++; ?>
 <?php endforeach; ?>
+            </div>
           </div>
           <div class="row">
             <div class="col-xs-12 padding-vert-xl text-align-center">
