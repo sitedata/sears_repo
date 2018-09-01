@@ -44,11 +44,11 @@ $logos = isset( $logos ) ? $logos :
     ),
 
   	'Whirlpool' => array(
-      'src' => '',
+      'src' => 'whirlpool.svg',
       'w' => '123',
       'h' => '38',
     ),
-    'whirlpool.svg',
+
   	'Frigidaire' => array(
       'src' => 'frigidaire.svg',
       'w' => '193',
@@ -134,6 +134,11 @@ $i = 0;
                   alt="<?php echo $brand ?>"
                   class="">
                 </div>
+  <?php if ( $i === 3 || $i === 7 ): ?>
+    <br class="md-hide">
+  <?php elseif ( $i === 5 && false ): ?>
+    <br class="md-show">
+  <?php endif; ?>
   <?php $i++; ?>
 <?php endforeach; ?>
             </div>
