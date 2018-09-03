@@ -4,6 +4,7 @@ Put the variables storing the copy, et al, into a separate file.
 */
 require_once( dirname( __FILE__ ) . '/page-data.php' );
 
+
 /**
 IMPORTANT!
 HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!

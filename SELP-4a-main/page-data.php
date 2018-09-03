@@ -15,24 +15,38 @@ http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logo
 // get the directory name
 $slug = basename( dirname( __FILE__ ) );
 
-$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/chili/' );
+$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
+
 
 $prod_img_dir = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-08-08_Refrigerator-Essentials/';
 
 // $img_dir = $prod_img_dir;
 
+// butternut-squash-chicken-chili_725w.jpg
+// butternut-squash-chicken-chili_800w.jpg
+// butternut-squash-chicken-chili_991w.jpg
+// quick-easy-meal-planning-ideas_800w.jpg
+// quick-easy-meal-planning-ideas_991w.jpg
+// quick-easy-meal-planning-ideas_1550w.jpg
+// salmon-and-veggies_725w.jpg
+// salmon-and-veggies_800w.jpg
+// salmon-and-veggies_991w.jpg
+// time-saving-ideas_725w.jpg
+// time-saving-ideas_800w.jpg
+// time-saving-ideas_991w.jpg
+
 $hero = array(
 	'picture' => array(
 		array(
 			'media' => '(max-width:991px)',
-			'srcset' => 'butternut-squash-chicken-chili_991w.jpg',
+			'srcset' => 'quick-easy-meal-planning-ideas_991w.jpg',
 		),
 		array(
 			'media' => '(min-width:992px)',
-			'srcset' => 'butternut-squash-chicken-chili_1550w.jpg',
+			'srcset' => 'quick-easy-meal-planning-ideas_1550w.jpg',
 		),
 	),
-	'img' => 'butternut-squash-chicken-chili_991w.jpg',
+	'img' => 'quick-easy-meal-planning-ideas_991w.jpg',
 	'alt' => 'Butternut Squash Chicken Chili topped with avocado slices',
 	'h1' => 'Easy One Pot Meal Recipe &mdash; <span itemprop="name">Butternut Squash Chicken Chili</span>',
 	'copy' => 'What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!',

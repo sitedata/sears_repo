@@ -5,7 +5,7 @@ if ( !defined( 'SEARS_USE_SANDBOX_ASSETS' ) ) {
   define( 'SEARS_USE_SANDBOX_ASSETS', false );
 }
 
-require_once( $_SERVER['DOCUMENT_ROOT'] . '/inc/bs.php' );
+// require_once( $_SERVER['DOCUMENT_ROOT'] . '/inc/bs.php' );
 
 $slug = basename( dirname( __FILE__ ) );
 
