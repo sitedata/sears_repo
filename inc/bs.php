@@ -42,7 +42,6 @@ define( 'SEARS_LOCAL_BRAND_LOGOS_DIR',
 define( 'SEARS_LOCAL_ICONS_DIR',
 	SEARS_IMG_BASE_PATH . '/icons/' );
 
-
 /**
 If the path the current landing page was not defined, define it here!
 */
