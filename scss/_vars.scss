@@ -25,5 +25,22 @@ $max-screen-size_d: 1920px !default;
 $sears-blue: #102869;
 $light-blue: #d2daee;
 
+// some fucking random blue the designers came up with
+$blue: #2159bb;
+// a more different tip box blue for some reason
+$light-blue-too: #dae2f1;
+
 $btn-color: #e0001e;
 $hr-color: #e0e0e0;
+
+
+//------------------------------------------------------------------------
+// Breakpoints!
+// These are the breakpoints defined by Sears CSS.
+//------------------------------------------------------------------------
+$breakpoints: (
+  xs: (0px, 767px),
+  sm: (768px, 991px),
+  md: (992px, 1199px),
+  lg: (1200px, null)
+) !default;

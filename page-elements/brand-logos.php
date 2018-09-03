@@ -1,7 +1,7 @@
 <?php
-
-$brand_logos = isset( $brand_logos ) ? $brand_logos : array();
-$brand_logos = is_array( $brand_logos ) ? $brand_logos : compact( 'brand_logos' );
+/**
+Elements now expect to receive an array named $data!
+*/
 
 $_defaults = array(
   'headline' => 'Ready to get started?',
@@ -9,26 +9,22 @@ $_defaults = array(
   'link_url' => '#',
   'classes' => '',
   'btn_url' => '#',
-  'logo_dir' => '/assets/cms/brand-logos/',
+  'logo_dir' => get_brand_logos_dir(),
 );
 
-$brand_logos = array_merge( $_defaults, $brand_logos );
+$data = array_merge( $_defaults, $data );
 
-if ( defined( 'SEARS_USE_SANDBOX_ASSETS' ) && SEARS_USE_SANDBOX_ASSETS ) {
-  $brand_logos['logo_dir'] = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/logos/';
-}
-// else if ( defined( 'SEARS_PROJECT_PATH' ) ) {
-//   $logo_dir = get_relative_path( SEARS_PROJECT_PATH . '/img/logos/' );
-// }
-// else {
-//   $logo_dir = '/assets/cms/brand-logos/';
-// }
-
-
-if ( false !== strpos( $brand_logos['copy'], '%1$s' ) ) {
-  $brand_logos['copy'] = sprintf( $brand_logos['copy'], $brand_logos['link_url'] );
+/**
+In the before times, the below was to allow for links in the copy above the
+brand logos box.
+*/
+if ( false !== strpos( $data['copy'], '%1$s' ) ) {
+  $data['copy'] = sprintf( $data['copy'], $data['link_url'] );
 }
 
+/**
+NOTE: width and height are based on values from PSDs!
+*/
 $logos = isset( $logos ) ? $logos :
   array(
     'Kenmore' => array(
@@ -111,12 +107,12 @@ $logos = isset( $logos ) ? $logos :
         <section class="container brand-logos">
 
           <!-- BRAND LOGOS HEADING -->
-          <div class="row<?php echo $brand_logos['classes'] ?>">
+          <div class="row<?php echo $data['classes'] ?>">
             <div class="col-xs-12 padding-vert-xl text-align-center">
-            <?php if ( !empty( $brand_logos['headline'] ) ): ?>
-              <h2 class="brand-logos__headline font-40 font--700 lh-sm"><?php echo $brand_logos['headline'] ?></h2>
+            <?php if ( !empty( $data['headline'] ) ): ?>
+              <h2 class="brand-logos__headline font-40 font--700 lh-sm"><?php echo $data['headline'] ?></h2>
             <?php endif; ?>
-              <p class="brand-logos__copy font--black font-31 lh-md"><?php echo $brand_logos['copy'] ?></p>
+              <p class="brand-logos__copy font--black font-31 lh-md"><?php echo $data['copy'] ?></p>
             </div>
           </div>
 
@@ -128,25 +124,30 @@ $i = 0;
             <div class="brand-logos--wrapper">
 <?php foreach ( $logos as $brand => $logo ): ?>
                 <div class="brand-logo">
-                  <img src="<?php echo $brand_logos['logo_dir'] . $logo['src'] ?>"
+                  <img src="<?php echo $data['logo_dir'] . $logo['src'] ?>"
                   width="<?php echo $logo['w'] ?>"
                   height="<?php echo $logo['h'] ?>"
                   alt="<?php echo $brand ?>"
                   class="">
                 </div>
-  <?php if ( $i === 3 || $i === 7 ): ?>
-    <br class="md-hide">
-  <?php elseif ( $i === 5 && false ): ?>
-    <br class="md-show">
-  <?php endif; ?>
-  <?php $i++; ?>
+<?php
+/**
+Use linebreaks that display at different breakpoints to conform to design.
+*/
+?>
+<?php if ( $i === 3 || $i === 7 ): ?>
+                <br class="md--hide">
+<?php elseif ( $i === 5 && false ): ?>
+                <br class="md--show">
+<?php endif; ?>
+<?php $i++; ?>
 <?php endforeach; ?>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 padding-vert-xl text-align-center">
-              <a href="<?php echo $brand_logos['btn_url'] ?>"
-                data-href="<?php echo $brand_logos['btn_url'] ?>"
+              <a href="<?php echo $data['btn_url'] ?>"
+                data-href="<?php echo $data['btn_url'] ?>"
                 class="btn btn-lg btn--shop-now"><span>shop</span>now</a>
             </div>
           </div>

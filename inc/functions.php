@@ -60,6 +60,43 @@ function get_image_dir( $abs_path ) {
 	return SEARS_IMG_BASE_PATH . '/' . basename( dirname( $abs_path ) ) . '/';
 }
 
+/**
+Returns true if we should use Sandbox environment assets;
+false if we should use local assets.
+
+@return bool
+*/
+function use_sandbox() {
+	return (defined( 'SEARS_USE_SANDBOX_ASSETS' ) && SEARS_USE_SANDBOX_ASSETS );
+}
+
+/**
+Get the brand logos image directory URL.
+
+@return string
+*/
+function get_brand_logos_dir() {
+	if ( use_sandbox() ) {
+		return SEARS_SANDBOX_BRAND_LOGOS_DIR;
+	}
+	else {
+		return SEARS_LOCAL_BRAND_LOGOS_DIR;
+	}
+}
+
+/**
+Get the icons image directory.
+
+@return string
+*/
+function get_icons_dir() {
+	if ( use_sandbox() ) {
+		return SEARS_SANDBOX_ICONS_DIR;
+	}
+	else {
+		return SEARS_LOCAL_ICONS_DIR;
+	}
+}
 
 /**
  build top-level index page
@@ -130,19 +167,107 @@ function get_relative_path( $path ) {
 }
 
 /**
-Include a reusable page element.
+ * Include a reusable page element using a specified template file.
+ *
+ * @param string $element_file_name file name of element template;
+ * 	may include absolute path.
+ * @param array $data Array of data to be passed to element.
+ * @param bool $return If true, return the element instead of outputting immediately. Default is false.
+ *
+ * @return mixed Returns false on error. If $return is true, returns a string containing the HTML of the element. If $return is false, returns true on successfully echoing the element.
 */
-function element( $element_file_name, $vars = array() ) {
+function element( $element_file_name, $data = array(), $return = false ) {
+
+	// these are the names of local variables that we don't want to step on when extracting $data!
+	$reserved_keys = array(
+		'reserved_keys',
+		'element_file_name',
+		'data',
+		'__data', // backup of data
+		'return',
+		'_el',
+	);
+
+/**
+ store a copy of $data so it's not destroyed when merged with $_defaults
+*/
+	$__data = $data;
+
 	// if variables passed, pull them into the current context
-	if ( !empty( $vars ) ) {
-		extract( $vars );
+	// for backwards compatibility ONLY
+	// new page-elements should expect an array named $data to exist
+	// when they come into the world!
+	if ( !empty( $data ) ) {
+
+		foreach( $reserved_keys as $k ) {
+
+			// make sure there's not a key in data named data before we extract!
+			if ( isset( $data[ $k ] ) ) {
+				$data[ '_' . $k ] = $data[ $k ];
+				unset( $data[ $k ] );
+			}
+
+		}
+		// now we should be able to safely extract $data
+		extract( $data );
 	}
+
+	// add '.php' if not already on element_file_name
 	if ( !preg_match( '/.*\.php/', $element_file_name ) ) {
 		$element_file_name .= '.php';
 	}
-	if ( file_exists( SEARS_ELEMENT_PATH . '/' . $element_file_name ) ) {
-		include( SEARS_ELEMENT_PATH . '/'. $element_file_name );
+
+	$_el = false;
+
+	/**
+	If $element_file_name is an absolute path (starts with '/'), go with it.
+	*/
+	if ( 0 === strpos( $element_file_name, '/' ) ) {
+		// check for existence in separate if block so we don't end up trying to use
+		// a file with absolute path in other places
+		if ( file_exists( $element_file_name ) ) {
+			$_el = $element_file_name;
+		}
 	}
+
+	/**
+	If not absolute path, try to use element in project folder, if one exists.
+	*/
+	else if ( defined( 'SEARS_PROJECT_PATH' ) &&
+		file_exists( SEARS_PROJECT_PATH . '/' . $element_file_name ) ) {
+		// include( SEARS_PROJECT_PATH . '/' . $element_file_name );
+		$_el = SEARS_PROJECT_PATH . '/' . $element_file_name;
+	}
+	/**
+	Lastly, try to use element in page-elements directory, if it exists.
+	*/
+	else if ( file_exists( SEARS_ELEMENT_PATH . '/' . $element_file_name ) ) {
+		// include( SEARS_ELEMENT_PATH . '/'. $element_file_name );
+		$_el = SEARS_ELEMENT_PATH . '/' . $element_file_name;
+	}
+
+	// if we got this far and $file is still false, ERROR!
+	if ( false === $_el ) {
+		// error!
+		return false;
+	}
+
+	// start output buffering
+	ob_start();
+	include( $_el );
+	$_el = ob_get_contents();
+	ob_end_clean();
+
+	// if we're spozta return a string, do it.
+	if ( false !== $return ) {
+		return $_el;
+	}
+	// otherwise, echo and return true.
+	else {
+		echo $_el;
+		return true;
+	}
+
 }
 
 /**

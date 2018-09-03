@@ -7,29 +7,26 @@
   // BRAND LOGOS
   // ********************************
   .brand-logos {
-    text-align: center;
+    text-align: left;
 
+    .brand-logos--col {
+      padding: 0 0 0 0;
+    }
     .brand-logos--wrapper {
-      display: inline-block;
+      display: table;
       margin: 0 auto;
-      word-spacing: 0;
-      font-size: 0;
-      // background: pink;
-      max-width: 1150px;
     }
 
     .brand-logo {
       display: table-cell;
-      display: inline-block;
       padding: 10px 20px;
+      width: 25%;
       text-align: center;
-      vertical-align: middle;
-      // font-size: 34px;
 
       img {
-      // width: auto;
-      // max-width: 100%;
-      // height: auto;
+      width: auto;
+      max-width: 100%;
+      height: auto;
       }
     }
 
@@ -89,20 +86,25 @@
       .brand-logos--heading {
        //  18px / 21px = 0.857em
        font-size: 0.857em;
-       font-size: 34px;
        line-height: 1.2em;
       }
 
       .brand-logos--wrapper {
-        // margin: 0 0 0 auto;
+        margin: 0 0 0 auto;
+      }
+
+      .brand-logos--col_right {
+        .brand-logos--wrapper {
+          margin: 0 auto 0 0;
+        }
       }
 
       .brand-logo {
         width: auto;
         img {
-          // display: block;
-          // width: 100%;
-          // height: auto;
+          display: block;
+          width: 100%;
+          height: auto;
         }
       }
 

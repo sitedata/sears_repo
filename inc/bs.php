@@ -19,6 +19,30 @@ define( 'SEARS_IMG_BASE_PATH', '/assets/cms' );
 
 define( 'SEARS_CSS_PATH', '/css' );
 
+define( 'SEARS_SANDBOX_ASSETS_BASE_URL',
+	'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered' );
+
+/**
+SANDBOX DIRECTORY URLS FOR BRAND LOGOS AND icons
+*/
+// URL of directory where brand logos live in Sears Sandbox environment (SSE)
+define( 'SEARS_SANDBOX_BRAND_LOGOS_DIR',
+	SEARS_SANDBOX_ASSETS_BASE_URL . '/brand-logos/logos/' );
+
+// URL of directory where icon images live in SSE
+define( 'SEARS_SANDBOX_ICONS_DIR',
+	SEARS_SANDBOX_ASSETS_BASE_URL . '/icons/' );
+
+/**
+LOCAL DIRECTORY URLS FOR BRAND LOGOS AND ICONS
+*/
+define( 'SEARS_LOCAL_BRAND_LOGOS_DIR',
+	SEARS_IMG_BASE_PATH . '/brand-logos/' );
+
+define( 'SEARS_LOCAL_ICONS_DIR',
+	SEARS_IMG_BASE_PATH . '/icons/' );
+
+
 /**
 If the path the current landing page was not defined, define it here!
 */

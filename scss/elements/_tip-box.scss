@@ -1,50 +1,49 @@
 // Tip box!
 
 // vars
-$tb-min-height: 130px;
-$tb-margin-top: 25px;
 
+// values from PSDs
+$tip-box-head-font-size: 50px;
+$tip-box-head-pad-top: 24px;
+$tip-box-head-pad-bot: 18px; // actually 16px on mobile, but that's stupid
+$tip-box-body-pad: 27px; // no bottom padding in PSDs, but it's needed!
+
+// $base-selector is probably specific to the current page
 #{ $base-selector } {
 
   .tip-box {
-    min-height: 130px;
     margin-top: 25px;
-    display: table;
-  }
-  .tip-box--tall {
-    $tip-box-tall_height: 170px;
-    min-height: 170px;
-  }
-
-  .tip_box__head,
-  .tip_box__body {
-    display: table-cell;
+    text-align: center;
   }
 
   // dark blue part that says "TIP"
   .tip-box__head {
     text-transform: uppercase;
-    background-color: $sears-blue;
+    background-color: $blue;
     color: #fff;
     font-weight: bold;
-    text-align: center;
-    height: inherit;
     // font-size: 31px;
-    font-size: em( 31px, $max-font-size_d );
-    padding-top: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 50px;
+    // font-size: em( 31px, $max-font-size_d );
+    font-size: $tip-box-head-font-size;
+    padding-top: $tip-box-head-pad-top;
+    padding-bottom: $tip-box-head-pad-bot;
     vertical-align: middle;
   }
   .tip-box__body {
-    background-color: $light-blue;
+    background-color: $light-blue-too;
     color: #000;
-    height: inherit;
-    padding: 25px;
-    font-weight: bold;
+    padding: $tip-box-body-pad;
     vertical-align: middle;
     line-height: 1.6em;
+
+    // bold part
+    &--headline {
+      font-weight: bold;
+    }
+    // reg'l'r
+    &--text {
+
+    }
   }
 
 }
