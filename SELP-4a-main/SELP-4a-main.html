@@ -90,12 +90,33 @@
   padding-left: 16px;
   padding-bottom: 10px; }
 
+[class*=SEARS-] .hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px; }
+  [class*=SEARS-] .hero--full-width h1 {
+    margin-left: 40px;
+    margin-right: 40px; }
+
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture > img {
+  width: 100%;
+  max-width: 100%; }
+
 @media screen and (min-width: 992px) {
   [class*=SEARS-] h3 {
     font-size: 2.1em; } }
 
 .font-31 {
   font-size: 31px !important; }
+
+.font-40 {
+  font-size: 40px !important; }
+
+.font-48 {
+  font-size: 48px !important; }
+
+.font-50 {
+  font-size: 50px !important; }
 
 [class*=SEARS-] .brand-logos {
   text-align: center; }
@@ -106,26 +127,28 @@
     font-size: 0;
     max-width: 1150px; }
   [class*=SEARS-] .brand-logos .brand-logo {
-    display: table-cell;
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle; }
   [class*=SEARS-] .brand-logos .btn--shop-now {
-    background-color: #e0001e;
+    background-color: #e92227;
     border-radius: 0;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 3em;
+    font-size: 54.36px;
     position: relative;
+    width: 354.25px;
+    height: 86.38px;
+    line-height: 86.38px;
     letter-spacing: 0.02em;
-    line-height: 1.59em;
-    padding: 0 1.63em 0 0.815em; }
+    padding: 0;
+    text-indent: -30px; }
     [class*=SEARS-] .brand-logos .btn--shop-now span {
       color: #fff;
       font-weight: 600; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      content: " ";
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
       position: absolute;
       border-right: none;
       top: 50%;
@@ -133,21 +156,13 @@
       border: 0.37em solid transparent;
       border-left-color: #FFF;
       border-left-width: 0.703em;
-      right: 0.259em; }
+      right: 0; }
 
 @media screen and (min-width: 992px) {
   [class*=SEARS-] .brand-logos {
     text-align: center; }
-    [class*=SEARS-] .brand-logos .brand-logos--heading {
-      font-size: 0.857em;
-      font-size: 34px;
-      line-height: 1.2em; }
     [class*=SEARS-] .brand-logos .brand-logo {
       width: auto; }
-    [class*=SEARS-] .brand-logos .btn--shop-now {
-      font-size: 1.198em;
-      padding-left: 0.715em;
-      padding-right: 1.431em; }
     [class*=SEARS-] .brand-logos .btn--shop-now :after {
       border-width: 0.358em;
       border-left-width: 0.596em; } }
@@ -194,68 +209,28 @@
 .SELP-4a-main .hero--full-width {
   margin-left: -20px;
   margin-right: -20px; }
-  .SELP-4a-main .hero--full-width picture,
-  .SELP-4a-main .hero--full-width picture > img {
-    width: 100%;
-    max-width: 100%; }
 
-.SELP-4a-main h2 {
-  font-size: 40px; }
+.SELP-4a-main .picture,
+.SELP-4a-main .picture > img {
+  width: 100%;
+  max-width: 100%; }
 
-.SELP-4a-main h3,
-.SELP-4a-main .h3 {
-  font-size: 1.14286em; }
+.SELP-4a-main .hero__text {
+  margin-right: 18%;
+  margin-left: 18%; }
 
-.SELP-4a-main .font--900 {
-  font-weight: 900; }
+.SELP-4a-main .article .headline {
+  color: #2159bb;
+  font-size: 40px;
+  margin-top: 20px; }
 
-.SELP-4a-main .headline--copy {
-  line-height: 1.4em; }
-  .SELP-4a-main .headline--copy br {
-    display: none; }
-
-.SELP-4a-main .link__download {
-  font-size: 31px;
-  white-space: nowrap; }
-  .SELP-4a-main .link__download .icon-document {
-    display: inline-block;
-    height: 44px; }
-  .SELP-4a-main .link__download--text {
-    vertical-align: middle; }
-
-.SELP-4a-main .recipe-section {
-  font-size: 31px;
-  line-height: 1.4; }
-  .SELP-4a-main .recipe-section > .headline {
-    background: #2159bb;
-    color: #fff;
-    font-size: 50px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    padding: 15px 0;
-    text-align: center; }
-    .SELP-4a-main .recipe-section > .headline:after {
-      content: ':'; }
-  .SELP-4a-main .recipe-section__description {
-    padding-left: 5px;
-    color: #000; }
-  .SELP-4a-main .recipe-section ol, .SELP-4a-main .recipe-section ul {
-    color: #2159bb; }
-    .SELP-4a-main .recipe-section ol li, .SELP-4a-main .recipe-section ul li {
-      margin-bottom: 15px; }
-  .SELP-4a-main .recipe-section ol {
-    font-weight: bold;
-    list-style-position: inside;
-    padding-left: 5px; }
+.SELP-4a-main .article .text {
+  margin-bottom: 20px; }
 
 @media screen and (min-width: 992px) {
-  .SELP-4a-main h2 {
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    line-height: 1; }
-  .SELP-4a-main h3,
-  .SELP-4a-main .h3 {
-    font-size: 1.14286em; } }
+  .SELP-4a-main .hero__text {
+    margin-right: 15%;
+    margin-left: 15%; } }
 
 </style>
 <main class="cms-content cms-content-html padding-vert-xl SEARS--landing-page SELP-4a-main" id="cms-content-1920-1920">
@@ -272,13 +247,13 @@
     >
 </picture>
     <div class="padding-vert-xl text-align-center">
-      <p class="hero__text font-31">Make delicious and healthy meals a routine this fall with some time-saving meal prep tips and simple recipes!</p>
+      <div class="hero__text font-31 lh-sm">Make delicious and healthy meals a routine this fall with some time-saving meal prep tips and simple recipes!</div>
     </div>
   </header>
   <!-- END #hero -->
 
   <!-- Articles -->
-  <article class="container">
+  <article class="container article">
     <div class="row padding-vert-xl">
       <div class="col-xs-12 col-md-6">
         <picture class="picture" >
@@ -291,15 +266,16 @@
 </picture>
       </div>
       <div class="col-xs-12 col-md-6 font-31">
-        <h2 class="headline">Time-saving Ideas for Fast,<br>Healthy Weeknight Dinners</h2>
-        <p class="text font--black font-31 lh-sm">Don&rsquo;t let &ldquo;what are we having for dinner&rdquo; become that nagging question at the end of a long day! Use these <a class="article-link" href="#" data-href="#">tips and tricks</a> to get healthy meal options onto your table in no time.</p>
-        <a href="#"
+        <h2 class="headline font--700 lh-sm">Time-saving Ideas for Fast,<br>Healthy Weeknight Dinners</h2>
+        <div class="text font--black lh-sm">Don&rsquo;t let &ldquo;what are we having for dinner&rdquo; become that nagging question at the end of a long day! Use these <a class="article-link" href="#" data-href="#">tips and tricks</a> to get healthy meal options onto your table in no time.</div>
+        <a class="link"
+          href="#"
           data-href="#"
-          class="article-link">View Time-saving Tips</a>
+          >View Time-saving Tips</a>
       </div>
     </div>
   </article>
-  <article class="container">
+  <article class="container article">
     <div class="row padding-vert-xl">
       <div class="col-xs-12 col-md-6">
         <picture class="picture" >
@@ -312,15 +288,16 @@
 </picture>
       </div>
       <div class="col-xs-12 col-md-6 font-31">
-        <h2 class="headline">Easy One Pot Meal Recipe:<br>Butternut Squash Chicken Chili</h2>
-        <p class="text font--black font-31 lh-sm">What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!</p>
-        <a href="#"
+        <h2 class="headline font--700 lh-sm">Easy One Pot Meal Recipe:<br>Butternut Squash Chicken Chili</h2>
+        <div class="text font--black lh-sm">What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!</div>
+        <a class="link"
+          href="#"
           data-href="#"
-          class="article-link">View Butternut Squash Chicken Chili Recipe</a>
+          >View Butternut Squash Chicken Chili Recipe</a>
       </div>
     </div>
   </article>
-  <article class="container">
+  <article class="container article">
     <div class="row padding-vert-xl">
       <div class="col-xs-12 col-md-6">
         <picture class="picture" >
@@ -333,11 +310,12 @@
 </picture>
       </div>
       <div class="col-xs-12 col-md-6 font-31">
-        <h2 class="headline">Easy One Sheet Pan Recipe:<br>Salmon and Veggies</h2>
-        <p class="text font--black font-31 lh-sm">Dinner doesn’t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!</p>
-        <a href="#"
+        <h2 class="headline font--700 lh-sm">Easy One Sheet Pan Recipe:<br>Salmon and Veggies</h2>
+        <div class="text font--black lh-sm">Dinner doesn’t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!</div>
+        <a class="link"
+          href="#"
           data-href="#"
-          class="article-link">View Salmon and Veggies Recipe</a>
+          >View Salmon and Veggies Recipe</a>
       </div>
     </div>
   </article>
@@ -350,7 +328,7 @@
           <div class="row">
             <div class="col-xs-12 padding-vert-xl text-align-center">
                           <h2 class="brand-logos__headline font-40 font--700 lh-sm">Ready to get started?</h2>
-                          <p class="brand-logos__copy font--black font-31 lh-md">Sears Hometown Store has unbeatable prices on the best brands available.</p>
+                          <p class="brand-logos__copy font--black font-31 lh-sm">Sears Hometown Store has unbeatable prices on the best brands available.</p>
             </div>
           </div>
 
