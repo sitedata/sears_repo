@@ -15,32 +15,52 @@ http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logo
 // get the directory name
 $slug = basename( dirname( __FILE__ ) );
 
-$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/chili/' );
+// local image directory
+$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
 
-$prod_img_dir = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-08-08_Refrigerator-Essentials/';
+// slug of image directory on sandbox
+$prod_slug = '2018-09-05_salmon-and-veggies';
+
+// creates a constant named PROD_IMG_DIR containing full URL of sandbox image directory for this page
+set_prod_img_dir( $prod_slug );
+
+// redundant
+$prod_img_dir = PROD_IMG_DIR;
 
 // $img_dir = $prod_img_dir;
+
+// salmon-and-veggies_800w.jpg
+// salmon-and-veggies_991w.jpg
+// salmon-and-veggies_1550w.jpg
 
 $hero = array(
 	'picture' => array(
 		array(
 			'media' => '(max-width:991px)',
-			'srcset' => 'butternut-squash-chicken-chili_800w.jpg',
+			'srcset' => 'salmon-and-veggies_991w.jpg',
 		),
 		array(
 			'media' => '(min-width:992px)',
-			'srcset' => 'butternut-squash-chicken-chili_1550w.jpg',
+			'srcset' => 'salmon-and-veggies_1550w.jpg',
 		),
 	),
-	'img' => 'butternut-squash-chicken-chili_800w.jpg',
-	'alt' => 'Butternut Squash Chicken Chili topped with avocado slices',
-	'h1' => 'Easy One Pot Meal Recipe &mdash; <span itemprop="name">Butternut Squash Chicken Chili</span>',
-	'copy' => 'What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!',
+	'img' => 'salmon-and-veggies_991w.jpg',
+	'alt' => 'Salmon on a baking sheet with asparagus and sweet potatoes',
+/**
+NOTE: see the <span itemprop="name"> in the h1.
+This is for the Schema.org Recipe microdata.
+*/
+	'h1' => 'Easy One Sheet Pan Recipe &mdash; <span itemprop="name">Salmon and Veggies</span>',
+	'text' => 'Dinner doesn’t have to be complicated to be delicious. Try one sheet recipes like this one to get healthy and delectable meals to the table from start to finish in 30 minutes or less!',
 	'link' => array(
 		'text' => 'Download Recipe PDF',
 		'url' => '#',
 	)
 );
+
+/**
+PRETTY SURE EVERYTHING AFTER THIS IS STILL THE DATA FOR THE CHILI RECIPE
+*/
 
 $ingredients = array(
 	'headline' => 'Shopping List',

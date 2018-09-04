@@ -30,8 +30,8 @@ You just need to set a -20px left & right margins on the hero to make it full-wi
     <div class="container headline">
       <div class="row">
         <div class="col-xs-12 text-align-center padding-vert-lg">
-          <div class="hero--copy font-31 lh-sm" itemprop="description">
-            <?php echo $hero['copy'] ?>
+          <div class="hero--text font-31 lh-sm" itemprop="description">
+            <?php echo $hero['text'] ?>
           </div>
           <div class="padding-vert-lg">
             <?php element( 'link__download-document', $hero['link'] ); ?>
@@ -43,37 +43,30 @@ You just need to set a -20px left & right margins on the hero to make it full-wi
   <!-- END #hero -->
 
   <article class="container">
-    <div class="row">
-      <!-- <section id="ingredients" class="col-xs-12 col-md-6 ingredients"> -->
-<?php
-element( 'recipe__ingredient-list', $ingredients );
-?>
-      <!-- </section> -->
-      <section class="col-xs-12 col-md-6 pre-prep"
-        itemprop="step" itemscope
-        itemtype="http://schema.org/HowToSection">
+    <div class="row padding-vert-xl">
+      <div class="col-xs-12 col-md-6">
+        <?php
+        element( 'recipe__ingredient-list', $ingredients );
+        ?>
+      </div>
+      <div class="col-xs-12 col-md-6">
         <?php
         element( 'recipe__how-to-section', $prep );
         ?>
-      </section>
+      </div>
     </div>
-    <div class="row">
-      <section class="col-xs-12 directions"
-        itemprop="step" itemscope
-        itemtype="http://schema.org/HowToSection">
+    <div class="row padding-vert-xl">
+      <div class="col-xs-12">
         <?php
         element( 'recipe__how-to-section', $directions );
         ?>
-      </section>
+      </div>
     </div>
   </article>
 
 
 <?php
 // use element to include reusable page-element snippet!
-element( 'brand-logos',
-  // compact( 'brand_logos_heading', 'shop_now_url' )
-  $brand_logos
-);
+element( 'brand-logos',  $brand_logos );
 ?>
 </main><!-- #cms-content-1920-1920.cms-content.cms-content-html -->
