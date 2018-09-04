@@ -33,7 +33,7 @@ function make_page( $content_file, $options = array() ) {
 
 	include( $content_file ); // include the content file
 	$output = ob_get_contents(); // store the buffered output
-	$output_file_name = get_output_file_name();
+	$output_file_name = get_output_file_name( $content_file );
 	file_put_contents( $output_file_name, $output ); // write it to a file (and fail silently)
 	ob_end_clean(); // stop buffering and empty the buffer
 
