@@ -89,12 +89,33 @@
   padding-left: 16px;
   padding-bottom: 10px; }
 
+[class*=SEARS-] .hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px; }
+  [class*=SEARS-] .hero--full-width h1 {
+    margin-left: 40px;
+    margin-right: 40px; }
+
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture > img {
+  width: 100%;
+  max-width: 100%; }
+
 @media screen and (min-width: 992px) {
   [class*=SEARS-] h3 {
     font-size: 2.1em; } }
 
 .font-31 {
   font-size: 31px !important; }
+
+.font-40 {
+  font-size: 40px !important; }
+
+.font-48 {
+  font-size: 48px !important; }
+
+.font-50 {
+  font-size: 50px !important; }
 
 [class*=SEARS-] .brand-logos {
   text-align: center; }
@@ -105,26 +126,28 @@
     font-size: 0;
     max-width: 1150px; }
   [class*=SEARS-] .brand-logos .brand-logo {
-    display: table-cell;
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle; }
   [class*=SEARS-] .brand-logos .btn--shop-now {
-    background-color: #e0001e;
+    background-color: #e92227;
     border-radius: 0;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 3em;
+    font-size: 54.36px;
     position: relative;
+    width: 354.25px;
+    height: 86.38px;
+    line-height: 86.38px;
     letter-spacing: 0.02em;
-    line-height: 1.59em;
-    padding: 0 1.63em 0 0.815em; }
+    padding: 0;
+    text-indent: -30px; }
     [class*=SEARS-] .brand-logos .btn--shop-now span {
       color: #fff;
       font-weight: 600; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      content: " ";
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
       position: absolute;
       border-right: none;
       top: 50%;
@@ -132,21 +155,13 @@
       border: 0.37em solid transparent;
       border-left-color: #FFF;
       border-left-width: 0.703em;
-      right: 0.259em; }
+      right: 0; }
 
 @media screen and (min-width: 992px) {
   [class*=SEARS-] .brand-logos {
     text-align: center; }
-    [class*=SEARS-] .brand-logos .brand-logos--heading {
-      font-size: 0.857em;
-      font-size: 34px;
-      line-height: 1.2em; }
     [class*=SEARS-] .brand-logos .brand-logo {
       width: auto; }
-    [class*=SEARS-] .brand-logos .btn--shop-now {
-      font-size: 1.198em;
-      padding-left: 0.715em;
-      padding-right: 1.431em; }
     [class*=SEARS-] .brand-logos .btn--shop-now :after {
       border-width: 0.358em;
       border-left-width: 0.596em; } }
@@ -193,65 +208,25 @@
 .SELP-4a-main .hero--full-width {
   margin-left: -20px;
   margin-right: -20px; }
-  .SELP-4a-main .hero--full-width picture,
-  .SELP-4a-main .hero--full-width picture > img {
-    width: 100%;
-    max-width: 100%; }
 
-.SELP-4a-main h2 {
-  font-size: 40px; }
+.SELP-4a-main .picture,
+.SELP-4a-main .picture > img {
+  width: 100%;
+  max-width: 100%; }
 
-.SELP-4a-main h3,
-.SELP-4a-main .h3 {
-  font-size: 1.14286em; }
+.SELP-4a-main .hero__text {
+  margin-right: 18%;
+  margin-left: 18%; }
 
-.SELP-4a-main .font--900 {
-  font-weight: 900; }
+.SELP-4a-main .article .headline {
+  color: #2159bb;
+  font-size: 40px;
+  margin-top: 20px; }
 
-.SELP-4a-main .headline--copy {
-  line-height: 1.4em; }
-  .SELP-4a-main .headline--copy br {
-    display: none; }
-
-.SELP-4a-main .link__download {
-  font-size: 31px;
-  white-space: nowrap; }
-  .SELP-4a-main .link__download .icon-document {
-    display: inline-block;
-    height: 44px; }
-  .SELP-4a-main .link__download--text {
-    vertical-align: middle; }
-
-.SELP-4a-main .recipe-section {
-  font-size: 31px;
-  line-height: 1.4; }
-  .SELP-4a-main .recipe-section > .headline {
-    background: #2159bb;
-    color: #fff;
-    font-size: 50px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    padding: 15px 0;
-    text-align: center; }
-    .SELP-4a-main .recipe-section > .headline:after {
-      content: ':'; }
-  .SELP-4a-main .recipe-section__description {
-    padding-left: 5px;
-    color: #000; }
-  .SELP-4a-main .recipe-section ol, .SELP-4a-main .recipe-section ul {
-    color: #2159bb; }
-    .SELP-4a-main .recipe-section ol li, .SELP-4a-main .recipe-section ul li {
-      margin-bottom: 15px; }
-  .SELP-4a-main .recipe-section ol {
-    font-weight: bold;
-    list-style-position: inside;
-    padding-left: 5px; }
+.SELP-4a-main .article .text {
+  margin-bottom: 20px; }
 
 @media screen and (min-width: 992px) {
-  .SELP-4a-main h2 {
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    line-height: 1; }
-  .SELP-4a-main h3,
-  .SELP-4a-main .h3 {
-    font-size: 1.14286em; } }
+  .SELP-4a-main .hero__text {
+    margin-right: 15%;
+    margin-left: 15%; } }
