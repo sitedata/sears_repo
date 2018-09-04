@@ -1,6 +1,16 @@
 Options Indexes
 
-# actually, if php_module not enabled, there are bigger issues. notably that.
-# i.e., no reason to check for it being enabled :-)
-php_value include_path ".:./inc:../inc"
-php_value auto_prepend_file "bs.php"
+<IfModule php7_module>
+  php_value include_path ".:./inc:../inc"
+  php_value auto_prepend_file "bs.php"
+</IfModule>
+
+<IfModule php5_module>
+  php_value include_path ".:./inc:../inc"
+  php_value auto_prepend_file "bs.php"
+</IfModule>
+
+<IfModule php_module>
+  php_value include_path ".:./inc:../inc"
+  php_value auto_prepend_file "bs.php"
+</IfModule>

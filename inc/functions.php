@@ -11,9 +11,15 @@ function make_page( $content_file, $options = array() ) {
 		'js' => false,
 		'template' => 'tmpl8.php',
 		'inline_css' => true,
+		'img_dir' => '/' . basename( SEARS_PROJECT_PATH ) . 'img'
 	);
 
 	$opts = array_merge( $_defaults, $options );
+
+	// check to see if we're spozta use sandbox images!
+	if ( use_sandbox() ) {
+		$opts['img_dir'] = get_prod_img_dir();
+	}
 
 	extract( $opts ); // bring array elements into the local symbol table
 
@@ -60,8 +66,40 @@ function get_output_file_name( $content_file ) {
 /**
  gets image directory relative to webroot for images based on a content file's absolute path
  */
-function get_image_dir( $abs_path ) {
-	return SEARS_IMG_BASE_PATH . '/' . basename( dirname( $abs_path ) ) . '/';
+function get_image_dir( $abs_path = '' ) {
+	if ( use_sandbox() && defined( 'PROD_IMG_DIR' ) ) {
+		return PROD_IMG_DIR;
+	}
+	else if ( !empty( $slug ) ) {
+
+		$slug = basename( dirname( $abs_path ) );
+
+		erp( compact( 'slug' ) );
+
+		// this expects images to be nested under /assets/cms/ !
+		$maybe = SEARS_IMG_BASE_PATH . '/' . $slug . '/';
+		if ( !empty( $abs_path) && file_exists( $maybe ) ) {
+			erp( compact( 'maybe' ) );
+			return $maybe;
+		}
+
+	}
+	// if the above failed or no path passed, assume we mean the project directory
+	// $abs_path = !empty( $abs_path ) ? $abs_path : SEARS_PROJECT_PATH;
+	$maybes = array( 'img', 'images' );
+	foreach ( $maybes as $m ) {
+		// erp( array( 'img_dir' => $path . '/' . $m ) );
+		if ( file_exists( SEARS_PROJECT_PATH . '/' . $m ) ) {
+			// erp( array( 'img_dir' => '/' . $slug . '/' . $m . '/' ) );
+			return '/' . basename( SEARS_PROJECT_PATH ) . '/' . $m . '/';
+		}
+	}
+	// return SEARS_IMG_BASE_PATH . '/' . basename( dirname( $abs_path ) ) . '/';
+
+	// if we somehow made it this far without finding return false
+	// and maybe warn
+	eh( 'Unable to locate image directory for $abs_path = "' . $abs_path . '"!' );
+	return false;
 }
 
 /**
@@ -72,6 +110,19 @@ false if we should use local assets.
 */
 function use_sandbox() {
 	return (defined( 'SEARS_USE_SANDBOX_ASSETS' ) && SEARS_USE_SANDBOX_ASSETS );
+}
+
+/**
+Sets the prod img directory for a given project.
+
+Returns true if able to set PROD_IMG_DIR; false if already set.
+*/
+function set_prod_img_dir( $prod_slug ) {
+	if ( !defined( 'PROD_IMG_DIR' ) ) {
+		define( 'PROD_IMG_DIR', SEARS_SANDBOX_ASSETS_BASE_URL . '/' . $prod_slug );
+		return true;
+	}
+	return false;
 }
 
 /**
