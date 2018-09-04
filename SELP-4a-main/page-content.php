@@ -32,7 +32,7 @@ By keeping the grid directives in the definition of each page, page elements wil
     </picture>
 <?php endif; ?>
     <div class="padding-vert-xl text-align-center">
-      <p class="hero__text font-31"><?php echo $hero['text'] ?></p>
+      <div class="hero__text font-31 lh-sm"><?php echo $hero['text'] ?></div>
     </div>
   </header>
   <!-- END #hero -->
@@ -40,8 +40,10 @@ By keeping the grid directives in the definition of each page, page elements wil
   <!-- Articles -->
 <?php foreach ( $articles as $a ): ?>
 <?php
-// if article has link url,
-// check for substitution tokens in the article text
+/**
+if article has link url,
+check for substitution tokens in the article text
+*/
 if ( isset( $a['link'] ) &&
   isset( $a['link']['url'] ) &&
   false !== strpos( $a['text'], '%1$s' ) ) {
@@ -49,7 +51,7 @@ if ( isset( $a['link'] ) &&
   $a['text'] = sprintf( $a['text'], $a['link']['url'] );
 }
 ?>
-  <article class="container">
+  <article class="container article">
     <div class="row padding-vert-xl">
       <div class="col-xs-12 col-md-6">
         <?php
@@ -57,11 +59,12 @@ if ( isset( $a['link'] ) &&
         ?>
       </div>
       <div class="col-xs-12 col-md-6 font-31">
-        <h2 class="headline"><?php echo $a['headline'] ?></h2>
-        <p class="text font--black font-31 lh-sm"><?php echo $a['text'] ?></p>
-        <a href="<?php echo $a['link']['url'] ?>"
+        <h2 class="headline font--700 lh-sm"><?php echo $a['headline'] ?></h2>
+        <div class="text font--black lh-sm"><?php echo $a['text'] ?></div>
+        <a class="link"
+          href="<?php echo $a['link']['url'] ?>"
           data-href="<?php echo $a['link']['url'] ?>"
-          class="article-link"><?php echo $a['link']['text'] ?></a>
+          ><?php echo $a['link']['text'] ?></a>
       </div>
     </div>
   </article>
