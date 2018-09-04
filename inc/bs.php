@@ -49,6 +49,21 @@ if ( !defined( 'SEARS_PROJECT_PATH' ) ) {
 	define( 'SEARS_PROJECT_PATH', dirname( $_SERVER['SCRIPT_FILENAME'] ) );
 }
 
+/**
+Check for a query string that tells us to use Sandbox assets.
+We may want to put this somewhere else so that it can still be set in index.php...
+*/
+if ( !defined( 'SEARS_USE_SANDBOX_ASSETS' ) ) {
+	if ( isset( $_GET['sb'] ) ||
+		isset( $_GET['sandbox'] ) ||
+		isset( $_GET['use_sandbox_assets'] ) ) {
+		define( 'SEARS_USE_SANDBOX_ASSETS', true );
+	}
+	else {
+		define( 'SEARS_USE_SANDBOX_ASSETS', false );
+	}
+}
+
 // debuggin' utilities
 require_once( SEARS_INC_PATH . '/util.php' );
 
