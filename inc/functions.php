@@ -33,8 +33,12 @@ function make_page( $content_file, $options = array() ) {
 
 	include( $content_file ); // include the content file
 	$output = ob_get_contents(); // store the buffered output
-	file_put_contents( get_output_file_name( $content_file ), $output ); // write it to a file (and fail silently)
+	$output_file_name = get_output_file_name();
+	file_put_contents( $output_file_name, $output ); // write it to a file (and fail silently)
 	ob_end_clean(); // stop buffering and empty the buffer
+
+	// maybe we should include the $output_file instead of the $content_file
+	// because the $output_file is what will be QA'd
 
 	// now build the page for the browser
 	include( SEARS_TEMPLATE_PATH . '/' . $template );
