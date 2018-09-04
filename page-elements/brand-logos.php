@@ -12,6 +12,14 @@ $_defaults = array(
   'logo_dir' => get_brand_logos_dir(),
 );
 
+/**
+Check to see if 'text' in array instead of 'copy'.
+*/
+if ( isset( $data['text'] ) && !isset( $data['copy'] ) ) {
+  $data['copy'] = $data['text'];
+}
+
+// merge $data with $_defaults
 $data = array_merge( $_defaults, $data );
 
 /**
@@ -112,7 +120,7 @@ $logos = isset( $logos ) ? $logos :
             <?php if ( !empty( $data['headline'] ) ): ?>
               <h2 class="brand-logos__headline font-40 font--700 lh-sm"><?php echo $data['headline'] ?></h2>
             <?php endif; ?>
-              <p class="brand-logos__copy font--black font-31 lh-md"><?php echo $data['copy'] ?></p>
+              <p class="brand-logos__copy font--black font-31 lh-sm"><?php echo $data['copy'] ?></p>
             </div>
           </div>
 
