@@ -15,7 +15,7 @@ http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logo
 // get the directory name
 $slug = basename( dirname( __FILE__ ) );
 
-$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/chili/' );
+$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
 
 $prod_img_dir = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-08-08_Refrigerator-Essentials/';
 
