@@ -25,21 +25,17 @@ $icon_height_d: 44px;
 // my stuff here!
 #{$wrap-class} {
 
-  // to achieve the 20px padding on each side of hero in PSD
-  // padding-left: 5px;
-  // padding-right: 5px;
+  #hero {
+    position: relative;
 
-  // max-width: 100%;
-  // overflow-x: hidden;
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform( translate( -50%, -50% ) );
+    }
+  }
 
-  // force content column width
-  // article,
-  // #hero .container {
-  //   padding-left: $content-padding_d;
-  //   padding-right: $content-padding_d;
-  // }
-
-  // font-size: 31px;
 
   .hero--full-width {
     margin-left: -20px;
