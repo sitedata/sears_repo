@@ -1,0 +1,72 @@
+[
+{
+	"LayerPath": "/desktop/UI/breadcrumb/",
+	"LayerContent": [
+		"Meal Planning Ideas"
+	]
+},
+{
+	"LayerPath": "/desktop/content/hero/intro copy/",
+	"LayerContent": [
+		"Make delicious and healthy meals a routine this fall with some time-saving meal prep tips and simple recipes!"
+	]
+},
+{
+	"LayerPath": "/desktop/content/01/",
+	"LayerContent": [
+		"Time-saving Ideas for Fast, Healthy Weeknight Dinners",
+		"Don’t let “what are we having for dinner” become that nagging question at the end of a long day! Use these tips and tricks to get healthy meal options onto your table in no time.",
+		"View Time-saving Tips"
+	]
+},
+{
+	"LayerPath": "/desktop/content/02/",
+	"LayerContent": [
+		"Easy One Pot Meal Recipe:",
+		"Butternut Squash Chicken Chili",
+		"What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!",
+		"View Butternut Squash Chicken Chili Recipe"
+	]
+},
+{
+	"LayerPath": "/desktop/content/03/",
+	"LayerContent": [
+		"Easy One Sheet Pan Recipe:",
+		"Salmon and Veggies",
+		"Dinner doesn’t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!",
+		"View Salmon and Veggies Recipe"
+	]
+},
+{
+	"LayerPath": "/mobile/UI/breadcrumb/",
+	"LayerContent": [
+		"Meal Planning Ideas"
+	]
+},
+{
+	"LayerPath": "/mobile/content/01/",
+	"LayerContent": [
+		"Time-saving Ideas for Fast, Healthy Weeknight Dinners",
+		"Don’t let “what are we having for dinner” become that nagging question at the end of a long day! Use these tips and tricks to get healthy meal options onto your table in no time.",
+		"View Time-saving Tips"
+	]
+},
+{
+	"LayerPath": "/mobile/content/02/",
+	"LayerContent": [
+		"Easy One Pot Meal Recipe:",
+		"Butternut Squash Chicken Chili",
+		"What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!",
+		"View Butternut Squash Chicken Chili Recipe"
+	]
+},
+{
+	"LayerPath": "/mobile/content/03/",
+	"LayerContent": [
+		"Easy One Sheet Pan Recipe:",
+		"Salmon and Veggies",
+		"Dinner doesn’t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!",
+		"View Salmon and Veggies Recipe"
+	]
+}
+];

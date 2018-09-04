@@ -64,6 +64,12 @@ if ( !defined( 'SEARS_USE_SANDBOX_ASSETS' ) ) {
 	}
 }
 
+// if ( !defined( 'IMG_DIR' ) ) {
+// 	if ( use_sandbox() ) {
+//
+// 	}
+// }
+
 // debuggin' utilities
 require_once( SEARS_INC_PATH . '/util.php' );
 
