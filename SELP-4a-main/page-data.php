@@ -40,7 +40,7 @@ $hero = array(
 	'img' => 'quick-easy-meal-planning-ideas_991w.jpg',
 	'alt' => 'Fresh fall vegetables',
 	'h1' => 'Quick &amp; Easy<br>Fall Meal<br>Planning Ideas',
-	'copy' => 'Make delicious and healthy meals a routine this fall with some time-saving meal prep tips and simple recipes!',
+	'text' => 'Make delicious and healthy meals a routine this fall with some time-saving meal prep tips and simple recipes!',
 );
 
 /**

@@ -19,19 +19,21 @@ By keeping the grid directives in the definition of each page, page elements wil
 <main class="cms-content cms-content-html padding-vert-xl SEARS--landing-page <?php echo $slug ?>" id="cms-content-1920-1920">
 
   <!-- BEGIN #hero -->
-  <header id="hero" class="hero--full-width">
-    <h1 class="font-48 font--700 font--white text-align-center padding-vert-xl"
-      itemprop="name"><?php echo $hero['h1'] ?></h1>
-    <picture class="Xhero--full-width">
+  <header id="hero" class="hero--full-width text-align-center">
+    <h1 class="font-48 font--700 font--white text-align-center center--both"><?php echo $hero['h1'] ?></h1>
+    <?php element( 'picture', $hero ); ?>
+<?php if ( false ): ?>
+    <picture class="picture">
     <?php foreach ($hero['picture'] as $p): ?>
       <source media="<?php echo $p['media'] ?>" srcset="<?php echo $img_dir . $p['srcset'] ?>">
     <?php endforeach; ?>
       <img src="<?php echo $img_dir . $hero['img'] ?>"
-        alt="<?php echo $hero['alt'] ?>"
-        itemprop="image"
-        >
+        alt="<?php echo $hero['alt'] ?>">
     </picture>
-
+<?php endif; ?>
+    <div class="padding-vert-xl text-align-center">
+      <p class="hero__text font-31"><?php echo $hero['text'] ?></p>
+    </div>
   </header>
   <!-- END #hero -->
 
@@ -54,10 +56,12 @@ if ( isset( $a['link'] ) &&
         element( 'picture', $a );
         ?>
       </div>
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-6 font-31">
         <h2 class="headline"><?php echo $a['headline'] ?></h2>
-        <p class="text"><?php echo $a['text'] ?></p>
-        <a href="<?php echo $a['link']['url'] ?>" data-href="<?php echo $a['link']['url'] ?>" class="article-link"><?php echo $a['link']['text'] ?></a>
+        <p class="text font--black font-31 lh-sm"><?php echo $a['text'] ?></p>
+        <a href="<?php echo $a['link']['url'] ?>"
+          data-href="<?php echo $a['link']['url'] ?>"
+          class="article-link"><?php echo $a['link']['text'] ?></a>
       </div>
     </div>
   </article>

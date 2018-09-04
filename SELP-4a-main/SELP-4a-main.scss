@@ -34,17 +34,13 @@ $icon_height_d: 44px;
       left: 50%;
       @include transform( translate( -50%, -50% ) );
     }
+
   }
 
 
   .hero--full-width {
     margin-left: -20px;
     margin-right: -20px;
-
-    h1 {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
 
     picture,
     picture > img {
@@ -54,7 +50,8 @@ $icon_height_d: 44px;
   }
 
   h2 {
-    font-size: em( $h2_d, $max-font-size_d );
+    // font-size: em( $h2_d, $max-font-size_d );
+    font-size: 40px;
   }
 
   h3,
