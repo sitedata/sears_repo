@@ -1,33 +1,6 @@
 Options Indexes
 
-# if module php7_module is enabled...
-# NOTE: Homebrew & default Apple Apache name Apache modules differently
-#   than other set ups. No idea what MAMP does.
-# e.g.,
-#   vanilla Apache on Linux: mod_rewrite.c
-#   Homebrew Apache: rewrite_module
-#
-# TL;DR
-#   Need to check for all reasonable possibilities.
-
-# PHP 7.1 on Homebrew/Apple
-<IfModule php7_module>
-  # set include_path to...include
-  #   - the current working directory (CWD)
-  #   - child of CWD named 'inc'
-  #   - sibling (child of parent of CWD) named 'inc'
-  php_value include_path ".:./inc:../inc"
-  php_value auto_prepend_file "bs.php"
-</IfModule>
-
-# PHP 5.x on Homebrew/Apple
-<IfModule php5_module>
-  php_value include_path ".:./inc:../inc"
-  php_value auto_prepend_file "bs.php"
-</IfModule>
-
-# PHP x on Homebrew/Apple
-<IfModule php_module>
-  php_value include_path ".:./inc:../inc"
-  php_value auto_prepend_file "bs.php"
-</IfModule>
+# actually, if php_module not enabled, there are bigger issues. notably that.
+# i.e., no reason to check for it being enabled :-)
+php_value include_path ".:./inc:../inc"
+php_value auto_prepend_file "bs.php"
