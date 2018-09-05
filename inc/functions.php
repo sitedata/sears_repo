@@ -125,6 +125,15 @@ function set_prod_img_dir( $prod_slug ) {
 	return false;
 }
 
+function get_prod_img_dir() {
+	if ( !defined( 'PROD_IMG_DIR' ) ) {
+		return false;
+	}
+	else {
+		return PROD_IMG_DIR;
+	}
+}
+
 /**
 Get the brand logos image directory URL.
 

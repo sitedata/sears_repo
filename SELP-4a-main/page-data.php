@@ -19,12 +19,20 @@ if ( !defined( 'SLUG' ) ) {
 	define( 'SLUG', $slug );
 }
 
-$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
+get_relative_path( SEARS_PROJECT_PATH . '/images/' );
 
+$prod_slug = '2018-09-05_Fall-Meal-Planning-Ideas';
 
-
-// $img_dir = $prod_img_dir;
-
+set_prod_img_dir( $prod_slug );
+if ( !defined( 'SEARS_USE_SANDBOX_ASSETS' ) ) {
+	define( 'SEARS_USE_SANDBOX_ASSETS', true );
+	eh( 'SEARS_USE_SANDBOX_ASSETS: ' . SEARS_USE_SANDBOX_ASSETS );
+	var_dump( SEARS_USE_SANDBOX_ASSETS );
+}
+else {
+	eh( SEARS_USE_SANDBOX_ASSETS );
+	eh( PROD_IMG_DIR );
+}
 
 $hero = array(
 	'picture' => array(
@@ -117,7 +125,7 @@ $articles = array(
 		'text' => "Dinner doesn’t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!",
 		'link' => array(
 			'text' => "View Salmon and Veggies Recipe",
-			'url' => '#'
+			'url' => '/salmon-and-veggies'
 		)
 	)
 );
