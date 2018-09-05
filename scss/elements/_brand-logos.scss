@@ -1,6 +1,14 @@
 // NOTE:
 // be sure to add the $base-selector class to the parent container in your page_content.php!
 // otherwise, the shared style rules won't get applied
+
+// to match the 2018-09-05 PSDs
+$btn-height: 86.38px;
+$btn-width: 354.25px;
+$btn-font-size: 54.36px;
+$btn-arrow-width: 44px;
+$btn-arrow-height: 41px;
+
 #{ $base-selector } {
 
   // *******************************
@@ -15,11 +23,11 @@
       word-spacing: 0;
       font-size: 0;
       // background: pink;
-      max-width: 1150px;
+      max-width: 1150px; // to make the logos play nice like the PSD!
     }
 
     .brand-logo {
-      display: table-cell;
+      // display: table-cell;
       display: inline-block;
       padding: 10px 20px;
       text-align: center;
@@ -40,24 +48,32 @@
       font-family: Arial, sans-serif;
       //  font-size is 54.73px in PSD
       //  54px / 18px = 3em
-      font-size: 3em;
+      // font-size: 3em;
+      font-size: $btn-font-size;
       position: relative; //  so we can absolutely position the arrow!
+
+      width: $btn-width;
+      height: $btn-height;
+      line-height: $btn-height;
 
       letter-spacing: 0.02em;
 
       //  86px / 54.73px = 1.59em
-      line-height: 1.59em;
+      // line-height: 1.59em;
 
       //  88px / 54px = 1.63em
-      padding: 0 1.63em 0 0.815em;
+      // padding: 0 1.63em 0 0.815em;
+      padding: 0; // to override stuff from shopping.css
+
+      text-indent: -30px; // because the text doesn't center correctly in the new design
 
       span {
         color: #fff;
         font-weight: 600;
       }
 
-      :after {
-        content: " ";
+      &:after {
+        content: "";
         position: absolute;
         border-right: none;
         top: 50%;
@@ -69,7 +85,8 @@
         //  38px / 54px = 0.703em
         border-left-width: 0.703em;
         //  14px / 54px = 0.259em
-        right: 0.259em;
+        // right: 0.259em;
+        right: 0;
       }
 
     } // .btn--shop-now
@@ -88,9 +105,9 @@
 
       .brand-logos--heading {
        //  18px / 21px = 0.857em
-       font-size: 0.857em;
-       font-size: 34px;
-       line-height: 1.2em;
+       // font-size: 0.857em;
+       // font-size: 34px;
+       // line-height: 1.2em;
       }
 
       .brand-logos--wrapper {
@@ -106,13 +123,14 @@
         }
       }
 
+      // same on both now!
       .btn--shop-now {
         //  25.16px / 21px = 1.198em
-        font-size: 1.198em;
-        //  18px / 25.16px = 0.715em
-        padding-left: 0.715em;
-        //  36px / 25.16px = 1.431em
-        padding-right: 1.431em;
+        // font-size: 1.198em;
+        // //  18px / 25.16px = 0.715em
+        // padding-left: 0.715em;
+        // //  36px / 25.16px = 1.431em
+        // padding-right: 1.431em;
       }
 
       .btn--shop-now :after {

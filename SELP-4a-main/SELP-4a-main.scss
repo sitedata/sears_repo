@@ -2,19 +2,8 @@ $wrap-class: '.SELP-4a-main';
 
 @import '../scss/_main';
 
-
-// used on laundry-hack right columns and their fake bottom borders
-$col-right-horz-padding: em( 25px, $max-font-size_m );
-
-$content-padding_d: 57px; // playing in the browser; PSD has 85px from edge
-
-$h2_d: 44px;
-$h3_d: 24px;
-
-$guide_pre_d: 36px;
-$guide_h3_d: 41px;
-
-$icon_height_d: 44px;
+$hero-text-hz-margin_m: 18%;
+$hero-text-hz-margin_d: 15%;
 
 // prevent horizontal overflow
 #main {
@@ -37,89 +26,47 @@ $icon_height_d: 44px;
 
   }
 
-
   .hero--full-width {
     margin-left: -20px;
     margin-right: -20px;
 
-    picture,
-    picture > img {
-      width: 100%;
-      max-width: 100%;
-    }
+  } // .hero--full-width
+
+  .picture,
+  .picture > img {
+    width: 100%;
+    max-width: 100%;
   }
 
-  h2 {
-    // font-size: em( $h2_d, $max-font-size_d );
-    font-size: 40px;
+
+  .hero__text {
+    margin-right: $hero-text-hz-margin_m;
+    margin-left: $hero-text-hz-margin_m;
   }
 
-  h3,
-  .h3 {
-    font-size: em( $h3_d, $max-font-size_d );
-  }
 
-  .font--900 {
-    font-weight: 900;
-  }
+  .article {
 
-  .headline--copy {
-    line-height: 1.4em;
-    br {
-      display: none;
-    }
-  }
+    // .picture,
+    // .picture > img {
+    //   max-width: 100%;
+    // }
 
-  .link__download {
-    // font-size: em( $h3_d, $max-font-size_d );
-    font-size: 31px;
-    white-space: nowrap;
-
-    .icon-document {
-      display: inline-block;
-      // height: em( $icon_height_d, $max-font-size_d );
-      height: $icon_height_d;
-    }
-
-    &--text {
-      vertical-align: middle;
-    }
-  }
-
-  .recipe-section {
-    font-size: 31px;
-    line-height: 1.4;
-
-    & > .headline {
-      background: $blue;
-      color: #fff;
-      font-size: 50px;
-      font-weight: 900;
-      margin-bottom: 20px;
-      padding: 15px 0;
-      text-align: center;
-      &:after {
-        content: ':';
-      }
-    }
-
-    &__description {
-      padding-left: 5px;
-      color: #000;
-    }
-
-    ol, ul {
+    .headline {
       color: $blue;
-      li {
-        margin-bottom: 15px;
-      }
+      font-size: 40px;
+      margin-top: 20px;
     }
-    ol {
-      font-weight: bold;
-      list-style-position: inside;
-      padding-left: 5px;
+
+    .text {
+      margin-bottom: 20px;
     }
-  }
+
+    .link {
+      // margin-top: 20px;
+    }
+
+  } // .article
 
 
 }
@@ -128,23 +75,10 @@ $icon_height_d: 44px;
 @media screen and (min-width: 992px) {
 
   #{$wrap-class} {
-    // force content column width
-    // article,
-    // #hero .container {
-    //   padding-left: $content-padding_d;
-    //   padding-right: $content-padding_d;
-    // }
 
-    h2 {
-      // font-size: em( $h2_d, $max-font-size_d );
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-      line-height: 1;
-    }
-
-    h3,
-    .h3 {
-      font-size: em( $h3_d, $max-font-size_d );
+    .hero__text {
+      margin-right: $hero-text-hz-margin_d;
+      margin-left: $hero-text-hz-margin_d;
     }
 
   }
