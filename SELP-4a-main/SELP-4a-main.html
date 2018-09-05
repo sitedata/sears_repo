@@ -102,10 +102,6 @@
   width: 100%;
   max-width: 100%; }
 
-@media screen and (min-width: 992px) {
-  [class*=SEARS-] h3 {
-    font-size: 2.1em; } }
-
 .font-31 {
   font-size: 31px !important; }
 
@@ -140,7 +136,7 @@
     position: relative;
     width: 354.25px;
     height: 86.38px;
-    line-height: 86.38px;
+    line-height: 83.38px;
     letter-spacing: 0.02em;
     padding: 0;
     text-indent: -30px; }
@@ -153,9 +149,9 @@
       border-right: none;
       top: 50%;
       transform: translate(0, -50%);
-      border: 0.37em solid transparent;
+      border: 22px solid transparent;
       border-left-color: #FFF;
-      border-left-width: 0.703em;
+      border-left-width: 40px;
       right: 0; }
 
 @media screen and (min-width: 992px) {
@@ -194,9 +190,9 @@
   max-width: 100%;
   overflow: hidden; }
 
-.SELP-4a-main #hero {
+.SELP-4a-main .hero--full-width .banner {
   position: relative; }
-  .SELP-4a-main #hero h1 {
+  .SELP-4a-main .hero--full-width .banner h1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -204,11 +200,8 @@
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-
-.SELP-4a-main .hero--full-width {
-  margin-left: -20px;
-  margin-right: -20px; }
+    transform: translate(-50%, -50%);
+    margin: 0; }
 
 .SELP-4a-main .picture,
 .SELP-4a-main .picture > img {
@@ -237,8 +230,9 @@
 
   <!-- BEGIN #hero -->
   <header id="hero" class="hero--full-width text-align-center">
-    <h1 class="font-48 font--700 font--white text-align-center center--both">Quick &amp; Easy<br>Fall Meal<br>Planning Ideas</h1>
-    <picture class="picture" >
+    <div class="banner">
+      <h1 class="font-48 font--700 font--white text-align-center center--both">Quick &amp; Easy<br>Fall Meal<br>Planning Ideas</h1>
+      <picture class="picture" >
   <source media="(max-width:991px)" srcset="/SELP-4a-main/images/quick-easy-meal-planning-ideas_991w.jpg">
   <source media="(min-width:992px)" srcset="/SELP-4a-main/images/quick-easy-meal-planning-ideas_1550w.jpg">
   <img src="/SELP-4a-main/images/quick-easy-meal-planning-ideas_991w.jpg"
@@ -246,6 +240,8 @@
     class="picture__img"
     >
 </picture>
+      
+    </div>
     <div class="padding-vert-xl text-align-center">
       <div class="hero__text font-31 lh-sm">Make delicious and healthy meals a routine this fall with some time-saving meal prep tips and simple recipes!</div>
     </div>

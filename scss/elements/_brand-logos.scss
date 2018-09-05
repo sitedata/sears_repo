@@ -54,7 +54,8 @@ $btn-arrow-height: 41px;
 
       width: $btn-width;
       height: $btn-height;
-      line-height: $btn-height;
+      // line-height: $btn-height;
+      line-height: ($btn-height - 3);
 
       letter-spacing: 0.02em;
 
@@ -79,11 +80,16 @@ $btn-arrow-height: 41px;
         top: 50%;
         transform: translate( 0, -50% );
         //  20px / 54px = 0.370em
-        border: 0.37em solid transparent;
+        // border: 0.37em solid transparent;
+        // 41px? in the PSD
+        border: 22px solid transparent;
 
         border-left-color: #FFF;
         //  38px / 54px = 0.703em
-        border-left-width: 0.703em;
+        // border-left-width: 0.703em;
+        // 44px in the PSD
+        border-left-width: 40px;
+
         //  14px / 54px = 0.259em
         // right: 0.259em;
         right: 0;
