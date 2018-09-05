@@ -15,21 +15,13 @@ $hr-color: #dadbdc;
 // my stuff here!
 #{$wrap-class} {
 
-  // to achieve the 20px padding on each side of hero in PSD
-  // padding-left: 5px;
-  // padding-right: 5px;
+  .font--900 {
+    font-weight: 900;
+  }
 
-  // max-width: 100%;
-  // overflow-x: hidden;
-
-  // force content column width
-  // article,
-  // #hero .container {
-  //   padding-left: $content-padding_d;
-  //   padding-right: $content-padding_d;
-  // }
-
-  // font-size: 31px;
+  .font--424242 {
+    color: $gray-42;
+  }
 
   .hero--full-width {
     margin-left: -20px;
@@ -45,10 +37,8 @@ $hr-color: #dadbdc;
       width: 100%;
       max-width: 100%;
     }
-  }
 
-  .font--900 {
-    font-weight: 900;
+
   }
 
   .recipe-section {
@@ -114,7 +104,7 @@ $hr-color: #dadbdc;
   } // .footer
 
   .view-more {
-    margin-top: 50px;
+    margin-top: 50px;    
   }
 
 }

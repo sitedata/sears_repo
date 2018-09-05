@@ -142,6 +142,12 @@
   max-width: 100%;
   overflow: hidden; }
 
+.SELP-4c-chili .font--900 {
+  font-weight: 900; }
+
+.SELP-4c-chili .font--424242 {
+  color: #424242; }
+
 .SELP-4c-chili .hero--full-width {
   margin-left: -20px;
   margin-right: -20px; }
@@ -152,9 +158,6 @@
   .SELP-4c-chili .hero--full-width .picture > img {
     width: 100%;
     max-width: 100%; }
-
-.SELP-4c-chili .font--900 {
-  font-weight: 900; }
 
 .SELP-4c-chili .recipe-section {
   font-size: 31px;

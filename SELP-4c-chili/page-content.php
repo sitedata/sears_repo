@@ -29,22 +29,10 @@ $slug = (isset( $slug ) && !empty( $slug )) ? $slug : basename( SEARS_PROJECT_PA
     <h1 class="font-48 font--700 text-align-center padding-vert-xl"
       itemprop="name"><?php echo $hero['h1'] ?></h1>
     <?php element( 'picture', $hero ); ?>
-<?php if (false): ?>
-    <picture class="picture">
-    <?php foreach ($hero['picture'] as $p): ?>
-      <source media="<?php echo $p['media'] ?>" srcset="<?php echo $img_dir . $p['srcset'] ?>">
-    <?php endforeach; ?>
-      <img src="<?php echo $img_dir . $hero['img'] ?>"
-        alt="<?php echo $hero['alt'] ?>"
-        itemprop="image"
-        >
-    </picture>
-<?php endif; ?>
-
     <div class="container">
       <div class="row text-align-center">
         <div class="col-xs-12 padding-vert-lg">
-          <div class="hero--text font-31 lh-sm" itemprop="description">
+          <div class="hero--text font-31 lh-sm font--424242" itemprop="description">
             <?php echo $hero['text'] ?>
           </div>
           <div class="padding-vert-lg font-31">
@@ -105,7 +93,7 @@ element( 'brand-logos', $brand_logos
     <div class="row padding-vert-xl">
     <?php foreach ( $view_more as $vm ): ?>
       <div class="col-xs-12 font-31">
-        <strong class="font--700">View More:</strong>
+        <strong class="font--700 font--424242">View More:</strong>
         <a class="link"
           href="<?php echo $vm['url'] ?>"
           data-href="<?php echo $vm['url'] ?>"
