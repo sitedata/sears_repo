@@ -15,11 +15,9 @@ http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logo
 // get the directory name
 $slug = basename( dirname( __FILE__ ) );
 
-$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
+$img_dir = get_image_dir();
 
 $prod_img_dir = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-08-08_Refrigerator-Essentials/';
-
-// $img_dir = $prod_img_dir;
 
 // bento-boxes_760w.jpg
 // bento-boxes_941w.jpg
@@ -49,6 +47,38 @@ $hero = array(
 	'h1' => 'Time-saving Tips for Fast, Healthy Weeknight Dinners',
 	'text' => 'Between getting ready for work, kids off to school, extracurricular school activities and completing homework, you have enough to think about on a daily basis. Don’t let “what are we having for dinner” become that nagging question at the end of a long day! Use these tips and tricks to get healthy meal options onto your table in no time.',
 );
+
+$content = array(
+  array(
+    'img' => 'bento-boxes_760w.jpg',
+  	'alt' => "Bento boxes",
+  	'subheading' => "Plan and Prep Ahead of Time",
+    'listitem' => array(
+  		"Make your menus a week in advance and include days for leftovers or eating out.",
+  		"Include a protein, a vegetable and a carb in each meal.",
+  		"Wash and chop your vegetables ahead of time for a quick snack or easy addition to any meal."
+    ),
+    // 'link' => array(
+    // 	"#",
+    // 	"#",
+    // ),
+    // 'linktext' => array(
+  		// "Shop Freezers",
+  		// "Shop Refrigerators"
+    // ),
+  ),
+ );
+
+$links =array( 
+	array(
+	'reference' => "#",
+	'linktext' => 'Shop Freezers'
+		)
+	,array(
+	'reference' => "#",
+	'linktext' => 'Shop Refrigerators'
+		)
+	);
 
 
 

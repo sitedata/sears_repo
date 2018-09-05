@@ -1,8 +1,82 @@
+<style type="text/css">
+/**
+My kingdom for a preprocessor...
+*/
+/* make sure link text responds to parent hover state */
+.SEARS-005936 .cursor--pointer:hover a {
+  color: #f3433a;
+}
+/* math  the old fashioned way.. */
+.SEARS-005936 .row {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+.SEARS-005936 .row h3 {
+  /* 44px / 14px = 3.14em */
+  font-size: 3.14em;
+}
+.SEARS-005936 .row .col-right {
+  /* 28px in PSD; doesn't account for line-height */
+  padding-top: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.SEARS-005936 .row p,
+.SEARS-005936 .row a {
+   /* 18px / 14px = 1.29em */
+  font-size: 1.29em;
+  margin-bottom: 0 !important;
+}
+/* have to fake a bottom border because of how the borders in the design sit */
+.SEARS-005936 .row .fake-bottom-border {
+  border-bottom: 2px solid #e0e0e0;
+  clear: both;
+  /* 30px / 14px = 2.14em */
+  height: 2.14em;
+  margin-left: 25px;
+  max-width: 85%;
+}
+
+/* intermediate screen sizes to appease QA and designers */
+@media (min-width: 450px ) {
+  .SEARS-005936 .row .fake-bottom-border {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 550px ) {
+  .SEARS-005936 .row .fake-bottom-border {
+    max-width: 94%;
+  }
+}
+
+
+/* large tablet/ desktop-ish */
+@media (min-width: 993px ) {
+  .SEARS-005936 .row .col-right {
+    padding-top: 2%;
+  }
+  .SEARS-005936 .row .fake-bottom-border {
+    /* to match the padding on the parent */
+    margin-left: 15px;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .SEARS-005936 .row .col-right {
+    padding-top: 6.66%;
+  }
+}
+
+</style>
+
+<h1>Unable to locate image directory for $abs_path = "/Users/santhony/Desktop/Sears_repo/landing-pages/SEARS-005936/page-content.php"!</h1>
 <div class="cms-content cms-content-html padding-vert-xl" id="cms-content-1920-1920">
     <!-- BEGIN #hero -->
     <!-- TEMPLATE STARTS: n-->
     <section id="hero">
-        <img alt="Cooking Essentials Appliance Overviews &amp; TOP Tips" src="/assets/cms/SEARS-005936/01_Masthead_CookingEssentials.jpg" class="img-responsive mqImage width100percent">
+        <img alt="Cooking Essentials Appliance Overviews &amp; TOP Tips" src="01_Masthead_CookingEssentials.jpg" class="img-responsive mqImage width100percent">
     </section><!-- #hero -->
     <!-- END #hero -->
 
@@ -12,7 +86,7 @@
 
             <div class="SEARS-005936--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005936/02_CooktopCraze.jpg" class="width100percent" alt="Cooktop Craze">
+                    <img src="02_CooktopCraze.jpg" class="width100percent" alt="Cooktop Craze">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">Cooktop Craze</h3>
@@ -25,7 +99,7 @@
 
             <div class="SEARS-005936--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005936/03_WithinRange.jpg" class="width100percent" alt="Within Range">
+                    <img src="03_WithinRange.jpg" class="width100percent" alt="Within Range">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">Within Range</h3>
@@ -38,7 +112,7 @@
 
             <div class="SEARS-005936--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005936/04_WallOvenOptions.jpg" class="width100percent" alt="Wall Oven Options">
+                    <img src="04_WallOvenOptions.jpg" class="width100percent" alt="Wall Oven Options">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">Wall Oven Options</h3>
@@ -51,7 +125,7 @@
 
             <div class="SEARS-005936--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005936/05_CantMissCookingHacks.jpg" class="width100percent" alt="Can't-Miss Cooking Hacks">
+                    <img src="05_CantMissCookingHacks.jpg" class="width100percent" alt="Can't-Miss Cooking Hacks">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">Can't-Miss Cooking Hacks</h3>
@@ -64,7 +138,7 @@
 
             <div class="SEARS-005936--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005936/06_CookingCreativity.jpg" class="width100percent" alt="Kitchen Creativity:<br />
+                    <img src="06_CookingCreativity.jpg" class="width100percent" alt="Kitchen Creativity:<br />
 Trends in Design">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">

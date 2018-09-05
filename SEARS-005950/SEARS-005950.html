@@ -1,8 +1,82 @@
+<style type="text/css">
+/**
+My kingdom for a preprocessor...
+*/
+/* make sure link text responds to parent hover state */
+.SEARS-005950 .cursor--pointer:hover a {
+  color: #f3433a;
+}
+/* math  the old fashioned way.. */
+.SEARS-005950 .row {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+.SEARS-005950 .row h3 {
+  /* 44px / 14px = 3.14em */
+  font-size: 3.14em;
+}
+.SEARS-005950 .row .col-right {
+  /* 28px in PSD; doesn't account for line-height */
+  padding-top: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.SEARS-005950 .row p,
+.SEARS-005950 .row a {
+   /* 18px / 14px = 1.29em */
+  font-size: 1.29em;
+  margin-bottom: 0 !important;
+}
+/* have to fake a bottom border because of how the borders in the design sit */
+.SEARS-005950 .row .fake-bottom-border {
+  border-bottom: 2px solid #e0e0e0;
+  clear: both;
+  /* 30px / 14px = 2.14em */
+  height: 2.14em;
+  margin-left: 25px;
+  max-width: 85%;
+}
+
+/* intermediate screen sizes to appease QA and designers */
+@media (min-width: 450px ) {
+  .SEARS-005950 .row .fake-bottom-border {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 550px ) {
+  .SEARS-005950 .row .fake-bottom-border {
+    max-width: 94%;
+  }
+}
+
+
+/* large tablet/ desktop-ish */
+@media (min-width: 993px ) {
+  .SEARS-005950 .row .col-right {
+    padding-top: 2%;
+  }
+  .SEARS-005950 .row .fake-bottom-border {
+    /* to match the padding on the parent */
+    margin-left: 15px;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .SEARS-005950 .row .col-right {
+    padding-top: 6.66%;
+  }
+}
+
+</style>
+
+<h1>Unable to locate image directory for $abs_path = "/Users/santhony/Desktop/Sears_repo/landing-pages/SEARS-005950/page-content.php"!</h1>
 <div class="cms-content cms-content-html padding-vert-xl" id="cms-content-1920-1920">
     <!-- BEGIN #hero -->
     <!-- TEMPLATE STARTS: n-->
     <section id="hero">
-        <img alt="Laundry essentials: Appliance Overviews & TOP Tips" src="/assets/cms/SEARS-005950/01_masthead_LaundryMain.jpg" class="img-responsive mqImage width100percent">
+        <img alt="Laundry essentials: Appliance Overviews & TOP Tips" src="01_masthead_LaundryMain.jpg" class="img-responsive mqImage width100percent">
     </section><!-- #hero -->
     <!-- END #hero -->
 
@@ -12,7 +86,7 @@
 
             <div class="SEARS-005950--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005950/02_WashingMachineShopping.jpg" class="width100percent" alt="Washing Machine Shopping? Start Here!">
+                    <img src="02_WashingMachineShopping.jpg" class="width100percent" alt="Washing Machine Shopping? Start Here!">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">Washing Machine Shopping? Start Here!</h3>
@@ -25,7 +99,7 @@
 
             <div class="SEARS-005950--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005950/03_YouCanWashThat.jpg" class="width100percent" alt="Wait, You Can Wash That?">
+                    <img src="03_YouCanWashThat.jpg" class="width100percent" alt="Wait, You Can Wash That?">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">Wait, You Can Wash That?</h3>
@@ -38,7 +112,7 @@
 
             <div class="SEARS-005950--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005950/04_LaundryHacks.jpg" class="width100percent" alt="6 Life Changing Laundry Hacks">
+                    <img src="04_LaundryHacks.jpg" class="width100percent" alt="6 Life Changing Laundry Hacks">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">6 Life Changing Laundry Hacks</h3>
@@ -51,7 +125,7 @@
 
             <div class="SEARS-005950--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005950/05_CrackTheCode.jpg" class="width100percent" alt="Crack the Code">
+                    <img src="05_CrackTheCode.jpg" class="width100percent" alt="Crack the Code">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">Crack the Code</h3>
@@ -64,7 +138,7 @@
 
             <div class="SEARS-005950--card row padding-vert-xl cursor--pointer" data-href="#">
                 <div class="col-sm-12 col-md-6 col-left">
-                    <img src="/assets/cms/SEARS-005950/06_ComeOutInTheWash.jpg" class="width100percent" alt="It'll Come Out in the Wash">
+                    <img src="06_ComeOutInTheWash.jpg" class="width100percent" alt="It'll Come Out in the Wash">
                 </div>
                 <div class="col-sm-12 col-md-6 padding-horiz-xl col-right">
                     <h3 class="font--400">It'll Come Out in the Wash</h3>

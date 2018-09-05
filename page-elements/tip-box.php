@@ -29,4 +29,3 @@ $data = array_merge( $_def, $data );
   </div>
 </aside>
 <?php
-echo $data['after'];

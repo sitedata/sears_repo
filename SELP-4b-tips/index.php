@@ -1,6 +1,9 @@
 <?php
 
+require_once( $_SERVER['DOCUMENT_ROOT'] . '/inc/bs.php' );
+
 $slug = basename( dirname( __FILE__ ) );
+
 
 $page_content = dirname( __FILE__ ) . '/page-content.php';
 
