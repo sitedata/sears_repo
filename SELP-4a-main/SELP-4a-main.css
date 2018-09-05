@@ -145,6 +145,7 @@
 .SELP-4a-main .hero--full-width .banner {
   position: relative; }
   .SELP-4a-main .hero--full-width .banner h1 {
+    font-size: 65px;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -21,7 +21,7 @@ By keeping the grid directives in the definition of each page, page elements wil
   <!-- BEGIN #hero -->
   <header id="hero" class="hero--full-width text-align-center">
     <div class="banner">
-      <h1 class="font-48 font--700 font--white text-align-center center--both"><?php echo $hero['h1'] ?></h1>
+      <h1 class="font--700 font--white text-align-center center--both"><?php echo $hero['h1'] ?></h1>
       <?php element( 'picture', $hero ); ?>
     </div>
     <div class="padding-vert-xl text-align-center">
