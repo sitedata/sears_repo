@@ -39,11 +39,11 @@ $data = array_merge( $_defaults, $data );
 ?>
 <section id="<?php echo $data['id'] ?>"
   class="<?php echo $data['class'] ?>">
-  <h2 class="headline"><?php echo $data['headline'] ?></h2>
+  <h2 class="headline font-50 font--white font--900"><?php echo $data['headline'] ?></h2>
   <?php if ( !empty( $data['copy'] ) ): ?>
-  <p class="recipe__ingredient-list--text"><?php echo $data['copy'] ?></p>
+  <p class="recipe__ingredient-list--text font-31 font--424242"><?php echo $data['copy'] ?></p>
   <?php endif; ?>
-  <ul>
+  <ul class="font-31">
   <?php foreach( $data['list'] as $ingredient ): ?>
     <li><span class="recipe__ingredient font--black font--400" itemprop="recipeIngredient"><?php echo htmlspecialchars( $ingredient ) ?></span></li>
   <?php endforeach; ?>
