@@ -27,7 +27,7 @@ SANDBOX DIRECTORY URLS FOR BRAND LOGOS AND icons
 */
 // URL of directory where brand logos live in Sears Sandbox environment (SSE)
 define( 'SEARS_SANDBOX_BRAND_LOGOS_DIR',
-	SEARS_SANDBOX_ASSETS_BASE_URL . '/brand-logos/logos/' );
+	SEARS_SANDBOX_ASSETS_BASE_URL . '/brand-logos/' );
 
 // URL of directory where icon images live in SSE
 define( 'SEARS_SANDBOX_ICONS_DIR',
@@ -59,8 +59,9 @@ if ( !defined( 'SEARS_USE_SANDBOX_ASSETS' ) ) {
 		isset( $_GET['use_sandbox_assets'] ) ) {
 		define( 'SEARS_USE_SANDBOX_ASSETS', true );
 	}
+	// not setting it as a default here allows us to set the constant in index!
 	else {
-		define( 'SEARS_USE_SANDBOX_ASSETS', false );
+		// define( 'SEARS_USE_SANDBOX_ASSETS', false );
 	}
 }
 

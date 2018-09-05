@@ -118,8 +118,12 @@ Sets the prod img directory for a given project.
 Returns true if able to set PROD_IMG_DIR; false if already set.
 */
 function set_prod_img_dir( $prod_slug ) {
+
+	// remove leading or trailing slashes if any from $prod_slug
+	$prod_slug = preg_replace( '/^\/*|\/*$/', '', $prod_slug );
+
 	if ( !defined( 'PROD_IMG_DIR' ) ) {
-		define( 'PROD_IMG_DIR', SEARS_SANDBOX_ASSETS_BASE_URL . '/' . $prod_slug );
+		define( 'PROD_IMG_DIR', SEARS_SANDBOX_ASSETS_BASE_URL . '/' . $prod_slug . '/' );
 		return true;
 	}
 	return false;

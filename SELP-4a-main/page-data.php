@@ -67,7 +67,7 @@ $articles = array(
 		'text' => 'Don&rsquo;t let &ldquo;what are we having for dinner&rdquo; become that nagging question at the end of a long day! Use these <a class="article-link" href="%1$s" data-href="%1$s">tips and tricks</a> to get healthy meal options onto your table in no time.',
 		'link' => array(
 			'text' => "View Time-saving Tips",
-			'url' => '#'
+			'url' => '/time-saving-dinner-ideas'
 		)
 	),
 	array(
@@ -87,7 +87,7 @@ $articles = array(
 		'text' => "What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!",
 		'link' => array(
 			'text' => "View Butternut Squash Chicken Chili Recipe",
-			'url' => '#'
+			'url' => '/butternut-squash-chicken-chili-recipe'
 		)
 	),
 	// butternut-squash-chicken-chili_725w.jpg
@@ -116,7 +116,7 @@ $articles = array(
 		'text' => "Dinner doesn’t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!",
 		'link' => array(
 			'text' => "View Salmon and Veggies Recipe",
-			'url' => '/salmon-and-veggies'
+			'url' => '/baked-salmon-and-veggies-recipe'
 		)
 	)
 );

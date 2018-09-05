@@ -9,67 +9,20 @@
   [class*=SEARS-] {
     font-size: 21px; } }
 
-.xs--show, .xs--hide {
-  display: none; }
-
-.xs--only-show, .xs--only-hide {
-  display: none; }
-
-.sm--show, .sm--hide {
-  display: none; }
-
-.sm--only-show, .sm--only-hide {
-  display: none; }
-
-.md--show, .md--hide {
-  display: none; }
-
-.md--only-show, .md--only-hide {
-  display: none; }
-
-.lg--show, .lg--hide {
-  display: none; }
-
-@media screen and (max-width: 767px) {
-  .xs--show {
-    display: unset; }
-  .xs--hide {
-    display: none; } }
-
-@media screen and (min-width: 0px) and (max-width: 767px) {
-  .xs--only-show {
-    display: unset; }
-  .xs--only-hide {
-    display: none; } }
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 991px) {
   .sm--show {
     display: unset; }
   .sm--hide {
-    display: none; } }
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .sm--only-show {
-    display: unset; }
-  .sm--only-hide {
+    display: none; }
+  .md--show {
     display: none; } }
 
 @media screen and (min-width: 992px) {
   .md--show {
     display: unset; }
+  .sm--hide {
+    display: unset; }
   .md--hide {
-    display: none; } }
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .md--only-show {
-    display: unset; }
-  .md--only-hide {
-    display: none; } }
-
-@media screen and (min-width: 1200px) {
-  .lg--show {
-    display: unset; }
-  .lg--hide {
     display: none; } }
 
 [class*=SEARS-] .headline .headline--copy {
@@ -231,8 +184,8 @@
       padding-left: 0;
       padding-right: 0; }
   .sm__text-column {
-    padding-left: 20px;
-    padding-right: 20px; } }
+    padding-left: 30px;
+    padding-right: 30px; } }
 
 @media screen and (min-width: 992px) {
   .SELP-4a-main .hero__text {
