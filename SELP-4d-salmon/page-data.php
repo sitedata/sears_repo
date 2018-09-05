@@ -19,19 +19,10 @@ $slug = basename( dirname( __FILE__ ) );
 $img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
 
 // slug of image directory on sandbox
-$prod_slug = '2018-09-05_salmon-and-veggies';
+$prod_slug = '2018-09-05_Salmon-and-Veggies';
 
 // creates a constant named PROD_IMG_DIR containing full URL of sandbox image directory for this page
 set_prod_img_dir( $prod_slug );
-
-// redundant
-$prod_img_dir = PROD_IMG_DIR;
-
-// $img_dir = $prod_img_dir;
-
-// salmon-and-veggies_800w.jpg
-// salmon-and-veggies_991w.jpg
-// salmon-and-veggies_1550w.jpg
 
 $hero = array(
 	'picture' => array(
@@ -51,10 +42,10 @@ NOTE: see the <span itemprop="name"> in the h1.
 This is for the Schema.org Recipe microdata.
 */
 	'h1' => 'Easy One Sheet Pan Recipe &mdash; <span itemprop="name">Salmon and Veggies</span>',
-	'text' => 'Dinner doesn’t have to be complicated to be delicious. Try one sheet recipes like this one to get healthy and delectable meals to the table from start to finish in 30 minutes or less!',
+	'text' => 'Dinner doesn&rsquo;t have to be complicated to be delicious. Try one sheet recipes like this one to get healthy and delectable meals to the table from start to finish in 30 minutes or less!',
 	'link' => array(
 		'text' => 'Download Recipe PDF',
-		'url' => '#',
+		'url' => get_prod_img_dir() . 'Salmon_and_Veggies_recipe.pdf',
 	)
 );
 
@@ -63,26 +54,18 @@ PRETTY SURE EVERYTHING AFTER THIS IS STILL THE DATA FOR THE CHILI RECIPE
 */
 
 $ingredients = array(
-	'headline' => 'Shopping List',
+	'headline' => 'Ingredients',
 	'list' => array(
-		'1 medium butternut squash peeled and chopped into 1-in cubes',
-		'1 medium yellow onion coarsely chopped',
-		'1 red bell pepper de-seeded and chopped into bite-sized pieces',
-		'1 lb. shredded chicken or pre-cooked ground chicken',
-		'1 (28 oz.) can diced fire-roasted tomatoes',
-		'2 (15 oz.) cans black beans, unseasoned',
-		'3 cups chicken broth',
-		'1 teaspoon kosher salt',
-		'1-2 tablespoons minced garlic',
-		'1 ½ tablespoon chili powder',
-		'½ tablespoon cumin',
-		'1 teaspoon cayenne pepper',
-		'1 teaspoon cinnamon',
-		'1 teaspoon oregano',
-		'2 tablespoons olive oil',
-		'Chopped green onions (optional)',
-		'Avocado (optional)',
-		'Cheese of choice (optional)',
+		"3 (4-6 oz.) salmon steaks",
+		"¼ cup olive oil",
+		"2 teaspoons minced garlic",
+		"½ tablespoon onion powder",
+		"1 tablespoon paprika",
+		"½ teaspoon cayenne pepper 	(if you don’t like heat, hold the pepper!)",
+		"½ teaspoon kosher salt",
+		"1 tablespoon chopped, fresh parsley",
+		"1 bundle of asparagus, stems removed",
+		"2 sweet potatoes peeled and cut into 1-inch cubes"
 	),
 );
 
@@ -92,41 +75,20 @@ Pre-prep
 $prep = array(
 	'how-to-position' => 1,
 	'headline' => 'Pre-Prep',
-	'copy' => 'Use your fridge to save time. Just a little bit of meal prep will make dinnertime go much faster with these few simple tips!',
+	'copy' => 'Meal prepping is a great way to eat healthier and further cut down on cooking time. Try these tips to make this recipe go even faster.',
 	'steps' => array(
 		array(
-			'headline' => 'Pre-cook your protein.',
+			'headline' => 'Pre-mix your spices.',
 			'copy' => array(
 				array(
 					'type' => 'tip', // or direction!
-					'text' => 'For this recipe, cook and shred your chicken 3-4 days before you make your chili.',
-				),
-				array(
-					'type' => 'direction',
-					'text' => 'In a stock pot, add chicken and water.',
-				),
-				array(
-					'type' => 'direction',
-					'text' => 'Bring to a boil and then move to medium heat to simmer for about 15 minutes.',
-				),
-				array(
-					'type' => 'direction',
-					'text' => 'After chicken has cooled, shred with a fork.',
-				),
-				array(
-					'type' => 'tip',
-					'text' => 'If shredded chicken is not your speed, try ground chicken!',
-				),
-				array(
-					'type' => 'direction',
-					'text' => 'Sauté over medium heat for 10-15 minutes until all pinkness is gone and remove from grease.',
+					'text' => "You’ll just need to add the olive oil and herbs!",
 				),
 			),
 		),
-
 		array(
-			'headline' => 'Wash and prepare your vegetables in advance.',
-			'copy' => 'Once peeled, de-seeded and cut into chunks, the butternut squash will last 2-5 days in your refrigerator. Chopped onion will last up to a week and chopped bell pepper is good for 2-3 days in the fridge.',
+			'headline' => "Wash and cut your vegetables and herbs after purchase.",
+			'copy' => "Asparagus can stay fresh in your refrigerator for 2-4 days. Chopped herbs will last 3-5 days. Sweet potatoes are fine for up to a month!",
 		),
 
 		array(
@@ -144,6 +106,7 @@ $prep = array(
 /**
 Directions
 */
+
 $directions = array(
 	'headline' => 'Directions',
 	'copy' => '',
@@ -151,22 +114,30 @@ $directions = array(
 	'steps' => array(
 		array(
 			'headline' => '',
-			'copy' => 'In a Dutch oven, heat olive oil on medium. Add coarsely chopped onion and saut&eacute; until translucent.',
+			'copy' => "10-15 minutes before cook time remove your salmon fillets from the refrigerator to allow them to come to room temperature.",
+
 		),
 
 		array(
 			'headline' => '',
-			'copy' => 'Add your pre-cooked chicken, spices, canned tomatoes, rinsed black beans, chicken broth and chopped bell pepper. Cover and simmer for 15 mins.',
+			'copy' => "Pre-heat oven to 375&deg;F.",
 		),
 
 		array(
 			'headline' => '',
-			'copy' => 'Add butternut squash chunks and simmer for an additional 15 mins.',
+			'copy' => "In a small saucepan on medium heat, combine olive oil, garlic, onion powder, paprika, cayenne pepper, salt and chopped parsley. Stir for one minute, then turn off heat and allow to sit for 5 minutes.",
 		),
-
 		array(
 			'headline' => '',
-			'copy' => 'Serve topped with green onion, avocado chunks and/or your cheese of choice! White cheddar pairs nicely, or if you&rsquo;re looking for a little more heat shredded pepper jack would also be a nice addition.',
+			'copy' => "Coat your room temperature salmon steaks and veggies with your olive oil mixture.",
+		),
+		array(
+			'headline' => '',
+			'copy' => "Cover a large baking sheet with tin foil or parchment paper and evenly lay out salmon and veggies.",
+		),
+		array(
+			'headline' => '',
+			'copy' => "Bake for about 20 mins until salmon is flaky and vegetables are tender."
 		),
 	),
 );
@@ -174,9 +145,11 @@ $directions = array(
 /**
 Footer
 */
+
 $footer = array(
-	'headline' => 'An easy, customizable, delicious fall meal in under 45 minutes!',
-	'copy' => 'Switch it up — add ground turkey instead of chicken, or sweet potatoes instead of butternut squash. It’s easy and your family will love it!',
+	'headline' => "Voil&agrave; — a simple fall dinner recipe that will leave you looking like a gourmet chef.",
+	'text' => "Not a fan or asparagus or sweet potatoes? Change it up! Carrots, Brussels sprouts, broccoli or any of your favorite vegetables can be substituted to suit your preferences."
+
 );
 
 
@@ -195,6 +168,6 @@ View More
 $view_more = array(
 	array(
 		'text' => 'Meal Planning Tips &amp; Recipes',
-		'url' => '#'
+		'url' => '/fall-meal-planning-ideas'
 	),
 );

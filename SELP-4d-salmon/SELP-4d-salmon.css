@@ -1,22 +1,76 @@
-[class*=SEARS-] {
-  font-size: calc(1.49031vw + 5.231px); }
+.font-31 {
+  font-size: 31px !important; }
 
-@media screen and (min-width: 992px) {
-  [class*=SEARS-] {
-    font-size: calc(0.75431vw + 6.51724px); } }
+.font-48 {
+  font-size: 48px !important; }
 
-@media screen and (min-width: 1921px) {
-  [class*=SEARS-] {
-    font-size: 21px; } }
+.font-50 {
+  font-size: 50px !important; }
 
-.md-show {
-  display: none; }
+.font-65 {
+  font-size: 65px !important; }
 
-@media screen and (min-width: 992px) {
-  .md-show {
+@media screen and (max-width: 767px) {
+  .font-31 {
+    font-size: 27.9px !important; }
+  .font-48 {
+    font-size: 43.2px !important; }
+  .font-50 {
+    font-size: 45px !important; }
+  .font-65 {
+    font-size: 58.5px !important; } }
+
+@media screen and (max-width: 599px) {
+  .font-31 {
+    font-size: 21.7px !important; }
+  .font-40 {
+    font-size: 28px !important; }
+  .font-48 {
+    font-size: 33.6px !important; }
+  .font-50 {
+    font-size: 35px !important; }
+  .font-65 {
+    font-size: 45.5px !important; } }
+
+@media screen and (max-width: 400px) {
+  .font-31 {
+    font-size: 15.5px !important; }
+  .font-40 {
+    font-size: 20px !important; }
+  .font-48 {
+    font-size: 24px !important; }
+  .font-50 {
+    font-size: 25px !important; }
+  .font-65 {
+    font-size: 32.5px !important; } }
+
+@media screen and (max-width: 991px) {
+  .sm--show {
     display: unset; }
-  .md-hide {
+  .sm--hide {
+    display: none; }
+  .md--show {
     display: none; } }
+
+@media screen and (min-width: 992px) {
+  .md--show {
+    display: unset; }
+  .sm--hide {
+    display: unset; }
+  .md--hide {
+    display: none; } }
+
+@media screen and (max-width: 767px) {
+  .xs--show {
+    display: unset; }
+  .xs--hide {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .xs--show {
+    display: none; }
+  .xs--hide {
+    display: unset; } }
 
 [class*=SEARS-] .headline .headline--copy {
   font-size: 1.19em;
@@ -35,12 +89,17 @@
   padding-left: 16px;
   padding-bottom: 10px; }
 
-@media screen and (min-width: 992px) {
-  [class*=SEARS-] h3 {
-    font-size: 2.1em; } }
+[class*=SEARS-] .hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px; }
+  [class*=SEARS-] .hero--full-width h1 {
+    margin-left: 40px;
+    margin-right: 40px; }
 
-.font-31 {
-  font-size: 31px !important; }
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture > img {
+  width: 100%;
+  max-width: 100%; }
 
 [class*=SEARS-] .brand-logos {
   text-align: center; }
@@ -49,216 +108,161 @@
     margin: 0 auto;
     word-spacing: 0;
     font-size: 0;
-    background: pink;
     max-width: 1150px; }
   [class*=SEARS-] .brand-logos .brand-logo {
-    display: table-cell;
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle; }
   [class*=SEARS-] .brand-logos .btn--shop-now {
-    background-color: #e0001e;
+    background-color: #e92227;
     border-radius: 0;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 3em;
+    font-size: 54.36px;
     position: relative;
+    width: 354.25px;
+    height: 86.38px;
+    line-height: 83.38px;
     letter-spacing: 0.02em;
-    line-height: 1.59em;
-    padding: 0 1.63em 0 0.815em; }
+    padding: 0;
+    text-indent: -30px; }
     [class*=SEARS-] .brand-logos .btn--shop-now span {
       color: #fff;
       font-weight: 600; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      content: " ";
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
       position: absolute;
       border-right: none;
       top: 50%;
       transform: translate(0, -50%);
-      border: 0.37em solid transparent;
+      border: 22px solid transparent;
       border-left-color: #FFF;
-      border-left-width: 0.703em;
-      right: 0.259em; }
+      border-left-width: 40px;
+      right: 0; }
 
 @media screen and (min-width: 992px) {
   [class*=SEARS-] .brand-logos {
     text-align: center; }
-    [class*=SEARS-] .brand-logos .brand-logos--heading {
-      font-size: 0.857em;
-      font-size: 34px;
-      line-height: 1.2em; }
     [class*=SEARS-] .brand-logos .brand-logo {
-      width: auto; }
-    [class*=SEARS-] .brand-logos .btn--shop-now {
-      font-size: 1.198em;
-      padding-left: 0.715em;
-      padding-right: 1.431em; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      border-width: 0.358em;
-      border-left-width: 0.596em; } }
+      width: auto; } }
+
+@media screen and (max-width: 400px) {
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e92227;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 27.18px;
+    position: relative;
+    width: 177.125px;
+    height: 43.19px;
+    line-height: 41.69px;
+    letter-spacing: 0.02em;
+    text-indent: -15px; }
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
+      position: absolute;
+      border-right: none;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 11px solid transparent;
+      border-left-color: #FFF;
+      border-left-width: 20px;
+      right: 0; } }
 
 [class*=SEARS-] .tip-box {
-  min-height: 130px;
   margin-top: 25px;
-  display: table; }
-
-[class*=SEARS-] .tip-box--tall {
-  min-height: 170px; }
-
-[class*=SEARS-] .tip_box__head,
-[class*=SEARS-] .tip_box__body {
-  display: table-cell; }
+  text-align: center; }
 
 [class*=SEARS-] .tip-box__head {
   text-transform: uppercase;
-  background-color: #102869;
+  background-color: #2159bb;
   color: #fff;
   font-weight: bold;
-  text-align: center;
-  height: inherit;
-  font-size: 1.47619em;
-  padding-top: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 50px;
+  font-size: 50px;
+  padding-top: 24px;
+  padding-bottom: 18px;
   vertical-align: middle; }
 
 [class*=SEARS-] .tip-box__body {
-  background-color: #d2daee;
+  background-color: #dae2f1;
   color: #000;
-  height: inherit;
-  padding: 25px;
-  font-weight: bold;
+  padding: 27px;
   vertical-align: middle;
   line-height: 1.6em; }
+  [class*=SEARS-] .tip-box__body--headline {
+    font-weight: bold; }
 
 #main {
   max-width: 100%;
   overflow: hidden; }
 
-.SELP-4 .hero--full-width {
+.SELP-4d-salmon .font--900 {
+  font-weight: 900; }
+
+.SELP-4d-salmon .font--424242 {
+  color: #424242; }
+
+.SELP-4d-salmon .hero--full-width {
   margin-left: -20px;
   margin-right: -20px; }
-  .SELP-4 .hero--full-width h1 {
+  .SELP-4d-salmon .hero--full-width h1 {
     margin-left: 20px;
     margin-right: 20px; }
-  .SELP-4 .hero--full-width picture,
-  .SELP-4 .hero--full-width picture > img {
+  .SELP-4d-salmon .hero--full-width .picture,
+  .SELP-4d-salmon .hero--full-width .picture > img {
     width: 100%;
     max-width: 100%; }
 
-.SELP-4 h2 {
-  font-size: 2.09524em; }
+.SELP-4d-salmon .recipe-section {
+  line-height: 1.4;
+  margin-left: -34px;
+  margin-right: -34px; }
+  .SELP-4d-salmon .recipe-section > .headline {
+    background: #2159bb;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    text-align: center; }
+    .SELP-4d-salmon .recipe-section > .headline:after {
+      content: ':'; }
+  .SELP-4d-salmon .recipe-section__description {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #000; }
+  .SELP-4d-salmon .recipe-section ol, .SELP-4d-salmon .recipe-section ul {
+    color: #2159bb;
+    margin-right: 20px; }
+    .SELP-4d-salmon .recipe-section ol li, .SELP-4d-salmon .recipe-section ul li {
+      margin-bottom: 15px; }
+  .SELP-4d-salmon .recipe-section ol {
+    margin-left: 20px;
+    font-weight: bold;
+    list-style-position: inside;
+    padding-left: 5px; }
+  .SELP-4d-salmon .recipe-section ul {
+    margin-left: 10px; }
 
-.SELP-4 h3,
-.SELP-4 .h3 {
-  font-size: 1.14286em; }
+.SELP-4d-salmon .footer {
+  color: #424242; }
+  .SELP-4d-salmon .footer hr {
+    color: #dadbdc; }
+  .SELP-4d-salmon .footer__content {
+    padding: 35px 0; }
+  .SELP-4d-salmon .footer__headline {
+    max-width: 88%;
+    margin: 0 auto; }
+  .SELP-4d-salmon .footer__text {
+    max-width: 95%;
+    margin: 0 auto; }
 
-.SELP-4 .font--900 {
-  font-weight: 900; }
-
-.SELP-4 .headline--copy {
-  line-height: 1.4em; }
-  .SELP-4 .headline--copy br {
-    display: none; }
-
-.SELP-4 .link__download {
-  font-size: 1.14286em;
-  white-space: nowrap; }
-  .SELP-4 .link__download .icon-document {
-    display: inline-block;
-    height: 2.09524em; }
-  .SELP-4 .link__download--text {
-    vertical-align: middle; }
-
-.SELP-4 .refrigerator-essentials .tip-box {
-  margin-top: 7%; }
-
-.SELP-4 .refrigerator-styles ul {
-  padding-top: 5px;
-  padding-left: 20px; }
-
-.SELP-4 .refrigerator-features__list {
-  padding-left: 25px;
-  padding-top: 20px;
-  padding-bottom: 20px; }
-
-.SELP-4 .refrigerator-features .tip-box {
-  margin-top: 10px; }
-
-.SELP-4 .refrigerator-guides .refrigerator-guide__idea {
-  font-size: 1.71429em; }
-
-.SELP-4 .refrigerator-guides h3 {
-  font-size: 1.95238em; }
-
-.SELP-4 .refrigerator-guides .refrigerator-guide {
-  padding-left: 0; }
-  .SELP-4 .refrigerator-guides .refrigerator-guide footer {
-    margin-top: 30px; }
-    .SELP-4 .refrigerator-guides .refrigerator-guide footer .refrigerator-guide__link {
-      font-size: 1.14286em;
-      white-space: nowrap; }
-      .SELP-4 .refrigerator-guides .refrigerator-guide footer .refrigerator-guide__link .icon-document {
-        display: inline-block;
-        height: 2.09524em; }
-      .SELP-4 .refrigerator-guides .refrigerator-guide footer .refrigerator-guide__link--text {
-        vertical-align: middle; }
-
-.SELP-4 .brand-logos .brand-logos--wrapper {
-  width: 100%; }
-
-.SELP-4 .tip-box,
-.SELP-4 .tipBoxContainer {
-  min-height: 130px;
-  margin-top: 25px;
-  display: table; }
-
-.SELP-4 .tip-box__tall,
-.SELP-4 .tipBoxContainer2 {
-  min-height: 170px; }
-
-.SELP-4 .tip_box__left,
-.SELP-4 .tip_box__right {
-  display: table-cell; }
-
-.SELP-4 .tip-box__left,
-.SELP-4 .tipBoxDarkerBlue {
-  display: table-cell;
-  text-transform: uppercase;
-  background-color: #102869;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  height: inherit;
-  font-size: 1.47619em;
-  padding-top: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 50px;
-  vertical-align: middle; }
-
-.SELP-4 .tip-box__right,
-.SELP-4 .tipBoxLighterBlue {
-  display: table-cell;
-  background-color: #d2daee;
-  color: #000;
-  height: inherit;
-  padding: 25px;
-  font-weight: bold;
-  vertical-align: middle;
-  line-height: 1.6em; }
+.SELP-4d-salmon .view-more {
+  margin-top: 50px; }
 
 @media screen and (min-width: 992px) {
-  .SELP-4 article,
-  .SELP-4 #hero .container {
-    padding-left: 57px;
-    padding-right: 57px; }
-  .SELP-4 h2 {
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    line-height: 1; }
-  .SELP-4 h3,
-  .SELP-4 .h3 {
-    font-size: 1.14286em; } }
+  .SELP-4d-salmon .recipe-section {
+    margin-left: 0;
+    margin-right: 0; }
+    .SELP-4d-salmon .recipe-section ul {
+      margin-left: 20px; } }
