@@ -36,6 +36,24 @@
 
 }
 
+@media screen and (max-width: 767px) {
+  .xs--show {
+    display: unset;
+  }
+  .xs--hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .xs--show {
+    display: none;
+  }
+  .xs--hide {
+    display: unset;
+  }
+}
+
 // $breakpoints also defined in _vars.scss
 //------------------------------------------------------------------------
 // Breakpoints!

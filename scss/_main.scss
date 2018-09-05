@@ -3,8 +3,9 @@
 @import '_mixins';
 
 // base
-@import 'base/_fluid-font-size';
-@import 'base/_breakpoint-display.scss';
+// @import 'base/_fluid-font-size';
+@import 'base/_font-sizes';
+@import 'base/_breakpoint-display';
 @import 'base/_etc';
 
 

@@ -141,9 +141,9 @@ $btn-arrow-height: 41px;
 
       .btn--shop-now :after {
         //  9px / 25.16px = 0.358em
-        border-width: 0.358em;
+        // border-width: 0.358em;
         //  15px / 25.16px = 0.596em
-        border-left-width: 0.596em;
+        // border-left-width: 0.596em;
       }
 
     } // .brand-logos
@@ -151,3 +151,49 @@ $btn-arrow-height: 41px;
   } // cms-content-1920-1920 a.k.a., $base-selector
 
 } // @media screen and (min-width: 992px)
+
+// scale it for small screens!
+@media screen and (max-width: 400px) {
+  #{ $base-selector } {
+
+    .brand-logos {
+
+      .btn--shop-now {
+        background-color: $btn-color;
+        border-radius: 0;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        //  font-size is 54.73px in PSD
+        //  54px / 18px = 3em
+        // font-size: 3em;
+        font-size: $btn-font-size * .5;
+        position: relative; //  so we can absolutely position the arrow!
+
+        width: $btn-width * .5;
+        height: $btn-height * .5;
+        // line-height: $btn-height;
+        line-height: (($btn-height * .5) - 1.5);
+
+        letter-spacing: 0.02em;
+
+        text-indent: -15px; // because the text doesn't center correctly in the new design
+
+
+        &:after {
+          content: "";
+          position: absolute;
+          border-right: none;
+          top: 50%;
+          transform: translate( 0, -50% );
+          border: 11px solid transparent;
+
+          border-left-color: #FFF;
+          border-left-width: 20px;
+
+          right: 0;
+        }
+
+      } // .btn--shop-now
+    } // .brand-logos
+  }
+}
