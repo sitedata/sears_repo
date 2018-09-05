@@ -15,9 +15,9 @@ http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logo
 // get the directory name
 $slug = basename( dirname( __FILE__ ) );
 
-$img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
+// $img_dir = get_relative_path( SEARS_PROJECT_PATH . '/images/' );
 
-$prod_img_dir = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-08-08_Refrigerator-Essentials/';
+// $prod_img_dir = 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-08-08_Refrigerator-Essentials/';
 
 // $img_dir = $prod_img_dir;
 
@@ -33,17 +33,18 @@ $hero = array(
 		),
 	),
 	'img' => 'butternut-squash-chicken-chili_991w.jpg',
+	'img_attr' => 'itemprop="image"',
 	'alt' => 'Butternut Squash Chicken Chili topped with avocado slices',
 	'h1' => 'Easy One Pot Meal Recipe &mdash; <span itemprop="name">Butternut Squash Chicken Chili</span>',
-	'copy' => 'What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!',
+	'text' => 'What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!',
 	'link' => array(
 		'text' => 'Download Recipe PDF',
-		'url' => '#',
+		'url' => get_prod_img_dir() . 'Butternut_Squash_Chicken_Chili_recipe.pdf',
 	)
 );
 
 $ingredients = array(
-	'headline' => 'Shopping List',
+	'headline' => 'Ingredients',
 	'list' => array(
 		'1 medium butternut squash peeled and chopped into 1-in cubes',
 		'1 medium yellow onion coarsely chopped',
@@ -99,7 +100,7 @@ $prep = array(
 				),
 				array(
 					'type' => 'direction',
-					'text' => 'Sauté over medium heat for 10-15 minutes until all pinkness is gone and remove from grease.',
+					'text' => 'Saut&eacute; over medium heat for 10-15 minutes until all pinkness is gone and remove from grease.',
 				),
 			),
 		),
@@ -156,7 +157,7 @@ Footer
 */
 $footer = array(
 	'headline' => 'An easy, customizable, delicious fall meal in under 45 minutes!',
-	'copy' => 'Switch it up — add ground turkey instead of chicken, or sweet potatoes instead of butternut squash. It’s easy and your family will love it!',
+	'text' => 'Switch it up &mdash; add ground turkey instead of chicken, or sweet potatoes instead of butternut squash. It&rsquo;s easy and your family will love it!',
 );
 
 
@@ -175,6 +176,6 @@ View More
 $view_more = array(
 	array(
 		'text' => 'Meal Planning Tips &amp; Recipes',
-		'url' => '#'
+		'url' => '/fall-meal-planning-ideas'
 	),
 );
