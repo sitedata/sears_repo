@@ -63,37 +63,14 @@
 
   #{ $base-selector } {
 
-    h3 {
-      //  44px / 21px = 2.095em
-      font-size: 2.1em;
-    }
+    // h3 {
+    //   //  44px / 21px = 2.095em
+    //   font-size: 2.1em;
+    // }
 
   }
 
 }
 
-//=======================
-// Additional font-sizes
-//=======================
-
-// Nope, this font size doesn't change between desktop and mobile.
-.font-31 {
-  font-size: 31px !important;
-}
-
-// brand logos heading, fall meal planning article headings
-.font-40 {
-  font-size: 40px !important;
-}
-
-// page headlines on recipes and tips pages
-.font-48 {
-  font-size: 48px !important;
-}
-
-// Tip and section headings like Ingredients, Directions, et al
-.font-50 {
-  font-size: 50px !important;
-}
 
 // showers and hiders

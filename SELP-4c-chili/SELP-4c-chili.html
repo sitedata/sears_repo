@@ -1,35 +1,65 @@
 <style type="text/css">
-[class*=SEARS-] {
-  font-size: calc(1.49031vw + 5.231px); }
+.font-31 {
+  font-size: 31px !important; }
+
+.font-48 {
+  font-size: 48px !important; }
+
+.font-50 {
+  font-size: 50px !important; }
+
+.font-65 {
+  font-size: 65px !important; }
+
+@media screen and (max-width: 767px) {
+  .font-31 {
+    font-size: 27.9px !important; }
+  .font-48 {
+    font-size: 43.2px !important; }
+  .font-50 {
+    font-size: 45px !important; }
+  .font-65 {
+    font-size: 58.5px !important; } }
+
+@media screen and (max-width: 599px) {
+  .font-31 {
+    font-size: 21.7px !important; }
+  .font-40 {
+    font-size: 28px !important; }
+  .font-48 {
+    font-size: 33.6px !important; }
+  .font-50 {
+    font-size: 35px !important; }
+  .font-65 {
+    font-size: 45.5px !important; } }
+
+@media screen and (max-width: 400px) {
+  .font-31 {
+    font-size: 15.5px !important; }
+  .font-40 {
+    font-size: 20px !important; }
+  .font-48 {
+    font-size: 24px !important; }
+  .font-50 {
+    font-size: 25px !important; }
+  .font-65 {
+    font-size: 32.5px !important; } }
+
+@media screen and (max-width: 991px) {
+  .sm--show {
+    display: unset; }
+  .sm--hide {
+    display: none; }
+  .md--show {
+    display: none; } }
 
 @media screen and (min-width: 992px) {
-  [class*=SEARS-] {
-    font-size: calc(0.75431vw + 6.51724px); } }
-
-@media screen and (min-width: 1921px) {
-  [class*=SEARS-] {
-    font-size: 21px; } }
-
-.xs--show, .xs--hide {
-  display: none; }
-
-.xs--only-show, .xs--only-hide {
-  display: none; }
-
-.sm--show, .sm--hide {
-  display: none; }
-
-.sm--only-show, .sm--only-hide {
-  display: none; }
-
-.md--show, .md--hide {
-  display: none; }
-
-.md--only-show, .md--only-hide {
-  display: none; }
-
-.lg--show, .lg--hide {
-  display: none; }
+  .md--show {
+    display: unset; }
+  .sm--hide {
+    display: unset; }
+  .md--hide {
+    display: none; } }
 
 @media screen and (max-width: 767px) {
   .xs--show {
@@ -37,41 +67,11 @@
   .xs--hide {
     display: none; } }
 
-@media screen and (min-width: 0px) and (max-width: 767px) {
-  .xs--only-show {
-    display: unset; }
-  .xs--only-hide {
-    display: none; } }
-
 @media screen and (min-width: 768px) {
-  .sm--show {
-    display: unset; }
-  .sm--hide {
-    display: none; } }
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .sm--only-show {
-    display: unset; }
-  .sm--only-hide {
-    display: none; } }
-
-@media screen and (min-width: 992px) {
-  .md--show {
-    display: unset; }
-  .md--hide {
-    display: none; } }
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .md--only-show {
-    display: unset; }
-  .md--only-hide {
-    display: none; } }
-
-@media screen and (min-width: 1200px) {
-  .lg--show {
-    display: unset; }
-  .lg--hide {
-    display: none; } }
+  .xs--show {
+    display: none; }
+  .xs--hide {
+    display: unset; } }
 
 [class*=SEARS-] .headline .headline--copy {
   font-size: 1.19em;
@@ -90,12 +90,17 @@
   padding-left: 16px;
   padding-bottom: 10px; }
 
-@media screen and (min-width: 992px) {
-  [class*=SEARS-] h3 {
-    font-size: 2.1em; } }
+[class*=SEARS-] .hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px; }
+  [class*=SEARS-] .hero--full-width h1 {
+    margin-left: 40px;
+    margin-right: 40px; }
 
-.font-31 {
-  font-size: 31px !important; }
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture > img {
+  width: 100%;
+  max-width: 100%; }
 
 [class*=SEARS-] .brand-logos {
   text-align: center; }
@@ -106,51 +111,66 @@
     font-size: 0;
     max-width: 1150px; }
   [class*=SEARS-] .brand-logos .brand-logo {
-    display: table-cell;
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle; }
   [class*=SEARS-] .brand-logos .btn--shop-now {
-    background-color: #e0001e;
+    background-color: #e92227;
     border-radius: 0;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 3em;
+    font-size: 54.36px;
     position: relative;
+    width: 354.25px;
+    height: 86.38px;
+    line-height: 83.38px;
     letter-spacing: 0.02em;
-    line-height: 1.59em;
-    padding: 0 1.63em 0 0.815em; }
+    padding: 0;
+    text-indent: -30px; }
     [class*=SEARS-] .brand-logos .btn--shop-now span {
       color: #fff;
       font-weight: 600; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      content: " ";
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
       position: absolute;
       border-right: none;
       top: 50%;
       transform: translate(0, -50%);
-      border: 0.37em solid transparent;
+      border: 22px solid transparent;
       border-left-color: #FFF;
-      border-left-width: 0.703em;
-      right: 0.259em; }
+      border-left-width: 40px;
+      right: 0; }
 
 @media screen and (min-width: 992px) {
   [class*=SEARS-] .brand-logos {
     text-align: center; }
-    [class*=SEARS-] .brand-logos .brand-logos--heading {
-      font-size: 0.857em;
-      font-size: 34px;
-      line-height: 1.2em; }
     [class*=SEARS-] .brand-logos .brand-logo {
-      width: auto; }
-    [class*=SEARS-] .brand-logos .btn--shop-now {
-      font-size: 1.198em;
-      padding-left: 0.715em;
-      padding-right: 1.431em; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      border-width: 0.358em;
-      border-left-width: 0.596em; } }
+      width: auto; } }
+
+@media screen and (max-width: 400px) {
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e92227;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 27.18px;
+    position: relative;
+    width: 177.125px;
+    height: 43.19px;
+    line-height: 41.69px;
+    letter-spacing: 0.02em;
+    text-indent: -15px; }
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
+      position: absolute;
+      border-right: none;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 11px solid transparent;
+      border-left-color: #FFF;
+      border-left-width: 20px;
+      right: 0; } }
 
 [class*=SEARS-] .tip-box {
   margin-top: 25px;
@@ -179,101 +199,100 @@
   max-width: 100%;
   overflow: hidden; }
 
-.SELP-4 .hero--full-width {
+.SELP-4c-chili .font--900 {
+  font-weight: 900; }
+
+.SELP-4c-chili .font--424242 {
+  color: #424242; }
+
+.SELP-4c-chili .hero--full-width {
   margin-left: -20px;
   margin-right: -20px; }
-  .SELP-4 .hero--full-width h1 {
+  .SELP-4c-chili .hero--full-width h1 {
     margin-left: 20px;
     margin-right: 20px; }
-  .SELP-4 .hero--full-width picture,
-  .SELP-4 .hero--full-width picture > img {
+  .SELP-4c-chili .hero--full-width .picture,
+  .SELP-4c-chili .hero--full-width .picture > img {
     width: 100%;
     max-width: 100%; }
 
-.SELP-4 h2 {
-  font-size: 2.09524em; }
-
-.SELP-4 h3,
-.SELP-4 .h3 {
-  font-size: 1.14286em; }
-
-.SELP-4 .font--900 {
-  font-weight: 900; }
-
-.SELP-4 .headline--copy {
-  line-height: 1.4em; }
-  .SELP-4 .headline--copy br {
-    display: none; }
-
-.SELP-4 .link__download {
-  font-size: 31px;
-  white-space: nowrap; }
-  .SELP-4 .link__download .icon-document {
-    display: inline-block;
-    height: 44px; }
-  .SELP-4 .link__download--text {
-    vertical-align: middle; }
-
-.SELP-4 .recipe-section {
-  font-size: 31px;
-  line-height: 1.4; }
-  .SELP-4 .recipe-section > .headline {
+.SELP-4c-chili .recipe-section {
+  line-height: 1.4;
+  margin-left: -32px;
+  margin-right: -32px; }
+  .SELP-4c-chili .recipe-section > .headline {
     background: #2159bb;
     color: #fff;
-    font-size: 50px;
-    font-weight: 900;
     margin-bottom: 20px;
     padding: 15px 0;
     text-align: center; }
-    .SELP-4 .recipe-section > .headline:after {
+    .SELP-4c-chili .recipe-section > .headline:after {
       content: ':'; }
-  .SELP-4 .recipe-section__description {
-    padding-left: 5px;
+  .SELP-4c-chili .recipe-section__description {
+    padding-left: 20px;
+    padding-right: 20px;
     color: #000; }
-  .SELP-4 .recipe-section ol, .SELP-4 .recipe-section ul {
-    color: #2159bb; }
-    .SELP-4 .recipe-section ol li, .SELP-4 .recipe-section ul li {
+  .SELP-4c-chili .recipe-section ol, .SELP-4c-chili .recipe-section ul {
+    color: #2159bb;
+    margin-right: 20px; }
+    .SELP-4c-chili .recipe-section ol li, .SELP-4c-chili .recipe-section ul li {
       margin-bottom: 15px; }
-  .SELP-4 .recipe-section ol {
+  .SELP-4c-chili .recipe-section ol {
+    margin-left: 20px;
     font-weight: bold;
     list-style-position: inside;
     padding-left: 5px; }
+  .SELP-4c-chili .recipe-section ul {
+    margin-left: 10px; }
+
+.SELP-4c-chili .footer {
+  color: #424242; }
+  .SELP-4c-chili .footer hr {
+    color: #dadbdc; }
+  .SELP-4c-chili .footer__content {
+    padding: 35px 0; }
+  .SELP-4c-chili .footer__headline {
+    max-width: 88%;
+    margin: 0 auto; }
+  .SELP-4c-chili .footer__text {
+    max-width: 95%;
+    margin: 0 auto; }
+
+.SELP-4c-chili .view-more {
+  margin-top: 50px; }
 
 @media screen and (min-width: 992px) {
-  .SELP-4 h2 {
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    line-height: 1; }
-  .SELP-4 h3,
-  .SELP-4 .h3 {
-    font-size: 1.14286em; } }
+  .SELP-4c-chili .recipe-section {
+    margin-left: 0;
+    margin-right: 0; }
+    .SELP-4c-chili .recipe-section ul {
+      margin-left: 20px; } }
 
 </style>
-<main class="cms-content cms-content-html padding-vert-xl SEARS--landing-page SELP-4" id="cms-content-1920-1920"  itemscope itemtype="http://schema.org/Recipe">
+<main class="cms-content cms-content-html padding-vert-xl SEARS--landing-page SELP-4c-chili" id="cms-content-1920-1920"  itemscope itemtype="http://schema.org/Recipe">
 
   <!-- BEGIN #hero -->
   <header id="hero" class="hero--full-width">
     <h1 class="font-48 font--700 text-align-center padding-vert-xl"
       itemprop="name">Easy One Pot Meal Recipe &mdash; <span itemprop="name">Butternut Squash Chicken Chili</span></h1>
-    <picture class="Xhero--full-width">
-          <source media="(max-width:991px)" srcset="/SELP-4/images/chili/butternut-squash-chicken-chili_991w.jpg">
-          <source media="(min-width:992px)" srcset="/SELP-4/images/chili/butternut-squash-chicken-chili_1550w.jpg">
-          <img src="/SELP-4/images/chili/butternut-squash-chicken-chili_991w.jpg"
-        alt="Butternut Squash Chicken Chili topped with avocado slices"
-        itemprop="image"
-        >
-    </picture>
-
-    <div class="container Xheadline">
+    <picture class="picture" >
+  <source media="(max-width:991px)" srcset="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Butternut-Squash-Chicken-Chili/butternut-squash-chicken-chili_991w.jpg">
+  <source media="(min-width:992px)" srcset="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Butternut-Squash-Chicken-Chili/butternut-squash-chicken-chili_1550w.jpg">
+  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Butternut-Squash-Chicken-Chili/butternut-squash-chicken-chili_991w.jpg"
+    alt="Butternut Squash Chicken Chili topped with avocado slices"
+    class="picture__img"
+    itemprop="image">
+</picture>
+    <div class="container">
       <div class="row text-align-center">
         <div class="col-xs-12 padding-vert-lg">
-          <div class="hero--copy font-31 lh-sm" itemprop="description">
+          <div class="hero--text font-31 lh-sm font--424242" itemprop="description">
             What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!          </div>
-          <div class="padding-vert-lg">
-            <a href="#"
-  data-href="#"
+          <div class="padding-vert-lg font-31">
+            <a href="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Butternut-Squash-Chicken-Chili/Butternut_Squash_Chicken_Chili_recipe.pdf"
+  data-href="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Butternut-Squash-Chicken-Chili/Butternut_Squash_Chicken_Chili_recipe.pdf"
   class="link__download link__download-document">
-  <img src="/assets/cms/icons/icon-document.png"
+  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/icons/icon-document.png"
     alt="Document Icon"
     class="icon-document icon__document">
   <span class="font--primary3 link--text link__text">Download Recipe PDF</span>
@@ -290,8 +309,8 @@
       <div class="col-xs-12 col-md-6">
         <section id="ingredients"
   class="recipe-section recipe__ingredient-list">
-  <h2 class="headline">Shopping List</h2>
-    <ul>
+  <h2 class="headline font-50 font--white font--900">Ingredients</h2>
+    <ul class="font-31">
       <li><span class="recipe__ingredient font--black font--400" itemprop="recipeIngredient">1 medium butternut squash peeled and chopped into 1-in cubes</span></li>
       <li><span class="recipe__ingredient font--black font--400" itemprop="recipeIngredient">1 medium yellow onion coarsely chopped</span></li>
       <li><span class="recipe__ingredient font--black font--400" itemprop="recipeIngredient">1 red bell pepper de-seeded and chopped into bite-sized pieces</span></li>
@@ -314,143 +333,193 @@
 </section>
       </div>
       <div class="col-xs-12 col-md-6">
-        <section id="recipe-section1294778563"
+        <section id="recipe-section1542827468"
   class="recipe-section "
   itemprop="step" itemscope
   itemtype="http://schema.org/HowToSection">
-  <h2 class="headline font--900 font--white text-align-center" itemprop="name">Pre-Prep</h2>
+  <h2 class="headline font-50 font--900 font--white text-align-center" itemprop="name">Pre-Prep</h2>
   <meta itemprop="position" content="1"/>
-    <p class="recipe-section__description">Use your fridge to save time. Just a little bit of meal prep will make dinnertime go much faster with these few simple tips!</p>
-    <ol class="recipe-section__step-list">
-        <li class="recipe-section__step"
+    <p class="recipe-section__description font-31">Use your fridge to save time. Just a little bit of meal prep will make dinnertime go much faster with these few simple tips!</p>
+    <ol class="recipe-section__step-list font-31">
+        <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="1"/>
-            <strong class="recipe-section__step--headline"
+            <strong class="recipe-section__step--headline font-31"
         itemprop="name">Pre-cook your protein.</strong>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToTip">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToTip">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">For this recipe, cook and shred your chicken 3-4 days before you make your chili.</span>
       </span>
-              <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+              <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="2"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">In a stock pot, add chicken and water.</span>
       </span>
-              <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+              <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="3"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">Bring to a boil and then move to medium heat to simmer for about 15 minutes.</span>
       </span>
-              <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+              <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="4"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">After chicken has cooled, shred with a fork.</span>
       </span>
-              <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToTip">
+              <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToTip">
         <meta itemprop="position" content="5"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">If shredded chicken is not your speed, try ground chicken!</span>
       </span>
-              <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+              <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="6"/>
-        <span class="recipe-section__step-text font--black font--400"
-          itemprop="text">Sauté over medium heat for 10-15 minutes until all pinkness is gone and remove from grease.</span>
+        <span class="recipe-section__step-text font--black font--400 font-31"
+          itemprop="text">Saut&eacute; over medium heat for 10-15 minutes until all pinkness is gone and remove from grease.</span>
       </span>
-                      <li class="recipe-section__step"
+                      <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="2"/>
-            <strong class="recipe-section__step--headline"
+            <strong class="recipe-section__step--headline font-31"
         itemprop="name">Wash and prepare your vegetables in advance.</strong>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">Once peeled, de-seeded and cut into chunks, the butternut squash will last 2-5 days in your refrigerator. Chopped onion will last up to a week and chopped bell pepper is good for 2-3 days in the fridge.</span>
       </span>
-                      <li class="recipe-section__step"
+                      <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="3"/>
-            <strong class="recipe-section__step--headline"
+            <strong class="recipe-section__step--headline font-31"
         itemprop="name">Pre-mix your spices in large batches.</strong>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">You can use it for this recipe and in the future for any other chili or soup you might whip up.</span>
       </span>
-                      <li class="recipe-section__step"
+                      <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="4"/>
-            <strong class="recipe-section__step--headline"
+            <strong class="recipe-section__step--headline font-31"
         itemprop="name">Pre-peel the skin off of garlic cloves.</strong>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">Store them in an airtight container in the fridge so they will be at the ready for mincing.</span>
       </span>
                     </ol>
 </section>
-
       </div>
     </div>
     <div class="row padding-vert-xl">
       <div class="col-xs-12">
-        <section id="recipe-section566477792"
+        <section id="recipe-section240333954"
   class="recipe-section "
   itemprop="step" itemscope
   itemtype="http://schema.org/HowToSection">
-  <h2 class="headline font--900 font--white text-align-center" itemprop="name">Directions</h2>
+  <h2 class="headline font-50 font--900 font--white text-align-center" itemprop="name">Directions</h2>
   <meta itemprop="position" content="2"/>
-    <ol class="recipe-section__step-list">
-        <li class="recipe-section__step"
+    <ol class="recipe-section__step-list font-31">
+        <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="1"/>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">In a Dutch oven, heat olive oil on medium. Add coarsely chopped onion and saut&eacute; until translucent.</span>
       </span>
-                      <li class="recipe-section__step"
+                      <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="2"/>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">Add your pre-cooked chicken, spices, canned tomatoes, rinsed black beans, chicken broth and chopped bell pepper. Cover and simmer for 15 minutes.</span>
       </span>
-                      <li class="recipe-section__step"
+                      <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="3"/>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">Add butternut squash chunks and simmer for an additional 15 minutes.</span>
       </span>
-                      <li class="recipe-section__step"
+                      <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="4"/>
-                          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
+                          <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowToDirection">
         <meta itemprop="position" content="1"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text">Serve topped with green onion, avocado chunks and/or your cheese of choice! White cheddar pairs nicely, or if you&rsquo;re looking for a little more heat shredded pepper jack would also be a nice addition.</span>
       </span>
                     </ol>
 </section>
-
       </div>
     </div>
-
   </article>
 
-
-
+  <footer class="container footer">
+    <div class="row">
+      <div class="col-xs-12">
+        <hr class="bordered--bottom bordered--sm">
+      </div>
+      <div class="col-xs-12 text-align-center font-31 lh-sm">
+        <div class="footer__content">
+          <div class="footer__headline font--700">An easy, customizable, delicious fall meal in under 45 minutes!</div>
+          <div class="footer__text">Switch it up &mdash; add ground turkey instead of chicken, or sweet potatoes instead of butternut squash. It&rsquo;s easy and your family will love it!</div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <hr class="bordered--bottom bordered--sm">
+      </div>
+    </div>
+  </footer>
 
 <!-- BRAND LOGOS -->
         <section class="container brand-logos">
@@ -459,35 +528,35 @@
           <div class="row">
             <div class="col-xs-12 padding-vert-xl text-align-center">
                           <h2 class="brand-logos__headline font-40 font--700 lh-sm">Ready to get started?</h2>
-                          <p class="brand-logos__copy font--black font-31 lh-md">Sears Hometown Store has unbeatable prices on the best brands available.</p>
+                          <p class="brand-logos__copy font--black font-31 lh-sm">Sears Hometown Store has unbeatable prices on the best brands available.</p>
             </div>
           </div>
 
           <div class="row">
             <div class="brand-logos--wrapper">
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/kenmore.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/kenmore.svg"
                   width="118"
                   height="25"
                   alt="Kenmore"
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/kenmore-elite.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/kenmore-elite.svg"
                   width="176"
                   height="25"
                   alt="Kenmore Elite"
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/whirlpool.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/whirlpool.svg"
                   width="123"
                   height="38"
                   alt="Whirlpool"
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/frigidaire.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/frigidaire.svg"
                   width="193"
                   height="21"
                   alt="Frigidaire"
@@ -495,28 +564,28 @@
                 </div>
                 <br class="md--hide">
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/samsung.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/samsung.svg"
                   width="151"
                   height="53"
                   alt="Samsung"
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/maytag.png"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/maytag.png"
                   width="126"
                   height="48"
                   alt="Maytag"
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/lg.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/lg.svg"
                   width="93"
                   height="41"
                   alt="LG"
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/kitchenAid.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/kitchenaid.svg"
                   width="199"
                   height="22"
                   alt="KitchenAid"
@@ -524,14 +593,14 @@
                 </div>
                 <br class="md--hide">
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/ge.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/ge.svg"
                   width="59"
                   height="58"
                   alt="GE"
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/bosch.svg"
+                  <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/brand-logos/bosch.svg"
                   width="143"
                   height="33"
                   alt="Bosch"
@@ -547,4 +616,17 @@
             </div>
           </div>
         </section><!-- .col-xs-12 -->
+
+  <section class="container view-more">
+    <div class="row padding-vert-xl">
+          <div class="col-xs-12 font-31">
+        <strong class="font--700 font--424242">View More:</strong>
+        <a class="link"
+          href="/fall-meal-planning-ideas"
+          data-href="/fall-meal-planning-ideas"
+          >Meal Planning Tips &amp; Recipes</a>
+      </div>
+        </div>
+  </section>
+
 </main><!-- #cms-content-1920-1920.cms-content.cms-content-html -->

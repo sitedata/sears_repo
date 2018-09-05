@@ -79,7 +79,7 @@ $logos = isset( $logos ) ? $logos :
     ),
 
     'KitchenAid' => array(
-      'src' => 'kitchenAid.svg',
+      'src' => 'kitchenaid.svg',
       'w' => '199',
       'h' => '22',
     ),

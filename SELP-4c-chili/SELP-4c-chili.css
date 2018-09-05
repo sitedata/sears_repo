@@ -1,34 +1,64 @@
-[class*=SEARS-] {
-  font-size: calc(1.49031vw + 5.231px); }
+.font-31 {
+  font-size: 31px !important; }
+
+.font-48 {
+  font-size: 48px !important; }
+
+.font-50 {
+  font-size: 50px !important; }
+
+.font-65 {
+  font-size: 65px !important; }
+
+@media screen and (max-width: 767px) {
+  .font-31 {
+    font-size: 27.9px !important; }
+  .font-48 {
+    font-size: 43.2px !important; }
+  .font-50 {
+    font-size: 45px !important; }
+  .font-65 {
+    font-size: 58.5px !important; } }
+
+@media screen and (max-width: 599px) {
+  .font-31 {
+    font-size: 21.7px !important; }
+  .font-40 {
+    font-size: 28px !important; }
+  .font-48 {
+    font-size: 33.6px !important; }
+  .font-50 {
+    font-size: 35px !important; }
+  .font-65 {
+    font-size: 45.5px !important; } }
+
+@media screen and (max-width: 400px) {
+  .font-31 {
+    font-size: 15.5px !important; }
+  .font-40 {
+    font-size: 20px !important; }
+  .font-48 {
+    font-size: 24px !important; }
+  .font-50 {
+    font-size: 25px !important; }
+  .font-65 {
+    font-size: 32.5px !important; } }
+
+@media screen and (max-width: 991px) {
+  .sm--show {
+    display: unset; }
+  .sm--hide {
+    display: none; }
+  .md--show {
+    display: none; } }
 
 @media screen and (min-width: 992px) {
-  [class*=SEARS-] {
-    font-size: calc(0.75431vw + 6.51724px); } }
-
-@media screen and (min-width: 1921px) {
-  [class*=SEARS-] {
-    font-size: 21px; } }
-
-.xs--show, .xs--hide {
-  display: none; }
-
-.xs--only-show, .xs--only-hide {
-  display: none; }
-
-.sm--show, .sm--hide {
-  display: none; }
-
-.sm--only-show, .sm--only-hide {
-  display: none; }
-
-.md--show, .md--hide {
-  display: none; }
-
-.md--only-show, .md--only-hide {
-  display: none; }
-
-.lg--show, .lg--hide {
-  display: none; }
+  .md--show {
+    display: unset; }
+  .sm--hide {
+    display: unset; }
+  .md--hide {
+    display: none; } }
 
 @media screen and (max-width: 767px) {
   .xs--show {
@@ -36,41 +66,11 @@
   .xs--hide {
     display: none; } }
 
-@media screen and (min-width: 0px) and (max-width: 767px) {
-  .xs--only-show {
-    display: unset; }
-  .xs--only-hide {
-    display: none; } }
-
 @media screen and (min-width: 768px) {
-  .sm--show {
-    display: unset; }
-  .sm--hide {
-    display: none; } }
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .sm--only-show {
-    display: unset; }
-  .sm--only-hide {
-    display: none; } }
-
-@media screen and (min-width: 992px) {
-  .md--show {
-    display: unset; }
-  .md--hide {
-    display: none; } }
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .md--only-show {
-    display: unset; }
-  .md--only-hide {
-    display: none; } }
-
-@media screen and (min-width: 1200px) {
-  .lg--show {
-    display: unset; }
-  .lg--hide {
-    display: none; } }
+  .xs--show {
+    display: none; }
+  .xs--hide {
+    display: unset; } }
 
 [class*=SEARS-] .headline .headline--copy {
   font-size: 1.19em;
@@ -89,12 +89,17 @@
   padding-left: 16px;
   padding-bottom: 10px; }
 
-@media screen and (min-width: 992px) {
-  [class*=SEARS-] h3 {
-    font-size: 2.1em; } }
+[class*=SEARS-] .hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px; }
+  [class*=SEARS-] .hero--full-width h1 {
+    margin-left: 40px;
+    margin-right: 40px; }
 
-.font-31 {
-  font-size: 31px !important; }
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture > img {
+  width: 100%;
+  max-width: 100%; }
 
 [class*=SEARS-] .brand-logos {
   text-align: center; }
@@ -105,51 +110,66 @@
     font-size: 0;
     max-width: 1150px; }
   [class*=SEARS-] .brand-logos .brand-logo {
-    display: table-cell;
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle; }
   [class*=SEARS-] .brand-logos .btn--shop-now {
-    background-color: #e0001e;
+    background-color: #e92227;
     border-radius: 0;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 3em;
+    font-size: 54.36px;
     position: relative;
+    width: 354.25px;
+    height: 86.38px;
+    line-height: 83.38px;
     letter-spacing: 0.02em;
-    line-height: 1.59em;
-    padding: 0 1.63em 0 0.815em; }
+    padding: 0;
+    text-indent: -30px; }
     [class*=SEARS-] .brand-logos .btn--shop-now span {
       color: #fff;
       font-weight: 600; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      content: " ";
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
       position: absolute;
       border-right: none;
       top: 50%;
       transform: translate(0, -50%);
-      border: 0.37em solid transparent;
+      border: 22px solid transparent;
       border-left-color: #FFF;
-      border-left-width: 0.703em;
-      right: 0.259em; }
+      border-left-width: 40px;
+      right: 0; }
 
 @media screen and (min-width: 992px) {
   [class*=SEARS-] .brand-logos {
     text-align: center; }
-    [class*=SEARS-] .brand-logos .brand-logos--heading {
-      font-size: 0.857em;
-      font-size: 34px;
-      line-height: 1.2em; }
     [class*=SEARS-] .brand-logos .brand-logo {
-      width: auto; }
-    [class*=SEARS-] .brand-logos .btn--shop-now {
-      font-size: 1.198em;
-      padding-left: 0.715em;
-      padding-right: 1.431em; }
-    [class*=SEARS-] .brand-logos .btn--shop-now :after {
-      border-width: 0.358em;
-      border-left-width: 0.596em; } }
+      width: auto; } }
+
+@media screen and (max-width: 400px) {
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e92227;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 27.18px;
+    position: relative;
+    width: 177.125px;
+    height: 43.19px;
+    line-height: 41.69px;
+    letter-spacing: 0.02em;
+    text-indent: -15px; }
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
+      position: absolute;
+      border-right: none;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 11px solid transparent;
+      border-left-color: #FFF;
+      border-left-width: 20px;
+      right: 0; } }
 
 [class*=SEARS-] .tip-box {
   margin-top: 25px;
@@ -178,71 +198,71 @@
   max-width: 100%;
   overflow: hidden; }
 
-.SELP-4 .hero--full-width {
+.SELP-4c-chili .font--900 {
+  font-weight: 900; }
+
+.SELP-4c-chili .font--424242 {
+  color: #424242; }
+
+.SELP-4c-chili .hero--full-width {
   margin-left: -20px;
   margin-right: -20px; }
-  .SELP-4 .hero--full-width h1 {
+  .SELP-4c-chili .hero--full-width h1 {
     margin-left: 20px;
     margin-right: 20px; }
-  .SELP-4 .hero--full-width picture,
-  .SELP-4 .hero--full-width picture > img {
+  .SELP-4c-chili .hero--full-width .picture,
+  .SELP-4c-chili .hero--full-width .picture > img {
     width: 100%;
     max-width: 100%; }
 
-.SELP-4 h2 {
-  font-size: 2.09524em; }
-
-.SELP-4 h3,
-.SELP-4 .h3 {
-  font-size: 1.14286em; }
-
-.SELP-4 .font--900 {
-  font-weight: 900; }
-
-.SELP-4 .headline--copy {
-  line-height: 1.4em; }
-  .SELP-4 .headline--copy br {
-    display: none; }
-
-.SELP-4 .link__download {
-  font-size: 31px;
-  white-space: nowrap; }
-  .SELP-4 .link__download .icon-document {
-    display: inline-block;
-    height: 44px; }
-  .SELP-4 .link__download--text {
-    vertical-align: middle; }
-
-.SELP-4 .recipe-section {
-  font-size: 31px;
-  line-height: 1.4; }
-  .SELP-4 .recipe-section > .headline {
+.SELP-4c-chili .recipe-section {
+  line-height: 1.4;
+  margin-left: -32px;
+  margin-right: -32px; }
+  .SELP-4c-chili .recipe-section > .headline {
     background: #2159bb;
     color: #fff;
-    font-size: 50px;
-    font-weight: 900;
     margin-bottom: 20px;
     padding: 15px 0;
     text-align: center; }
-    .SELP-4 .recipe-section > .headline:after {
+    .SELP-4c-chili .recipe-section > .headline:after {
       content: ':'; }
-  .SELP-4 .recipe-section__description {
-    padding-left: 5px;
+  .SELP-4c-chili .recipe-section__description {
+    padding-left: 20px;
+    padding-right: 20px;
     color: #000; }
-  .SELP-4 .recipe-section ol, .SELP-4 .recipe-section ul {
-    color: #2159bb; }
-    .SELP-4 .recipe-section ol li, .SELP-4 .recipe-section ul li {
+  .SELP-4c-chili .recipe-section ol, .SELP-4c-chili .recipe-section ul {
+    color: #2159bb;
+    margin-right: 20px; }
+    .SELP-4c-chili .recipe-section ol li, .SELP-4c-chili .recipe-section ul li {
       margin-bottom: 15px; }
-  .SELP-4 .recipe-section ol {
+  .SELP-4c-chili .recipe-section ol {
+    margin-left: 20px;
     font-weight: bold;
     list-style-position: inside;
     padding-left: 5px; }
+  .SELP-4c-chili .recipe-section ul {
+    margin-left: 10px; }
+
+.SELP-4c-chili .footer {
+  color: #424242; }
+  .SELP-4c-chili .footer hr {
+    color: #dadbdc; }
+  .SELP-4c-chili .footer__content {
+    padding: 35px 0; }
+  .SELP-4c-chili .footer__headline {
+    max-width: 88%;
+    margin: 0 auto; }
+  .SELP-4c-chili .footer__text {
+    max-width: 95%;
+    margin: 0 auto; }
+
+.SELP-4c-chili .view-more {
+  margin-top: 50px; }
 
 @media screen and (min-width: 992px) {
-  .SELP-4 h2 {
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    line-height: 1; }
-  .SELP-4 h3,
-  .SELP-4 .h3 {
-    font-size: 1.14286em; } }
+  .SELP-4c-chili .recipe-section {
+    margin-left: 0;
+    margin-right: 0; }
+    .SELP-4c-chili .recipe-section ul {
+      margin-left: 20px; } }

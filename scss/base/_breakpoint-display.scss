@@ -1,109 +1,155 @@
 // _breakpoint-display.scss
 // jugglers of display values, crusty and otherwise
 
+// The below is more complicated than we need!
+// All we need (for now) is to hide some things at md and sm
+
+@media screen and (max-width: 991px) {
+
+  .sm--show {
+    display: unset;
+  }
+
+  .sm--hide {
+    display: none;
+  }
+
+  .md--show {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .md--show {
+    display: unset;
+  }
+
+  .sm--hide {
+    display: unset;
+  }
+
+  .md--hide {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .xs--show {
+    display: unset;
+  }
+  .xs--hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .xs--show {
+    display: none;
+  }
+  .xs--hide {
+    display: unset;
+  }
+}
+
 // $breakpoints also defined in _vars.scss
 //------------------------------------------------------------------------
 // Breakpoints!
 // These are the breakpoints defined by Sears CSS.
 //------------------------------------------------------------------------
-$breakpoints: (
-  xs: (0px, 767px), // '(max-width: 767px)',
-  sm: (768px, 991px), // '(min-width: 768px) and (max-width: 991px)',
-  md: (992px, 1199px), // '(min-width: 992px) and (max-width: 1199px)',
-  lg: (1200px, null) // '(min-width: 1200px)'
-) !default;
-//
 // $breakpoints: (
-//   xs: (min: 0px, max: 767px)'(max-width: 767px)',
-//   sm: '(min-width: 768px)',
-//   md: '(min-width: 992px)',
-//   lg: '(min-width: 1200px)'
+//   xs: (0px, 767px), // '(max-width: 767px)',
+//   sm: (768px, 991px), // '(min-width: 768px) and (max-width: 991px)',
+//   md: (992px, 1199px), // '(min-width: 992px) and (max-width: 1199px)',
+//   lg: (1200px, null) // '(min-width: 1200px)'
 // ) !default;
-
-// basic showers & hiders
-@each $bp, $mq in $breakpoints {
-
-  // hide everything by default
-  // media queries will sort it out
-  .#{ $bp } {
-    &--show,
-    &--hide {
-      display: none;
-    }
-
-    // only-show/hide doesn't make sense on largest breakpoint
-    @if $bp != 'lg' {
-      &--only {
-        &-show,
-        &-hide {
-          display: none;
-        }
-      }
-    }
-  }
-
-}
-
-// now loop again to create the media queries
-@each $bp, $mq in $breakpoints {
-
-  // get an error if you don't define the variable before if/else
-  $media-query: '';
-
-  // if xs, we need to use max-width and 2nd $mq value!
-  @if $bp == 'xs' {
-    $media-query: 'max-width: ' + nth( $mq, 2 );
-  }
-  // all other media queries use min-width 1st $
-  @else {
-    $media-query: 'min-width: ' + nth( $mq, 1 );
-  }
-
-  @media screen and ( #{$media-query} ) {
-    .#{ $bp }--show {
-      display: unset; // restores previous cascaded display value!
-    }
-    .#{ $bp }--hide {
-      display: none;
-    }
-  }
-
-  // these are when you only want to show or hide something for give breakpoint
-  // NOTE: doesn't make sense to have these for the largest breakpoint
-  @if nth( $mq, 2 ) != null and $bp != 'lg' {
-    @media screen and (min-width: nth( $mq, 1 )) and (max-width: nth( $mq, 2 )) {
-      .#{ $bp }--only {
-        &-show {
-          display: unset;
-        }
-        &-hide {
-          display: none;
-        }
-      }
-    }
-  }
-
-  // @media screen and #{ $mq } {
-  // }
-}
-
-// // the only ones we really need for now are md show and hide
-// .md- {
-//   &show {
-//     display: none; // remember we're outside of the media query!
+//
+// // basic showers & hiders
+// @each $bp, $mq in $breakpoints {
+//
+//   // hide everything by default
+//   // media queries will sort it out
+//   .#{ $bp } {
+//     &--show,
+//     &--hide {
+//       display: none;
+//     }
+//
+//     // only-show/hide doesn't make sense on largest breakpoint
+//     @if $bp != 'lg' {
+//       &--only {
+//         &-show,
+//         &-hide {
+//           display: none;
+//         }
+//       }
+//     }
 //   }
-//   // &hide {
-//   //   display: default;
-//   // }
+//
 // }
 //
-// @media screen and (min-width: 992px) {
-//   .md- {
-//     &show {
-//       display: unset; // resets display to previous cascaded value!
+// // now loop again to create the media queries
+// @each $bp, $mq in $breakpoints {
+//
+//   // get an error if you don't define the variable before if/else
+//   $media-query: '';
+//
+//   // if xs, we need to use max-width and 2nd $mq value!
+//   @if $bp == 'xs' {
+//     $media-query: 'max-width: ' + nth( $mq, 2 );
+//   }
+//   // all other media queries use min-width 1st $
+//   @else {
+//     $media-query: 'min-width: ' + nth( $mq, 1 );
+//   }
+//
+//   @media screen and ( #{$media-query} ) {
+//     .#{ $bp }--show {
+//       display: unset; // restores previous cascaded display value!
 //     }
-//     &hide {
+//     .#{ $bp }--hide {
 //       display: none;
 //     }
 //   }
+//
+//   // these are when you only want to show or hide something for give breakpoint
+//   // NOTE: doesn't make sense to have these for the largest breakpoint
+//   @if nth( $mq, 2 ) != null and $bp != 'lg' {
+//     @media screen and (min-width: nth( $mq, 1 )) and (max-width: nth( $mq, 2 )) {
+//       .#{ $bp }--only {
+//         &-show {
+//           display: unset;
+//         }
+//         &-hide {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+//
+//   // @media screen and #{ $mq } {
+//   // }
 // }
+//
+// // // the only ones we really need for now are md show and hide
+// // .md- {
+// //   &show {
+// //     display: none; // remember we're outside of the media query!
+// //   }
+// //   // &hide {
+// //   //   display: default;
+// //   // }
+// // }
+// //
+// // @media screen and (min-width: 992px) {
+// //   .md- {
+// //     &show {
+// //       display: unset; // resets display to previous cascaded value!
+// //     }
+// //     &hide {
+// //       display: none;
+// //     }
+// //   }
+// // }

@@ -28,19 +28,19 @@ $data['class'] .= ' ' . $data['extra_classes'];
   class="<?php echo $data['class'] ?>"
   itemprop="step" itemscope
   itemtype="http://schema.org/HowToSection">
-  <h2 class="headline font--900 font--white text-align-center" itemprop="name"><?php echo $data['headline'] ?></h2>
+  <h2 class="headline font-50 font--900 font--white text-align-center" itemprop="name"><?php echo $data['headline'] ?></h2>
   <meta itemprop="position" content="<?php echo $data['how-to-position'] ?>"/>
   <?php if ( !empty( $data['copy'] ) ): ?>
-  <p class="recipe-section__description"><?php echo $data['copy'] ?></p>
+  <p class="recipe-section__description font-31"><?php echo $data['copy'] ?></p>
   <?php endif; ?>
-  <ol class="recipe-section__step-list">
+  <ol class="recipe-section__step-list font-31">
     <?php foreach ( $data['steps'] as $i => $step ): ?>
-    <li class="recipe-section__step"
+    <li class="recipe-section__step font-31"
       itemprop="itemListElement"
       itemscope itemtype="http://schema.org/HowToStep">
       <meta itemprop="position" content="<?php echo $i + 1 ?>"/>
       <?php if ( !empty( $step['headline'] ) ): ?>
-      <strong class="recipe-section__step--headline"
+      <strong class="recipe-section__step--headline font-31"
         itemprop="name"><?php echo $step['headline'] ?></strong>
       <?php endif; ?>
       <?php if ( !empty( $step['copy'] ) ): ?>
@@ -55,9 +55,12 @@ $data['class'] .= ' ' . $data['extra_classes'];
   }
 ?>
         <?php foreach( $step['copy'] as $j => $sc ): ?>
-      <span itemprop="itemListElement" itemscope itemtype="http://schema.org/HowTo<?php echo ucfirst( $sc['type'] ) ?>">
+      <span class="font-31"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/HowTo<?php echo ucfirst( $sc['type'] ) ?>">
         <meta itemprop="position" content="<?php echo $j + 1 ?>"/>
-        <span class="recipe-section__step-text font--black font--400"
+        <span class="recipe-section__step-text font--black font--400 font-31"
           itemprop="text"><?php echo $sc['text'] ?></span>
       </span>
         <?php endforeach; ?>
@@ -65,8 +68,3 @@ $data['class'] .= ' ' . $data['extra_classes'];
     <?php endforeach; ?>
   </ol>
 </section>
-
-<?php if (false): ?>
-  <span class="recipe-step__step"
-    itemprop="text"><?php echo $step['copy'] ?></span>
-<?php endif; ?>
