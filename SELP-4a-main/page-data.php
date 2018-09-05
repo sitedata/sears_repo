@@ -24,15 +24,6 @@ get_relative_path( SEARS_PROJECT_PATH . '/images/' );
 $prod_slug = '2018-09-05_Fall-Meal-Planning-Ideas';
 
 set_prod_img_dir( $prod_slug );
-if ( !defined( 'SEARS_USE_SANDBOX_ASSETS' ) ) {
-	define( 'SEARS_USE_SANDBOX_ASSETS', true );
-	eh( 'SEARS_USE_SANDBOX_ASSETS: ' . SEARS_USE_SANDBOX_ASSETS );
-	var_dump( SEARS_USE_SANDBOX_ASSETS );
-}
-else {
-	eh( SEARS_USE_SANDBOX_ASSETS );
-	eh( PROD_IMG_DIR );
-}
 
 $hero = array(
 	'picture' => array(
