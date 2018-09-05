@@ -22,7 +22,7 @@ By keeping the grid directives in the definition of each page, page elements wil
   <header id="hero" class="hero--full-width text-align-center">
     <div class="banner">
       <h1 class="font-48 font--700 font--white text-align-center center--both"><?php echo $hero['h1'] ?></h1>
-      <?php element( 'picture', $hero ); ?>      
+      <?php element( 'picture', $hero ); ?>
     </div>
     <div class="padding-vert-xl text-align-center">
       <div class="hero__text font-31 lh-sm"><?php echo $hero['text'] ?></div>
@@ -44,17 +44,22 @@ if ( isset( $a['link'] ) &&
   $a['text'] = sprintf( $a['text'], $a['link']['url'] );
 }
 ?>
-  <article class="container article">
+<?php
+/**
+Don't use .container on the outer element because it makes it needlessly complicated to make full-width!
+*/
+?>
+  <article class="article sm__article--full-width">
     <div class="row padding-vert-xl">
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-6 sm__full-width">
         <?php
         element( 'picture', $a );
         ?>
       </div>
-      <div class="col-xs-12 col-md-6 font-31">
-        <h2 class="headline font--700 lh-sm"><?php echo $a['headline'] ?></h2>
+      <div class="col-xs-12 col-md-6 font-31 sm__text-column">
+        <h2 class="headline font--700"><?php echo $a['headline'] ?></h2>
         <div class="text font--black lh-sm"><?php echo $a['text'] ?></div>
-        <a class="link"
+        <a class="link lh-sm"
           href="<?php echo $a['link']['url'] ?>"
           data-href="<?php echo $a['link']['url'] ?>"
           ><?php echo $a['link']['text'] ?></a>

@@ -214,12 +214,33 @@
 .SELP-4a-main .article .headline {
   color: #2159bb;
   font-size: 40px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  line-height: 1.2; }
 
 .SELP-4a-main .article .text {
   margin-bottom: 20px; }
 
+@media screen and (max-width: 991px) {
+  .sm__article--full-width {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .sm__article--full-width .row {
+      margin-left: 0;
+      margin-right: 0; }
+    .sm__article--full-width .sm__full-width {
+      padding-left: 0;
+      padding-right: 0; }
+  .sm__text-column {
+    padding-left: 20px;
+    padding-right: 20px; } }
+
 @media screen and (min-width: 992px) {
   .SELP-4a-main .hero__text {
     margin-right: 15%;
-    margin-left: 15%; } }
+    margin-left: 15%; }
+  .SELP-4a-main .sm__article--full-width {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 99%; } }
