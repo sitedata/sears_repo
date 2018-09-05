@@ -2,7 +2,7 @@ $wrap-class: '.SELP-4a-main';
 
 @import '../scss/_main';
 
-$hero-text-hz-margin_m: 18%;
+$hero-text-hz-margin_m: 40px;
 $hero-text-hz-margin_d: 15%;
 
 $text-column-padding_m: 35px; // per PSD!
@@ -16,26 +16,19 @@ $text-column-padding_m: 35px; // per PSD!
 // my stuff here!
 #{$wrap-class} {
 
-  #hero {
-
-
-  }
-
   .hero--full-width {
-    // margin-left: -20px;
-    // margin-right: -20px;
 
     // .banner wraps a headline and image so that we can center it
     .banner {
       position: relative;
 
       h1 {
-        font-size: 65px;
         position: absolute;
         top: 50%;
         left: 50%;
         @include transform( translate( -50%, -50% ) );
         margin: 0;
+        white-space: nowrap;
       }
 
     }
@@ -57,14 +50,8 @@ $text-column-padding_m: 35px; // per PSD!
 
   .article {
 
-    // .picture,
-    // .picture > img {
-    //   max-width: 100%;
-    // }
-
     .headline {
       color: $blue;
-      font-size: 40px;
       margin-top: 20px;
       line-height: 1.2;
     }
@@ -136,7 +123,6 @@ $text-column-padding_m: 35px; // per PSD!
       padding-right: 15px;
       width: 99%;
     }
-
 
   }
 }
