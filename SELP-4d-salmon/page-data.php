@@ -92,11 +92,6 @@ $prep = array(
 		),
 
 		array(
-			'headline' => 'Pre-mix your spices in large batches.',
-			'copy' => 'You can use it for this recipe and in the future for any other chili or soup you might whip up.',
-		),
-
-		array(
 			'headline' => 'Pre-peel the skin off of garlic cloves.',
 			'copy' => 'Store them in an airtight container in the fridge so they will be at the ready for mincing.',
 		),
