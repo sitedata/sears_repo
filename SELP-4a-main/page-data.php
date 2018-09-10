@@ -54,20 +54,20 @@ $articles = array(
 		'picture' => array(
 			array(
 				'media' => '(max-width:991px)',
-				'srcset' => 'time-saving-ideas_991w.jpg',
+				'srcset' => 'time-saving-tips_991w.jpg',
 			),
 			array(
 				'media' => '(min-width:992px)',
-				'srcset' => 'time-saving-ideas_725w.jpg',
+				'srcset' => 'time-saving-tips_725w.jpg',
 			),
 		),
-		'img' => 'time-saving-ideas_991w.jpg',
+		'img' => 'time-saving-tips_991w.jpg',
 		'alt' => 'A family preparing a healthy dinner together',
 		'headline' => "Time-saving Ideas for Fast,<br>Healthy Weeknight Dinners",
 		'text' => 'Don&rsquo;t let &ldquo;what are we having for dinner&rdquo; become that nagging question at the end of a long day! Use these <a class="article-link" href="%1$s" data-href="%1$s">tips and tricks</a> to get healthy meal options onto your table in no time.',
 		'link' => array(
 			'text' => "View Time-saving Tips",
-			'url' => '/time-saving-dinner-ideas'
+			'url' => '/time-saving-dinner-tips'
 		)
 	),
 	array(
