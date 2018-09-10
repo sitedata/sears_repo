@@ -69,17 +69,28 @@ $content = array(
   ),
  );
 
-$links =array( 
+$links =array(
 	array(
-	'reference' => "#",
+	'reference' => "/Refrigerators-Freezers/Freezers",
 	'linktext' => 'Shop Freezers'
 		)
 	,array(
-	'reference' => "#",
+	'reference' => "/Refrigerators-Freezers",
 	'linktext' => 'Shop Refrigerators'
 		)
 	);
 
+
+
+	//
+	// /Outdoor-Living/Grills
+	// /Cooking-Appliances
+	//
+	// /Cooking-Appliances/Ranges
+	// /Cooking-Appliances/Ovens
+	//
+	// /Dishwashers-Disposals/Dishwashers
+	// /Dishwashers-Disposals/Disposers-Trash-Compactors
 
 
 /**
@@ -88,7 +99,7 @@ Brand Logos
 $brand_logos = array(
 	'headline' => 'Ready to get started?',
 	'copy' => 'Sears Hometown Store has unbeatable prices on the best brands available.',
-	'btn_url' => '#'
+	'btn_url' => '/appliances'
 );
 
 /**
@@ -97,6 +108,6 @@ View More
 $view_more = array(
 	array(
 		'text' => 'Meal Planning Tips &amp; Recipes',
-		'url' => '#'
+		'url' => '/fall-meal-planning-ideas'
 	),
 );

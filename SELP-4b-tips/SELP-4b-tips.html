@@ -1,68 +1,678 @@
 <style type="text/css">
+.linkStyle p {
+  margin-bottom: 25px !important;
+}
+
+.font-31 {
+  font-size: 31px !important;
+}
+
+.font-48 {
+  font-size: 48px !important;
+}
+
+.font-50 {
+  font-size: 50px !important;
+}
+
+.font-65 {
+  font-size: 65px !important;
+}
+
+.width100percent {
+  width: 100%;
+}
+
+.headline {
+  background: #2159bb;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.tipbottom {
+  background: #dae2f1;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.text-align-left {
+  text-align: left !important;
+}
+
+.noMargin {
+  margin: 0px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.paddingattop {
+  padding: 20px 0;
+}
+
+.heropadding {
+  padding: 0;
+}
+
+ul {
+  color: #2159bb;
+  padding-left: 35px;
+}
+
+ul li {
+  line-height: 1.5;
+}
+
+ul li span {
+  color: black;
+}
+
+.viewMore {
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .font-31 {
+    font-size: 27.9px !important;
+  }
+  .font-48 {
+    font-size: 43.2px !important;
+  }
+  .font-50 {
+    font-size: 45px !important;
+  }
+  .font-65 {
+    font-size: 58.5px !important;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .font-31 {
+    font-size: 21.7px !important;
+  }
+  .font-40 {
+    font-size: 28px !important;
+  }
+  .font-48 {
+    font-size: 33.6px !important;
+  }
+  .font-50 {
+    font-size: 35px !important;
+  }
+  .font-65 {
+    font-size: 45.5px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .font-31 {
+    font-size: 15.5px !important;
+  }
+  .font-40 {
+    font-size: 20px !important;
+  }
+  .font-48 {
+    font-size: 24px !important;
+  }
+  .font-50 {
+    font-size: 25px !important;
+  }
+  .font-65 {
+    font-size: 32.5px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sm--show {
+    display: unset;
+  }
+  .sm--hide {
+    display: none;
+  }
+  .md--show {
+    display: none;
+  }
+  .sm__section--full-width {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .sm__section--full-width .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sm__section--full-width .sm__full-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sm__text-column {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .sm__no-pad {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .md--show {
+    display: unset;
+  }
+  .sm--hide {
+    display: unset;
+  }
+  .md--hide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .xs--show {
+    display: unset;
+  }
+  .xs--hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .xs--show {
+    display: none;
+  }
+  .xs--hide {
+    display: unset;
+  }
+}
+
+[class*=SEARS-] .headline .headline--copy {
+  font-size: 1.19em;
+  padding: 1.5em 2em 0.75em 2em;
+}
+
+[class*=SEARS-] h3 {
+  font-size: 2.44em;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+
+[class*=SEARS-] hr {
+  border-color: #e0e0e0;
+}
+
+[class*=SEARS-] .fake-bottom-border {
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-bottom: 10px;
+}
+
+[class*=SEARS-] .hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+[class*=SEARS-] .hero--full-width h1 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture > img {
+  width: 100%;
+  max-width: 100%;
+}
+
+[class*=SEARS-] .brand-logos {
+  text-align: center;
+}
+
+[class*=SEARS-] .brand-logos .brand-logos--wrapper {
+  display: inline-block;
+  margin: 0 auto;
+  word-spacing: 0;
+  font-size: 0;
+  max-width: 1150px;
+}
+
+[class*=SEARS-] .brand-logos .brand-logo {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+[class*=SEARS-] .brand-logos .btn--shop-now {
+  background-color: #e92227;
+  border-radius: 0;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 54.36px;
+  position: relative;
+  width: 354.25px;
+  height: 86.38px;
+  line-height: 83.38px;
+  letter-spacing: 0.02em;
+  padding: 0;
+  text-indent: -30px;
+}
+
+[class*=SEARS-] .brand-logos .btn--shop-now span {
+  color: #fff;
+  font-weight: 600;
+}
+
+[class*=SEARS-] .brand-logos .btn--shop-now:after {
+  content: "";
+  position: absolute;
+  border-right: none;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 22px solid transparent;
+  border-left-color: #FFF;
+  border-left-width: 40px;
+  right: 0;
+}
+
+@media only screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 992px) {
+  [class*=SEARS-] .brand-logos {
+    text-align: center;
+  }
+  [class*=SEARS-] .brand-logos .brand-logo {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e92227;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 27.18px;
+    position: relative;
+    width: 177.125px;
+    height: 43.19px;
+    line-height: 41.69px;
+    letter-spacing: 0.02em;
+    text-indent: -15px;
+  }
+  [class*=SEARS-] .brand-logos .btn--shop-now:after {
+    content: "";
+    position: absolute;
+    border-right: none;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 11px solid transparent;
+    border-left-color: #FFF;
+    border-left-width: 20px;
+    right: 0;
+  }
+}
+
+[class*=SEARS-] .tip-box {
+  margin-top: 25px;
+  text-align: center;
+}
+
+[class*=SEARS-] .tip-box__head {
+  text-transform: uppercase;
+  background-color: #2159bb;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 24px;
+  padding-bottom: 18px;
+  vertical-align: middle;
+}
+
+[class*=SEARS-] .tip-box__body {
+  background-color: #dae2f1;
+  color: #000;
+  padding: 27px;
+  vertical-align: middle;
+  line-height: 1.6em;
+}
+
+[class*=SEARS-] .tip-box__body--headline {
+  font-weight: bold;
+}
+
+#main {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.font--900 {
+  font-weight: 900;
+}
+
+.font--424242 {
+  color: #424242;
+}
+
+.hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.hero--full-width h1 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.hero--full-width .picture,
+.hero--full-width .picture > img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.recipe-section {
+  line-height: 1.4;
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
+.recipe-section > .headline {
+  background: #2159bb;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.recipe-section > .headline:after {
+  content: ":";
+}
+
+.recipe-section__description {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #000;
+}
+
+.recipe-section ol,
+.recipe-section ul {
+  color: #2159bb;
+  margin-right: 20px;
+}
+
+.recipe-section ol li,
+.recipe-section ul li {
+  margin-bottom: 15px;
+}
+
+.recipe-section ol {
+  margin-left: 20px;
+  font-weight: bold;
+  list-style-position: inside;
+  padding-left: 5px;
+}
+
+.recipe-section ul {
+  margin-left: 10px;
+}
+
+.footer {
+  color: #424242;
+}
+
+.footer hr {
+  color: #dadbdc;
+}
+
+.footer__content {
+  padding: 35px 0;
+}
+
+.footer__headline {
+  max-width: 88%;
+  margin: 0 auto;
+}
+
+.footer__text {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.view-more {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .recipe-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .recipe-section ul {
+    margin-left: 20px;
+  }
+}
 
 </style>
 <main class="cms-content cms-content-html padding-vert-xl SEARS--landing-page SELP-4b-tips" id="cms-content-1920-1920">
 
   <!-- BEGIN #hero -->
-  <header id="hero" class="hero--full-width">
-    <h1 class="font-48 font--700 text-align-center padding-vert-xl"
-     >Time-saving Tips for Fast, Healthy Weeknight Dinners</h1>
-     <picture class="picture" >
-  <source media="(max-width:991px)" srcset="/SELP-4b-tips/images/fast-healthy-weeknight-dinners_991w.jpg">
-  <source media="(min-width:992px)" srcset="/SELP-4b-tips/images/fast-healthy-weeknight-dinners_1550w.jpg">
-  <img src="/SELP-4b-tips/images/fast-healthy-weeknight-dinners_991w.jpg"
-    alt="A family cooking a healthy meal together."
-    class="picture__img"
-    >
-</picture>
+  <header id="hero" class="heropadding hero--full-width text-align-center">
+    <h1 class="font-48 font--700 text-align-center padding-vert-xl ">Time-saving Tips for Fast, Healthy Weeknight Dinners</h1>
+    <div class="banner">
+      <picture class="picture">
+        <source media="(max-width:991px)" srcset="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Time-Saving-Dinner-Tips/fast-healthy-weeknight-dinners_991w.jpg">
+        <source media="(min-width:992px)" srcset="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Time-Saving-Dinner-Tips/fast-healthy-weeknight-dinners_1550w.jpg">
+        <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Time-Saving-Dinner-Tips/fast-healthy-weeknight-dinners_991w.jpg" alt="A family preparing a healthy dinner together" class="picture__img">
+      </picture>
+    </div>
+  </header>
 
-    <div class="container headline">
-      <div class="row">
-        <div class="col-xs-12 text-align-center padding-vert-lg">
-          <div class="hero--copy font-31 lh-sm">
-            Between getting ready for work, kids off to school, extracurricular school activities and completing homework, you have enough to think about on a daily basis. Don’t let “what are we having for dinner” become that nagging question at the end of a long day! Use these tips and tricks to get healthy meal options onto your table in no time.          </div>
-          
+  <div class="container-fluid sm__no-pad padding-vert-lg">
+    <div class="row">
+      <div class="col-md-6 text-align-center padding-vert-xl">
+        <div class="hero--copy font-31 lh-sm text-align-left font-424242">
+          Between getting ready for work, kids off to school, extracurricular school activities and completing homework, you have enough to think about on a daily basis. Don&rsquo;t let &ldquo;what are we having for dinner&rdquo; become that nagging question at the end of a long day! Use these tips and tricks to get healthy meal options onto your table in no time.
+        </div>
+      </div>
+      <div class="col-md-6 text-align-center fullwidthPadding sm__no-pad">
+        <aside class="tip-box">
+  <div class="tip-box__head font--white font-50 lh-sm">Tip</div>
+  <div class="tip-box__body font--black">
+      <div class="tip-box__body--headline font--700 font-31 lh-sm">Before you prep, plan a day for shopping.</div>
+        <div class="tip-box__body--text font-31 lh-sm">Include a trip to your local farmers market for the freshest veggies and herbs to add maximum flavor to your recipes.</div>
+    </div>
+</aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- END #hero -->
+  <section class="container-fluid sm__no-pad padding-vert-xl">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 fullwidthPadding padding-bottom-xl">
+        <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Time-Saving-Dinner-Tips/bento-boxes_760w.jpg" class="width100percent" alt="Leftover food storage containers with salads, fruits and vegetables, and meat">
+      </div>
+      <div class="col-xs-12 col-md-6 padding-horiz-xl">
+        <h2 class="font-40 font--700 font--424242 lh-sm">Plan and Prep Ahead of Time</h2>
+        <ul class="font-31 lh-sm">
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Make your menus a week in advance and include days for leftovers or eating out.</span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Include a protein, a vegetable and a carb in each meal. </span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Wash and chop your vegetables ahead of time for a quick snack or easy addition to any meal.</span>
+          </li>
+
+        </ul>
+        <div class="linkStyle padding-vert-lg lh-md">
+          <p><a href="/Refrigerators-Freezers/Freezers" data-href="/Refrigerators-Freezers/Freezers" class="font-31">Shop Freezers</a></p>
+          <p><a href="/Refrigerators-Freezers" data-href="/Refrigerators-Freezers" class="font-31">Shop Refrigerators</a></p>
         </div>
       </div>
     </div>
-  </header>
-  <!-- END #hero -->
-  <section class="container">
-     <div class="col-xs-12">  
-                      <div class="col-xs-12 col-md-6"><img src='/SELP-4b-tips/images/bento-boxes_760w.jpg' class="width100percent" alt='Bento boxes'></div>
-          <div class="col-xs-12 col-md-6" class="width100percent">
-            <h2><b>Plan and Prep Ahead of Time</b></h2>
-              <ul>
-                                  <li class="padding-bottom-sm listfont">
-                    <span class="font--black listfont">
-                  Make your menus a week in advance and include days for leftovers or eating out.                    </span>
-                  </li>
-    
-                                  <li class="padding-bottom-sm listfont">
-                    <span class="font--black listfont">
-                  Include a protein, a vegetable and a carb in each meal.                    </span>
-                  </li>
-    
-                                  <li class="padding-bottom-sm listfont">
-                    <span class="font--black listfont">
-                  Wash and chop your vegetables ahead of time for a quick snack or easy addition to any meal.                    </span>
-                  </li>
-    
-                              </ul>
-                            <a href='#'>Shop Freezers</a><br>
-                      <a href='#'>Shop Refrigerators</a><br>
-                </div>
-      
-     </div>
+
+    <div class="row">
+      <div class="col-xs-12 text-align-center fullwidthPadding sm__no-pad">
+        <aside class="tip-box">
+  <div class="tip-box__head font--white font-50 lh-sm">Tip</div>
+  <div class="tip-box__body font--black">
+      <div class="tip-box__body--headline font--700 font-31 lh-sm">Theme nights make meals easy to plan and fun.</div>
+        <div class="tip-box__body--text font-31 lh-sm">Breakfast for dinner or taco night are sure to be crowd favorites.</div>
+    </div>
+</aside>
+      </div>
+    </div>
   </section>
+
+  <section class="container-fluid sm__no-pad padding-vert-xl">
+    <div class="row">
+
+      <div class="col-xs-12 col-md-6 fullwidthPadding padding-bottom-xl"><img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Time-Saving-Dinner-Tips/oven-roasted-veggies_760w.jpg" class="width100percent fullwidthPadding" alt="Roasted apples, sweet potatoes, Brussels sprout, red onions, and pecans on a sheet pan"></div>
+
+      <div class="col-xs-12 col-md-6 padding-horiz-xl">
+        <h2 class="font-40 font--424242 lh-sm"><b>Think Big: Cook in Large Batches</b></h2>
+        <div class="font-31 lh-sm">Large batch cooking saves time! </div>
+        <ul class="font-31 lh-sm padding-bottom-sm">
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                 Grill or bake chicken breasts in advance for protein at the ready. </span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Roasting large batches of veggies on baking sheets in the oven is simple and healthy.   </span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Try new recipes like this tasty <a href="/butternut-squash-chicken-chili-recipe" data-href="/butternut-squash-chicken-chili-recipe">One Pot Chili Recipe</a> or this easy <a href="/baked-salmon-and-veggies-recipe" data-href="/baked-salmon-and-veggies-recipe">One Sheet Salmon Recipe</a>.</span>
+          </li>
+
+        </ul>
+
+        <div class="linkStyle lh-sm padding-top-lg">
+          <p><a href="/Outdoor-Living/Grills" data-href="/Outdoor-Living/Grills" class="font-31 lh-xs">Shop Grills</a></p>
+          <p><a href="/Cooking-Appliances" data-href="/Cooking-Appliances" class="font-31 lh-xs">Shop Cooking Appliances</a></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row padding-vert-lg">
+      <div class="col-xs-12 text-align-center fullwidthPadding sm__no-pad">
+        <aside class="tip-box">
+  <div class="tip-box__head font--white font-50 lh-sm">Tip</div>
+  <div class="tip-box__body font--black">
+      <div class="tip-box__body--headline font--700 font-31 lh-sm">Buy Bento Box style containers and freezer bags to store all of your prepped meals and leftovers easily.</div>
+      </div>
+</aside>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container-fluid sm__no-pad padding-vert-xl">
+      <div class="row">
+
+      <div class="col-xs-12 col-md-6 fullwidthPadding padding-bottom-xl">
+        <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Time-Saving-Dinner-Tips/chopped-chicken-breast_941w.jpg" class="width100percent fullwidthPadding" alt="bite sized chicken pieces using a knife">
+      </div>
+
+      <div class="col-xs-12 col-md-6 padding-horiz-xl">
+        <h2 class="font-40 font--700 font--424242 lh-sm">Dinner Short Cuts</h2>
+        <ul class="font-31 lh-sm">
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                Turn your leftovers into new meals; put last night’s roast into a pot pie or that turkey breast into a casserole. </span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Pick up a pre-cooked rotisserie chicken and just add sides to complete your meal. </span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                 With a WiFi connected range or wall oven you can preheat from your phone so you can begin cooking right when you get home.</span>
+          </li>
+
+        </ul>
+        <div class="linkStyle padding-top-lg">
+          <p><a href="/Cooking-Appliances/Ranges" data-href="/Cooking-Appliances/Ranges" class="font-31 lh-xs">Shop Ranges</a></p>
+          <p><a href="/Cooking-Appliances/Ovens" data-href="/Cooking-Appliances/Ovens" class="font-31 lh-xs">Shop Wall Ovens</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 text-align-center fullwidthPadding sm__no-pad">
+        <aside class="tip-box">
+  <div class="tip-box__head font--white font-50 lh-sm">Tip</div>
+  <div class="tip-box__body font--black">
+      <div class="tip-box__body--headline font--700 font-31 lh-sm">Don&rsquo;t forget about the sauce!</div>
+        <div class="tip-box__body--text font-31 lh-sm">Freeze leftover sauce in ice cube trays to add to your next meal.</div>
+    </div>
+</aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid sm__no-pad padding-vert-xl">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 fullwidthPadding padding-bottom-xl">
+        <img src="http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-09-05_Time-Saving-Dinner-Tips/hand-washing-dishes_760w.jpg" class="width100percent fullwidthPadding" alt="A woman washing a cooking pan in the sink">
+      </div>
+
+      <div class="col-xs-12 col-md-6 padding-horiz-xl">
+        <h2 class="font-40 font--700 font--424242">Quick and Easy Clean Up</h2>
+        <ul class="font-31 lh-md">
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                Clean as you go and empty the dishwasher before you start to make reloading it easier.</span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Have a trash bowl within reach for those egg shells or vegetable peelings to add to the compost pile later.</span>
+          </li>
+
+          <li class="padding-bottom-sm listfont">
+            <span class="font--black listfont">
+                  Wipe up spills immediately and cover your baking sheets in tin foil so you don’t have to waste time scrubbing.</span>
+          </li>
+
+        </ul>
+
+        <div class="linkStyle padding-top-xl">
+          <p><a href="/Dishwashers-Disposals/Dishwashers" data-href="/Dishwashers-Disposals/Dishwashers" class="font-31">Shop Dishwashers</a></p>
+          <p><a href="/Dishwashers-Disposals/Disposers-Trash-Compactors" data-href="/Dishwashers-Disposals/Disposers-Trash-Compactors" class="font-31">Shop Trash Compactors</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <hr class="bordered--bottom bordered--sm">
+      </div>
+    </div>
+
+  </section>
+
+
 <!-- BRAND LOGOS -->
-        <section class="container brand-logos">
+        <section class="container brand-logos padding-vert-md">
 
           <!-- BRAND LOGOS HEADING -->
           <div class="row">
-            <div class="col-xs-12 padding-vert-xl text-align-center">
+            <div class="col-xs-12 text-align-center">
                           <h2 class="brand-logos__headline font-40 font--700 lh-sm">Ready to get started?</h2>
-                          <p class="brand-logos__copy font--black font-31 lh-md">Sears Hometown Store has unbeatable prices on the best brands available.</p>
+                          <p class="brand-logos__copy font--black font-31 lh-sm">Sears Hometown Store has unbeatable prices on the best brands available.</p>
             </div>
           </div>
 
@@ -119,7 +729,7 @@
                   class="">
                 </div>
                 <div class="brand-logo">
-                  <img src="/assets/cms/brand-logos/kitchenAid.svg"
+                  <img src="/assets/cms/brand-logos/kitchenaid.svg"
                   width="199"
                   height="22"
                   alt="KitchenAid"
@@ -144,10 +754,23 @@
           </div>
           <div class="row">
             <div class="col-xs-12 padding-vert-xl text-align-center">
-              <a href="#"
-                data-href="#"
+              <a href="/appliances"
+                data-href="/appliances"
                 class="btn btn-lg btn--shop-now"><span>shop</span>now</a>
             </div>
           </div>
         </section><!-- .col-xs-12 -->
-</main><!-- #cms-content-1920-1920.cms-content.cms-content-html -->
+
+  <section class="container view-more">
+    <div class="row padding-vert-xl">
+          <div class="col-xs-12 font-31">
+        <strong class="font--700 font--424242">View More:</strong>
+        <a class="link"
+          href="/fall-meal-planning-ideas"
+          data-href="/fall-meal-planning-ideas"
+          >Meal Planning Tips &amp; Recipes</a>
+      </div>
+        </div>
+  </section>
+</main>
+<!-- #cms-content-1920-1920.cms-content.cms-content-html -->

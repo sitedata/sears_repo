@@ -65,6 +65,7 @@ $data['class'] .= ' ' . $data['extra_classes'];
       </span>
         <?php endforeach; ?>
       <?php endif; ?>
+    </li>
     <?php endforeach; ?>
   </ol>
 </section>

@@ -24,6 +24,7 @@ $options = array(
     'Meal Planning Ideas',
   ),
   'css' =>  get_relative_path( dirname( __FILE__ ) . '/' . $slug . '.css' ),
+  'write_html' => true
 );
 
 make_page( $page_content, $options );

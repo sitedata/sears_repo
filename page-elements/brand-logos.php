@@ -112,11 +112,11 @@ $logos = isset( $logos ) ? $logos :
 
 ?>
 <!-- BRAND LOGOS -->
-        <section class="container brand-logos">
+        <section class="container brand-logos padding-vert-md">
 
           <!-- BRAND LOGOS HEADING -->
           <div class="row<?php echo $data['classes'] ?>">
-            <div class="col-xs-12 padding-vert-xl text-align-center">
+            <div class="col-xs-12 text-align-center">
             <?php if ( !empty( $data['headline'] ) ): ?>
               <h2 class="brand-logos__headline font-40 font--700 lh-sm"><?php echo $data['headline'] ?></h2>
             <?php endif; ?>

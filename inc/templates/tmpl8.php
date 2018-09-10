@@ -17,7 +17,7 @@ Use local CSS so we can override the font URLs!
 Add CSS file, if any.
 */
 ?>
-<?php if ( isset( $css ) && false !== $css && !empty( $css ) ): ?>
+<?php if ( isset( $inline_css ) && false === $inline_css && isset( $css ) && false !== $css && !empty( $css ) ): ?>
     <link rel="stylesheet" href="<?php echo $css ?>">
 <?php endif; ?>
     <!--<![endif]-->

@@ -34,7 +34,7 @@ $hero = array(
 	),
 	'img' => 'butternut-squash-chicken-chili_991w.jpg',
 	'img_attr' => 'itemprop="image"',
-	'alt' => 'Butternut Squash Chicken Chili topped with avocado slices',
+	'alt' => 'Butternut squash chicken chili with avocado slices',
 	'h1' => 'Easy One Pot Meal Recipe &mdash; <span itemprop="name">Butternut Squash Chicken Chili</span>',
 	'text' => 'What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!',
 	'link' => array(
@@ -44,6 +44,7 @@ $hero = array(
 );
 
 $ingredients = array(
+	'id' => 'ingredients',
 	'headline' => 'Ingredients',
 	'list' => array(
 		'1 medium butternut squash peeled and chopped into 1-in cubes',
@@ -71,6 +72,7 @@ $ingredients = array(
 Pre-prep
 */
 $prep = array(
+	'id' => 'pre-prep',
 	'how-to-position' => 1,
 	'headline' => 'Pre-Prep',
 	'copy' => 'Use your fridge to save time. Just a little bit of meal prep will make dinnertime go much faster with these few simple tips!',
@@ -126,6 +128,7 @@ $prep = array(
 Directions
 */
 $directions = array(
+	'id' => 'directions',
 	'headline' => 'Directions',
 	'copy' => '',
 	'how-to-position' => 2,
@@ -167,7 +170,7 @@ Brand Logos
 $brand_logos = array(
 	'headline' => 'Ready to get started?',
 	'copy' => 'Sears Hometown Store has unbeatable prices on the best brands available.',
-	'btn_url' => '#'
+	'btn_url' => '/appliances',
 );
 
 /**

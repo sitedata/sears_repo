@@ -36,7 +36,7 @@ $hero = array(
 		),
 	),
 	'img' => 'salmon-and-veggies_991w.jpg',
-	'alt' => 'Salmon on a baking sheet with asparagus and sweet potatoes',
+	'alt' => 'Baked salmon with asparagus and sweet potatoes',
 /**
 NOTE: see the <span itemprop="name"> in the h1.
 This is for the Schema.org Recipe microdata.
@@ -54,6 +54,7 @@ PRETTY SURE EVERYTHING AFTER THIS IS STILL THE DATA FOR THE CHILI RECIPE
 */
 
 $ingredients = array(
+	'id' => 'ingredients',
 	'headline' => 'Ingredients',
 	'list' => array(
 		"3 (4-6 oz.) salmon steaks",
@@ -73,6 +74,7 @@ $ingredients = array(
 Pre-prep
 */
 $prep = array(
+	'id' => 'pre-prep',
 	'how-to-position' => 1,
 	'headline' => 'Pre-Prep',
 	'copy' => 'Meal prepping is a great way to eat healthier and further cut down on cooking time. Try these tips to make this recipe go even faster.',
@@ -103,6 +105,7 @@ Directions
 */
 
 $directions = array(
+	'id' => 'directions',
 	'headline' => 'Directions',
 	'copy' => '',
 	'how-to-position' => 2,
@@ -154,7 +157,7 @@ Brand Logos
 $brand_logos = array(
 	'headline' => 'Ready to get started?',
 	'copy' => 'Sears Hometown Store has unbeatable prices on the best brands available.',
-	'btn_url' => '#'
+	'btn_url' => '/appliances'
 );
 
 /**

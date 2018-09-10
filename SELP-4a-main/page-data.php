@@ -37,7 +37,7 @@ $hero = array(
 		),
 	),
 	'img' => 'quick-easy-meal-planning-ideas_991w.jpg',
-	'alt' => 'Fresh fall vegetables',
+	'alt' => 'Fall vegetables with zucchini, yellow squash, tomatoes, pumpkin',
 	'h1' => 'Quick &amp; Easy<br>Fall Meal<br>Planning Ideas',
 	'text' => 'Make delicious and healthy meals a routine this fall with some time-saving meal prep tips and simple recipes!',
 );
@@ -62,7 +62,7 @@ $articles = array(
 			),
 		),
 		'img' => 'time-saving-ideas_991w.jpg',
-		'alt' => 'Time-Saving Ideas',
+		'alt' => 'A family preparing a healthy dinner together',
 		'headline' => "Time-saving Ideas for Fast,<br>Healthy Weeknight Dinners",
 		'text' => 'Don&rsquo;t let &ldquo;what are we having for dinner&rdquo; become that nagging question at the end of a long day! Use these <a class="article-link" href="%1$s" data-href="%1$s">tips and tricks</a> to get healthy meal options onto your table in no time.',
 		'link' => array(
@@ -82,7 +82,7 @@ $articles = array(
 			),
 		),
 		'img' => 'butternut-squash-chicken-chili_991w.jpg',
-		'alt' => 'Time-Saving Ideas',
+		'alt' => 'Butternut squash chicken chili with avocado slices',
 		'headline' => "Easy One Pot Meal Recipe:<br>Butternut Squash Chicken Chili",
 		'text' => "What is better when the weather turns brisk than a hearty chili? Make it quick, easy and healthy with some simple meal prep and have dinner on the table in 45 minutes or less!",
 		'link' => array(
@@ -111,9 +111,9 @@ $articles = array(
 			),
 		),
 		'img' => 'salmon-and-veggies_991w.jpg',
-		'alt' => 'Baked Salmon and Veggies',
+		'alt' => 'Baked salmon with asparagus and sweet potatoes',
 		'headline' => "Easy One Sheet Pan Recipe:<br>Salmon and Veggies",
-		'text' => "Dinner doesn’t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!",
+		'text' => "Dinner doesn&rsquo;t have to be complicated to be delicious. Try this one sheet recipe to get a healthy and delectable meal to the table from start to finish in 30 minutes or less!",
 		'link' => array(
 			'text' => "View Salmon and Veggies Recipe",
 			'url' => '/baked-salmon-and-veggies-recipe'
@@ -128,5 +128,5 @@ Brand Logos
 $brand_logos = array(
 	'headline' => 'Ready to get started?',
 	'copy' => 'Sears Hometown Store has unbeatable prices on the best brands available.',
-	'btn_url' => '#'
+	'btn_url' => '/appliances',
 );

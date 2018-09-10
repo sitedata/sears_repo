@@ -11,7 +11,8 @@ function make_page( $content_file, $options = array() ) {
 		'js' => false,
 		'template' => 'tmpl8.php',
 		'inline_css' => true,
-		'img_dir' => '/' . basename( SEARS_PROJECT_PATH ) . 'img'
+		'img_dir' => '/' . basename( SEARS_PROJECT_PATH ) . 'img',
+		'write_html' => true,
 	);
 
 	$opts = array_merge( $_defaults, $options );
@@ -40,7 +41,12 @@ function make_page( $content_file, $options = array() ) {
 	include( $content_file ); // include the content file
 	$output = ob_get_contents(); // store the buffered output
 	$output_file_name = get_output_file_name( $content_file );
-	file_put_contents( $output_file_name, $output ); // write it to a file (and fail silently)
+	// unless specified otherwise...
+	if ( false !== $opts['write_html'] ) {
+		// write it to a file (and fail silently)
+		file_put_contents( $output_file_name, $output );
+	}
+
 	ob_end_clean(); // stop buffering and empty the buffer
 
 	// maybe we should include the $output_file instead of the $content_file

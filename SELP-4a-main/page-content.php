@@ -70,9 +70,12 @@ Don't use .container on the outer element because it makes it needlessly complic
   <!-- END Articles -->
 
 <?php
+/**
+No brand logos on main page!
+*/
 // use element to include reusable page-element snippet!
-element( 'brand-logos',
-  $brand_logos
-);
+// element( 'brand-logos',
+//   $brand_logos
+// );
 ?>
 </main><!-- #cms-content-1920-1920.cms-content.cms-content-html -->

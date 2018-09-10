@@ -11585,7 +11585,9 @@ small,
 .small {
     font-size: 85%
 }
-
+/**
+ TExt manipulation: alignment, transform, etc.
+*/
 .text-left {
     text-align: left
 }
@@ -16227,7 +16229,9 @@ img.pull-left {
 .z9999 {
     z-index: 9999
 }
-
+/**
+@padding
+*/
 .padding-vert-xxs {
     padding-top: 2px;
     padding-bottom: 2px
@@ -16327,7 +16331,9 @@ img.pull-left {
 .padding-xl {
     padding: 25px
 }
-
+/**
+@clear
+*/
 .clear {
     clear: both
 }

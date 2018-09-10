@@ -55,6 +55,12 @@ THIS IS WHERE CMS CONTENT ACTUALLY GOES!
 */
 ?>
 
+<?php if ( isset( $css ) && false !== $css ): ?>
+<style type="text/css">
+<?php include( SEARS_BASE_PATH . $opts['css'] ); ?>
+</style>
+<?php endif; ?>
+
 <?php
 
 include( $content_file );
