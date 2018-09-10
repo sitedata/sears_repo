@@ -15,7 +15,7 @@ define( 'SEARS_TEMPLATE_PATH', SEARS_INC_PATH . '/templates' );
 
 define( 'SEARS_ELEMENT_PATH', SEARS_BASE_PATH . '/page-elements' );
 
-define( 'SEARS_IMG_BASE_PATH', '/assets/cms' );
+define( 'SEARS_IMG_BASE_PATH', '/assets/cms/purered' );
 
 define( 'SEARS_CSS_PATH', '/css' );
 
