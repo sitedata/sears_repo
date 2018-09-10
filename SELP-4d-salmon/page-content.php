@@ -57,7 +57,7 @@ $slug = (isset( $slug ) && !empty( $slug )) ? $slug : basename( SEARS_PROJECT_PA
         ?>
       </div>
     </div>
-    <div class="row padding-vert-xl">
+    <div itemprop="recipeInstructions" class="row padding-vert-xl">
       <div class="col-xs-12">
         <?php
         element( 'recipe__how-to-section', $directions );
