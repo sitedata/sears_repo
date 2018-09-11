@@ -153,23 +153,19 @@ $icon_height_d: 44px;
 
   #{$wrap-class} {
     // force content column width
-    article,
-    #hero .container {
-      padding-left: $content-padding_d;
-      padding-right: $content-padding_d;
-    }
+    // article,
+    // #hero .container {
+    //   padding-left: $content-padding_d;
+    //   padding-right: $content-padding_d;
+    // }
 
-    h2 {
-      // font-size: em( $h2_d, $max-font-size_d );
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-      line-height: 1;
-    }
+    // h2 {
+    //   // font-size: em( $h2_d, $max-font-size_d );
+    //   letter-spacing: 0.01em;
+    //   // white-space: nowrap;
+    //   line-height: 1;
+    // }
 
-    h3,
-    .h3 {
-      font-size: em( $h3_d, $max-font-size_d );
-    }
 
 
   }
