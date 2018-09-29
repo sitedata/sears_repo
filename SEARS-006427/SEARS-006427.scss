@@ -1,0 +1,215 @@
+@import '../scss/_main';
+
+#layout{
+  overflow:hidden;
+}
+// my stuff here!
+.SEARS-006427 {
+
+  // to achieve the 20px padding on each side of hero in PSD
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .headline--copy {
+    br {
+      display: none;
+    }
+  }
+
+  .fullWidth{
+    width:100%;
+  }
+
+  .font-18 {
+    font-size:18px !important;
+  }
+  .font-25 {
+    font-size:25px !important;
+  }
+  .font-31 {
+    font-size:31px !important;
+  }
+  .font-35 {
+    font-size:35px;
+  }
+  .font-22{
+        font-size: 22px;
+  }
+  .comfortPadding{
+    padding-right:20px;
+  }
+
+  ul{
+    margin-bottom: 0px;
+    padding-left: 25px;
+  }
+  a h3:hover{
+    color:#f3433a;
+  }
+  .listspacing{
+    padding-bottom:10px;
+  }
+  .lg__no-pad{
+    padding-left:0px; 
+    padding-right: 0px;
+  }
+  .tip-box__head{
+      font-size: 33px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .banner{
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  #UltraPlush{
+    background-color:#bac6e6;
+  }
+  #Plush{
+    background-color:#9aacdb;
+  }
+  #CushionFirm{
+    background-color:#768ece;
+  }
+  #Firm{
+    background-color:#4868bd;
+  }
+  #ExtraFirm{
+    background-color:#1a42ad;
+  }
+  .coloredBox{
+    width: 18.9999%;
+    height: 150px;
+    float: left;
+    margin: 1% .5%;
+    text-align: center;
+    padding: 60px 0px;
+    color: white;
+    text-transform: uppercase;
+  }
+   .brand-logo{
+          padding:0px !important;
+        }
+  
+  .font--800{
+    font-weight:800 !important;
+  }
+
+  .footer-ish--headline {
+    .fake-bottom-border {
+      padding: 0; // to allow larger than container
+      margin-left: em(-20px, $max-font-size_m); // to push the jerk left
+
+      hr {
+        width: 102.5%; // to push it out of the right side of the box to match PSD
+      }
+
+    } // .fake-bottom-border
+
+  }
+
+}
+
+// make the inconsistent footer headline shit more managable
+@media screen and (max-width: $max-screen-size_m) {
+
+  .SEARS-006427 {
+
+    .footer-ish--headline {
+
+      .headline--copy {
+        // hr above it has 20px margin-bottom so we only need 20px to match PSD
+        padding-top: em( 20px, $max-font-size_m );
+        padding-left: 0;
+        padding-right: 0;
+        color: #000;
+        text-align: left;
+        font-size: em( 18px, $max-font-size_m );
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (min-width: $min-screen-size_d) {
+  .SEARS-006427 {
+
+    .headline--copy {
+      br {
+        display: block;
+      }
+    }
+
+    .laundry-essentials {
+      .row {
+        .col-sm-6 {
+          padding-left: 20px;
+          &:first-child {
+            padding-right: 20px;
+            padding-left: 15px; // reset to original
+          }
+        }
+      }
+    } // .laundry-essentials
+
+    .footer-ish--headline {
+      .headline--copy {
+        padding-top: em( 100px, $max-font-size_d );
+      }
+    }
+
+  } // .SEARS-006427
+}
+
+@media screen and (max-width: 992px) {
+    .SEARS-006427 {
+
+      // .md__no-pad{
+      //   padding:0px;
+      // }
+      .tip-box{
+        margin-right:-35px;
+        margin-left:-35px;
+        }
+
+        .coloredBox{
+
+        float: none;
+        margin: 2% auto;
+        width: 100%;
+        } 
+        .comfortPadding{
+        padding-right:0px;
+        }  
+        .fullWidth{
+         padding-left:0px; 
+         padding-right:0px; 
+        } 
+
+        .no-pad-mob{
+          padding-left:0px; 
+         padding-right:0px; 
+        }
+        .font-18 {
+        font-size:15px !important;
+      }
+      .font-25 {
+        font-size:19px !important;
+      }
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .SEARS-006427 {
+      .brand-logos {
+      .btn--shop-now{
+        width:300px;
+        font-size:40px;
+      }
+    }
+
+  }
+}
