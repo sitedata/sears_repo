@@ -25,28 +25,12 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
 
 <!-- extra wrapper around all these things that are spozta be 65px narrower than hero -->
 <div class="">
-<!-- padding-horiz-xl -->
-  <!-- HEADLINE -->
-  <!-- <section class="container headline">
-    <div class="col-xs-12">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="headline--copy text-align-center font--primary2 font--700">
-            <?php echo clean_text( $headline ) ?>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 fake-bottom-border">
-          <hr class="bordered--bottom bordered--sm">
-        </div>
-      </div>
-    </div>
-  </section> -->
   <section class="container-fluid">
       <div class="row">
-        <div class="padding-vert-xl  ">
-          <div class="col-md-6 md__no-pad">
+        <div class="padding-vert-xl">
+          <div class="col-md-6 md__no-pad padding-vert-xl">
             <div class="font-18"><?php echo $sleep?></div>
-            <div class="col-xs-12 text-align-center fullwidthPadding lg__no-pad ">
+            <div class="text-align-center fullwidthPadding lg__no-pad ">
             <aside class="tip-box padding-bottom-xl">
               <div class="tip-box__head">Tip</div>
               <div class="tip-box__body font-18 lh-md">
@@ -54,10 +38,13 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
               </div>
             </aside>
             </div>
-            
           </div>
           <div class="col-md-6 no-pad-mob">
-            <img alt="<?php echo $video['alt']?>" src="<?php echo $video['img']?>" class="width100percent">
+          <aside class="tip-box" id="videoHeaderPaddingMobile">
+              <div class="tip-box__head textUntransformed font-24 ">Video: Tips for a Good Night’s Sleep </div>
+            </aside>
+            <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/wybvxdQSkT8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <!--  <img alt="<?php echo $video['alt']?>" src="<?php echo $video['img']?>" class="width100percent"> -->
           </div>
         </div>
       </div>
@@ -221,7 +208,7 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
          
     <?php endforeach; ?>
     </div>
-  </div>
+  
       
      <div class="row">
         <div class="col-xs-12 fake-bottom-border">
@@ -277,6 +264,7 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
         </div>
       </div>
   </section>
+  </div>
 
 
 
@@ -299,7 +287,7 @@ HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
 MOTHERSCRATCHING, INCONSISTENT, FAKE BORDERS THAT WANT TO BUST OUT OF BOXES!
 */
 ?>
-          <!-- <div class="fake-bottom-border">
+        <!--   <div class="fake-bottom-border">
             <hr class="visible-xs visible-sm bordered--bottom bordered--sm">
           </div>
 
@@ -311,9 +299,9 @@ MOTHERSCRATCHING, INCONSISTENT, FAKE BORDERS THAT WANT TO BUST OUT OF BOXES!
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </section>
- -->
+
 
 <?php
 
@@ -329,3 +317,4 @@ element( 'brand-logos-mattress.php',
 ?>
   </div><!-- div.pading-horiz-xl -->
 </div><!-- #cms-content-1920-1920.cms-content.cms-content-html -->
+

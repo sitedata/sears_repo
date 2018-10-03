@@ -250,6 +250,10 @@
     padding: 0px !important; }
   .SEARS-006427 .font--800 {
     font-weight: 800 !important; }
+  .SEARS-006427 .textUntransformed {
+    text-transform: none; }
+  .SEARS-006427 #videoHeaderPaddingMobile {
+    letter-spacing: 1px; }
   .SEARS-006427 .footer-ish--headline .fake-bottom-border {
     padding: 0;
     margin-left: -1em; }
@@ -278,8 +282,8 @@
 
 @media screen and (max-width: 992px) {
   .SEARS-006427 .tip-box {
-    margin-right: -35px;
-    margin-left: -35px; }
+    margin-right: -38px;
+    margin-left: -38px; }
   .SEARS-006427 .coloredBox {
     float: none;
     margin: 2% auto;
@@ -295,9 +299,18 @@
   .SEARS-006427 .font-18 {
     font-size: 15px !important; }
   .SEARS-006427 .font-25 {
-    font-size: 19px !important; } }
+    font-size: 19px !important; }
+  .SEARS-006427 #videoHeaderPaddingMobile {
+    margin-left: 0px;
+    margin-right: 0px; } }
 
 @media screen and (max-width: 480px) {
   .SEARS-006427 .brand-logos .btn--shop-now {
-    width: 300px;
+    width: 100%;
     font-size: 40px; } }
+
+@media screen and (max-width: 375px) {
+  .SEARS-006427 .brand-logos .btn--shop-now {
+    width: 230px;
+    font-size: 40px;
+    height: 50px; } }

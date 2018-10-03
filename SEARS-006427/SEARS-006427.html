@@ -251,6 +251,10 @@
     padding: 0px !important; }
   .SEARS-006427 .font--800 {
     font-weight: 800 !important; }
+  .SEARS-006427 .textUntransformed {
+    text-transform: none; }
+  .SEARS-006427 #videoHeaderPaddingMobile {
+    letter-spacing: 1px; }
   .SEARS-006427 .footer-ish--headline .fake-bottom-border {
     padding: 0;
     margin-left: -1em; }
@@ -279,8 +283,8 @@
 
 @media screen and (max-width: 992px) {
   .SEARS-006427 .tip-box {
-    margin-right: -35px;
-    margin-left: -35px; }
+    margin-right: -38px;
+    margin-left: -38px; }
   .SEARS-006427 .coloredBox {
     float: none;
     margin: 2% auto;
@@ -296,12 +300,21 @@
   .SEARS-006427 .font-18 {
     font-size: 15px !important; }
   .SEARS-006427 .font-25 {
-    font-size: 19px !important; } }
+    font-size: 19px !important; }
+  .SEARS-006427 #videoHeaderPaddingMobile {
+    margin-left: 0px;
+    margin-right: 0px; } }
 
 @media screen and (max-width: 480px) {
   .SEARS-006427 .brand-logos .btn--shop-now {
-    width: 300px;
+    width: 100%;
     font-size: 40px; } }
+
+@media screen and (max-width: 375px) {
+  .SEARS-006427 .brand-logos .btn--shop-now {
+    width: 230px;
+    font-size: 40px;
+    height: 50px; } }
 
 </style>
 <div class="cms-content cms-content-html padding-vert-xl SEARS--landing-page SEARS-006427" id="cms-content-1920-1920">
@@ -324,39 +337,25 @@
 
 <!-- extra wrapper around all these things that are spozta be 65px narrower than hero -->
 <div class="">
-<!-- padding-horiz-xl -->
-  <!-- HEADLINE -->
-  <!-- <section class="container headline">
-    <div class="col-xs-12">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="headline--copy text-align-center font--primary2 font--700">
-            <br />
-<b>Notice</b>:  Undefined variable: headline in <b>/Users/santhony/Desktop/Sears_repo/landing-pages/SEARS-006427/page-content.php</b> on line <b>35</b><br />
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 fake-bottom-border">
-          <hr class="bordered--bottom bordered--sm">
-        </div>
-      </div>
-    </div>
-  </section> -->
   <section class="container-fluid">
       <div class="row">
-        <div class="padding-vert-xl  ">
-          <div class="col-md-6 md__no-pad">
+        <div class="padding-vert-xl">
+          <div class="col-md-6 md__no-pad padding-vert-xl">
             <div class="font-18">A good night’s sleep starts with the right mattress and you need your beauty rest for great days ahead! Find a mattress that fits <b><i>you</i></b> by considering your sleep style. Are you a side sleeper, back sleeper or stomach sleeper? Do you have pets, kids or a spouse sharing your mattress? How big is your bedroom? Take these things into consideration before you purchase.</div>
-            <div class="col-xs-12 text-align-center fullwidthPadding lg__no-pad ">
+            <div class="text-align-center fullwidthPadding lg__no-pad ">
             <aside class="tip-box padding-bottom-xl">
               <div class="tip-box__head">Tip</div>
               <div class="tip-box__body font-18 lh-md">
                 <b>Lie down!</b> It’s the tried and true technique to get a good feel of a new mattress. If possible, spend 5-10 minutes trying out your favorite sleep positions before you buy.               </div>
             </aside>
             </div>
-            
           </div>
           <div class="col-md-6 no-pad-mob">
-            <img alt="Video: Tips for a Good Night&rsquo;s Sleep Tips for a Good night Sleep pand5" src="http://hometown.dev1.sb3.production.netsuitestaging.com/assets/cms/purered/2018_09_28_Mattress_LandingPage/02_videoTipsforAGoodNightSleep.jpg" class="width100percent">
+          <aside class="tip-box" id="videoHeaderPaddingMobile">
+              <div class="tip-box__head textUntransformed font-24 ">Video: Tips for a Good Night’s Sleep </div>
+            </aside>
+            <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/wybvxdQSkT8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <!--  <img alt="Video: Tips for a Good Night&rsquo;s Sleep Tips for a Good night Sleep pand5" src="http://hometown.dev1.sb3.production.netsuitestaging.com/assets/cms/purered/2018_09_28_Mattress_LandingPage/02_videoTipsforAGoodNightSleep.jpg" class="width100percent"> -->
           </div>
         </div>
       </div>
@@ -651,7 +650,7 @@
               </div>
          
         </div>
-  </div>
+  
       
      <div class="row">
         <div class="col-xs-12 fake-bottom-border">
@@ -728,6 +727,7 @@
         </div>
       </div>
   </section>
+  </div>
 
 
 
@@ -745,7 +745,7 @@
 
         <!-- FOOTER-ISH HEADLINE -->
         <section class="container headline footer-ish--headline">
-          <!-- <div class="fake-bottom-border">
+        <!--   <div class="fake-bottom-border">
             <hr class="visible-xs visible-sm bordered--bottom bordered--sm">
           </div>
 
@@ -756,9 +756,9 @@
                   Now you know ten money-saving secrets to keeping your things fresh by throwing them in your weekly wash.                </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </section>
- -->
+
 
 <!-- BRAND LOGOS -->
         <section class="container brand-logos brand-logos__mattress padding-vert-md">
@@ -835,3 +835,4 @@
         </section><!-- .col-xs-12 -->
   </div><!-- div.pading-horiz-xl -->
 </div><!-- #cms-content-1920-1920.cms-content.cms-content-html -->
+
