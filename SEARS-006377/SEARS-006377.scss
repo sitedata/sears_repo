@@ -1,0 +1,354 @@
+@import '../scss/_main';
+
+#layout{
+  overflow:hidden;
+}
+// my stuff here!
+.SEARS-006377 {
+
+  // to achieve the 20px padding on each side of hero in PSD
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .headline--copy {
+    br {
+      display: none;
+    }
+  }
+  .no-pad{
+    padding: 0;
+  }
+    .heroText{
+    position:absolute;
+    color:white;
+    text-transform:uppercase;
+    width: 500px;
+    height: 150px;
+    line-height: 1;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    background-color:rgba(27,50,141,.4);
+    padding: 50px 0;
+    white-space: nowrap;
+  }
+
+  .removeMarginTop{
+    margin-top:0px;
+  }
+  .textTransCap{
+    text-transform: capitalize;
+  }
+
+  .fullWidth{
+    width:100%;
+  }
+
+  .font-18 {
+    font-size:18px !important;
+  }
+  .font-25 {
+    font-size:25px !important;
+  }
+  .font-31 {
+    font-size:31px !important;
+  }
+  .font-35 {
+    font-size:35px;
+  }
+  .font-22{
+        font-size: 22px;
+  }
+  .comfortPadding{
+    padding-right:20px;
+  }
+
+  ul{
+    margin-bottom: 0px;
+    padding-left: 25px;
+  }
+  a h3:hover{
+    color:#f3433a;
+  }
+  .listspacing{
+    padding-bottom:10px;
+  }
+  .tip-box__head{
+      font-size: 33px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .banner{
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .coloredBox{
+    width: 16.66666666666666666667%;
+    // height: 150px;
+    float: left;
+    // margin: 1% .5%;
+    text-align: center;
+    // padding: 60px 0px;
+    // color: white;
+    padding: .3%;
+    color: #1a42ad;
+  }
+   .brand-logo{
+          padding:0px !important;
+        }
+  
+  .font--800{
+    font-weight:800 !important;
+  }
+  .textUntransformed{
+    text-transform:none;
+  }
+
+  .footer-ish--headline {
+    .fake-bottom-border {
+      padding: 0; // to allow larger than container
+      margin-left: em(-20px, $max-font-size_m); // to push the jerk left
+
+      hr {
+        width: 102.5%; // to push it out of the right side of the box to match PSD
+      }
+
+    } // .fake-bottom-border
+
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .SEARS-006377 {
+      .heroText{
+        width: 35%;
+        height: 30%;
+        padding: 3.5% 0px;
+      }
+      .font-48{
+        font-size:50px !important;
+        }
+  }
+
+}
+
+@media screen and (min-width: 2560px) {
+    .SEARS-006377  {
+      // .heroText{
+      //   width: 35%;
+      //   height: 30%;
+      //   padding: 3.5% 0px;
+      // }
+      .font-48{
+        font-size:80px !important;
+        }
+  }
+
+}
+
+// make the inconsistent footer headline shit more managable
+@media screen and (max-width: $max-screen-size_m) {
+
+  .SEARS-006377 {
+
+    .footer-ish--headline {
+
+      .headline--copy {
+        // hr above it has 20px margin-bottom so we only need 20px to match PSD
+        padding-top: em( 20px, $max-font-size_m );
+        padding-left: 0;
+        padding-right: 0;
+        color: #000;
+        text-align: left;
+        font-size: em( 18px, $max-font-size_m );
+      }
+
+    }
+
+  //   .tip-box{
+
+  //     .videoHeaderPaddingMobile{
+  //     margin-left: 0px;
+  //     margin-right: 0px;
+  //     }
+  //   }
+    
+
+  }
+
+
+}
+
+
+@media screen and (min-width: $min-screen-size_d) {
+  .SEARS-006377 {
+
+    .headline--copy {
+      br {
+        display: block;
+      }
+    }
+
+    .laundry-essentials {
+      .row {
+        .col-sm-6 {
+          padding-left: 20px;
+          &:first-child {
+            padding-right: 20px;
+            padding-left: 15px; // reset to original
+          }
+        }
+      }
+    } // .laundry-essentials
+
+    .footer-ish--headline {
+      .headline--copy {
+        padding-top: em( 100px, $max-font-size_d );
+      }
+    }
+
+  } // .SEARS-006377
+}
+
+@media screen and (max-width: 992px) {
+    .SEARS-006377 {
+
+      // .md__no-pad{
+      //   padding:0px;
+      // }
+      .fullWidthMobile{
+        width:100%;
+            padding: 0px 5px;
+      }
+      .noMarginmob{
+        margin: 0 auto;
+      }
+      // .font-35,.font-24,.font-22{
+      //   font-size:18px !important;
+      // }
+
+      .tip-box{
+        margin-right:-38px;
+        margin-left:-38px;
+        }
+
+        .mobleading{
+          line-height: 1.6em;
+        }
+
+        .coloredBox{
+
+        float: none;
+        margin: 0% auto;
+        width: 100%;
+        padding:0px;
+        } 
+        // .coloredBox{
+        //   img:nth-child(odd){
+        //     padding-right:10px;
+        //   }
+        // } 
+        .comfortPadding{
+        padding-right:0px;
+        }  
+        .fullWidth{
+         padding-left:0px; 
+         padding-right:0px; 
+        } 
+
+        .no-pad-mob{
+          padding-left:0px; 
+         padding-right:0px; 
+        }
+        .font-18 {
+        font-size:15px !important;
+      }
+      .font-25 {
+        font-size:19px !important;
+      }
+     .padding-horiz-xl {
+        padding-left: 25px;
+        padding-right: 25px
+    }
+      .heroText{
+          width: 70%;
+          height: 100px;
+          padding: 3% 0;
+          // min-height: 80px;
+      }
+
+
+    }
+}
+@media screen and (max-width: 768px) {
+    .SEARS-006377 {
+
+       .heroText{
+        padding: 5% 0;
+        
+  }
+
+}
+}
+  @media screen and (max-width: 599px) {
+    .SEARS-006377 {
+
+      .heroText{
+        padding: 7% 0px;
+      }
+    .font-40{
+
+        font-size:36px !important;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .SEARS-006377 {
+      .brand-logos {
+      .btn--shop-now{
+        width:100%;
+        font-size:40px;
+
+      }
+    }
+
+    .font-48{
+        font-size:20px !important;
+        }
+
+     .heroText{
+        // width: 70%;
+        height: 80px;
+        padding: 8% 0px;
+        }
+
+        .font-48{
+        font-size:25px !important;
+        }
+      }
+
+  
+}
+@media screen and (max-width: 375px) {
+    .SEARS-006377 {
+      .brand-logos {
+      .btn--shop-now{
+        width:230px;
+        font-size:40px;
+        height:50px;
+      }
+    }
+
+  }
+}
+

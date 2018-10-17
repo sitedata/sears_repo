@@ -1,0 +1,293 @@
+.font-31 {
+  font-size: 18px !important; }
+
+.font-48 {
+  font-size: 48px !important; }
+
+.font-50 {
+  font-size: 50px !important; }
+
+.font-65 {
+  font-size: 65px !important; }
+
+@media screen and (max-width: 767px) {
+  .font-48 {
+    font-size: 43.2px !important; }
+  .font-50 {
+    font-size: 45px !important; }
+  .font-65 {
+    font-size: 58.5px !important; } }
+
+@media screen and (max-width: 599px) {
+  .font-40 {
+    font-size: 28px !important; }
+  .font-48 {
+    font-size: 33.6px !important; }
+  .font-50 {
+    font-size: 35px !important; }
+  .font-65 {
+    font-size: 45.5px !important; } }
+
+@media screen and (max-width: 400px) {
+  .font-40 {
+    font-size: 20px !important; }
+  .font-48 {
+    font-size: 24px !important; }
+  .font-50 {
+    font-size: 25px !important; }
+  .font-65 {
+    font-size: 32.5px !important; } }
+
+@media screen and (max-width: 991px) {
+  .sm--show {
+    display: unset; }
+  .sm--hide {
+    display: none; }
+  .md--show {
+    display: none; } }
+
+@media screen and (min-width: 992px) {
+  .md--show {
+    display: unset; }
+  .sm--hide {
+    display: unset; }
+  .md--hide {
+    display: none; } }
+
+@media screen and (max-width: 767px) {
+  .xs--show {
+    display: unset; }
+  .xs--hide {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .xs--show {
+    display: none; }
+  .xs--hide {
+    display: unset; } }
+
+[class*=SEARS-] .headline .headline--copy {
+  font-size: 1.19em;
+  padding: 1.5em 2em 0.75em 2em; }
+
+[class*=SEARS-] h3 {
+  font-size: 2.44em;
+  line-height: 1.2em;
+  margin-top: 0; }
+
+[class*=SEARS-] hr {
+  border-color: #e0e0e0; }
+
+[class*=SEARS-] .fake-bottom-border {
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-bottom: 10px; }
+
+[class*=SEARS-] .hero--full-width {
+  margin-left: -20px;
+  margin-right: -20px; }
+  [class*=SEARS-] .hero--full-width h1 {
+    margin-left: 40px;
+    margin-right: 40px; }
+
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture > img {
+  width: 100%;
+  max-width: 100%; }
+
+[class*=SEARS-] .brand-logos {
+  text-align: center; }
+  [class*=SEARS-] .brand-logos .brand-logos--wrapper {
+    display: inline-block;
+    margin: 0 auto;
+    word-spacing: 0;
+    font-size: 0;
+    max-width: 1150px; }
+  [class*=SEARS-] .brand-logos .brand-logo {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    vertical-align: middle; }
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e92227;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 54.36px;
+    position: relative;
+    width: 354.25px;
+    height: 86.38px;
+    line-height: 83.38px;
+    letter-spacing: 0.02em;
+    padding: 0;
+    text-indent: -30px; }
+    [class*=SEARS-] .brand-logos .btn--shop-now span {
+      color: #fff;
+      font-weight: 600; }
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
+      position: absolute;
+      border-right: none;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 22px solid transparent;
+      border-left-color: #FFF;
+      border-left-width: 40px;
+      right: 0; }
+
+@media screen and (min-width: 992px) {
+  [class*=SEARS-] .brand-logos {
+    text-align: center; }
+    [class*=SEARS-] .brand-logos .brand-logo {
+      width: auto; } }
+
+@media screen and (max-width: 400px) {
+  [class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e92227;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 27.18px;
+    position: relative;
+    width: 177.125px;
+    height: 43.19px;
+    line-height: 41.69px;
+    letter-spacing: 0.02em;
+    text-indent: -15px; }
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+      content: "";
+      position: absolute;
+      border-right: none;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 11px solid transparent;
+      border-left-color: #FFF;
+      border-left-width: 20px;
+      right: 0; } }
+
+[class*=SEARS-] .tip-box {
+  margin-top: 25px;
+  text-align: center; }
+
+[class*=SEARS-] .tip-box__head {
+  text-transform: uppercase;
+  background-color: #2159bb;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 24px;
+  padding-bottom: 18px;
+  vertical-align: middle; }
+
+[class*=SEARS-] .tip-box__body {
+  background-color: #dae2f1;
+  color: #000;
+  padding: 27px;
+  vertical-align: middle;
+  line-height: 1.6em; }
+  [class*=SEARS-] .tip-box__body--headline {
+    font-weight: bold; }
+
+.SEARS-007321 {
+  padding-left: 5px;
+  padding-right: 5px; }
+  .SEARS-007321 .noHorizontalPad {
+    padding-left: 0px !important;
+    padding-right: 0px !important; }
+  .SEARS-007321 .headline--copy br {
+    display: none; }
+  .SEARS-007321 .footer-ish--headline .fake-bottom-border {
+    padding: 0;
+    margin-left: -1em; }
+    .SEARS-007321 .footer-ish--headline .fake-bottom-border hr {
+      width: 102.5%; }
+  .SEARS-007321 .banner {
+    margin-left: -20px;
+    margin-right: -20px; }
+  .SEARS-007321 .font-31 {
+    font-size: 31px !important; }
+  .SEARS-007321 .no-pad {
+    padding: 0; }
+  .SEARS-007321 .fontsize-48 {
+    font-size: 48px; }
+  .SEARS-007321 .heroText {
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    width: 350px;
+    height: 150px;
+    line-height: 1.2;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(42, 29, 29, 0.5);
+    padding: 2% 0px;
+    white-space: nowrap; }
+  .SEARS-007321 .font-18px {
+    font-size: 18px; }
+
+@media screen and (min-width: 1440px) {
+  .SEARS-007321 .heroText {
+    width: 35%;
+    height: 180px; }
+  .SEARS-007321 .font-40 {
+    font-size: 50px !important; } }
+
+@media screen and (min-width: 2560px) {
+  .SEARS-007321 .heroText {
+    width: 35%;
+    height: 280px; }
+  .SEARS-007321 .font-40 {
+    font-size: 80px !important; } }
+
+@media screen and (max-width: 991px) {
+  .SEARS-007321 .footer-ish--headline .headline--copy {
+    padding-top: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    color: #000;
+    text-align: left;
+    font-size: 0.9em; } }
+
+@media screen and (min-width: 992px) {
+  .SEARS-007321 .headline--copy br {
+    display: block; }
+  .SEARS-007321 .laundry-essentials .row .col-sm-6 {
+    padding-left: 20px; }
+    .SEARS-007321 .laundry-essentials .row .col-sm-6:first-child {
+      padding-right: 20px;
+      padding-left: 15px; }
+  .SEARS-007321 .footer-ish--headline .headline--copy {
+    padding-top: 4.7619em; } }
+
+@media screen and (max-width: 992px) {
+  .SEARS-007321 .heroText {
+    width: 70%;
+    padding: 3% 0px;
+    min-height: 80px; }
+  .SEARS-007321 .font-31 {
+    font-size: 18px !important; } }
+
+@media screen and (max-width: 768px) {
+  .SEARS-007321 .heroText {
+    width: 70%;
+    padding: 5% 0px; } }
+
+@media screen and (max-width: 599px) {
+  .SEARS-007321 .heroText {
+    padding: 5% 0px; }
+  .SEARS-007321 .font-40 {
+    font-size: 36px !important; } }
+
+@media screen and (max-width: 480px) {
+  .SEARS-007321 .heroText {
+    height: 80px;
+    padding: 4.5% 0px; }
+  .SEARS-007321 .font-40 {
+    font-size: 20px !important; } }
