@@ -1,0 +1,608 @@
+$wrap-class: '.SELP-12';
+
+@import '../scss/_main';
+
+$russet: #914f0b; // 40px/50px
+$orange: #ec4e1b; // 43px/50px
+$a-gray: #434343; // 24px/26px
+
+
+$hero-text-hz-margin_m: 40px;
+$hero-text-hz-margin_d: 15%;
+
+$text-column-padding_m: 35px; // per PSD!
+
+// table data font-sizes
+$chart-head-fs: 34px !default;
+// $row-head-bold-fs: 24px;
+$chart-row-head-fs: 16px !default;
+$chart-bold-fs: 24px !default;
+$chart-fs: 18px !default;
+$chart-icon-w: 116px !default;
+$chart-icon-h: 98px !default;
+
+// prevent horizontal overflow
+#main {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+// my stuff here!
+#{$wrap-class} {
+
+  .hero--full-width {
+
+    // .banner wraps a headline and image so that we can center it
+    .banner {
+      position: relative;
+
+      h1 {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+    }
+
+  } // .hero--full-width
+
+  .picture,
+  .picture > img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  hr {
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    margin: 10px auto 30px;
+  }
+
+// needed?
+  .article {
+
+    .text {
+      margin-bottom: 20px;
+    }
+
+    .link {
+      // margin-top: 20px;
+    }
+
+  } // .article
+
+  .font-25 {
+    font-size: 25px;
+  }
+  .font-31 {
+    font-size: 31px;
+  }
+  .font-36 {
+    font-size: 36px;
+  }
+  .font-22{
+    font-size: 22px;
+  }
+
+  .font--900 {
+    font-weight: 900;
+  }
+
+  .turkey-chart-wrap {
+    header {
+      max-width: 96%;
+    }
+
+    .pre-headline {
+      color: $russet;
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .headline {
+      color: $orange;
+      font-size: 43px;
+      line-height: 50px;
+      text-transform: uppercase;
+    }
+    .text {
+      color: $a-gray;
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  .turkey-chart {
+    border: 2px solid $a-gray;
+    color: #000000;
+    margin: 10px auto;
+    min-width: 89%;
+    // max-width: 1380px;
+    max-width: 96%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 2px solid $a-gray;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    strong {
+      font-size: $chart-bold-fs;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    span {
+      font-size: $chart-row-head-fs;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    // first row headings
+    thead {
+      th {
+        font-size: $chart-head-fs;
+        font-weight: 900;
+        line-height: 1.2;
+        padding: 30px 15px 30px;
+        text-transform: uppercase;
+      }
+    }
+
+    tbody {
+      th {
+        font-size: $chart-row-head-fs;
+        font-weight: 400;
+        padding-left: $chart-icon-w;
+        text-align: left;
+
+        img {
+          float: left;
+          height: $chart-icon-h;
+          margin-left: $chart-icon-w * -1;
+          width: $chart-icon-w;
+        }
+
+      }
+      td {
+        font-size: $chart-bold-fs;
+        line-height: 1.2;
+      }
+    }
+
+    // do I use this?
+    .chart__icon--wrap {
+      float: left;
+      margin-left: $chart-icon-w * -1;
+    }
+    .chart__text--wrap {
+      height: 100%;
+      // line-height: $chart-icon-h;
+      min-height: $chart-icon-h;
+      max-height: $chart-icon-h;
+      position: relative;
+      vertical-align: middle;
+    }
+    .chart__text {
+      left: 50%;
+      line-height: 1.2;
+      padding-right: 1em;
+      position: relative;
+      top: 50%;
+      transform: translate( -50%, -50% );
+    }
+
+  } // .turkey-chart
+
+  // brand logos!
+  .brand-logos {
+    .brand-logo {
+      padding: 10px 0;
+    }
+  } // .brand-logos
+
+}
+
+// mobile only
+@media screen and (max-width: 991px) {
+
+  #{$wrap-class} {
+
+    .xs--hide,
+    .sm--hide,
+    .hide--mobile {
+      display: none;
+    }
+
+    .xs--block,
+    .sm--block,
+    .md--hide,
+    .hide--desktop {
+      display: block;
+    }
+
+    .turkey-chart {
+      margin: 20px auto;
+
+      max-width: 100%;
+      thead {
+        .th {
+          // desktop  padding!
+          padding: 40px 45px 30px;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+// desktop
+@media screen and (min-width: 992px) {
+
+  #{$wrap-class} {
+
+    hr {
+      max-width: 93.666%;
+    }
+
+    .md--hide,
+    .hide--desktop {
+      display: none;
+    }
+
+    .md--block {
+      display: block;
+    }
+
+    .turkey-chart {
+      margin: 30px auto;
+
+      max-width: 95%;
+      thead {
+        .th {
+          // desktop  padding!
+          padding: 40px 45px 30px;
+        }
+      }
+    }
+
+  } // .#{$wrap-class}
+}
+
+// additional media queries
+// xs: < 768px
+// sm: >= 768px && < 991px
+// md: >= 992px && ;
+
+
+
+
+@media (min-width: 601px) and (max-width: 767px) {
+  #{$wrap-class} {
+
+    .turkey-chart-wrap {
+      .pre-headline {
+        font-size: 40px * .9;
+        line-height: 50px * .9;
+      }
+      .headline {
+        font-size: 43px * .9;
+        line-height: 50px * .9;
+      }
+      .text {
+        // font-size: 24px * .9;
+      }
+    }
+
+
+    .turkey-chart {
+      // background: pink;
+      // min-width: 90%;
+      // max-width: 90%;
+
+
+      strong {
+        font-size: $chart-bold-fs * .8;
+      }
+      span {
+        font-size: $chart-row-head-fs * .8;
+      }
+
+      // first row headings
+      thead {
+        th {
+          font-size: $chart-head-fs * .7;
+          padding: 20px 10px;
+        }
+      }
+
+      tbody {
+        th {
+          font-size: $chart-row-head-fs * .8;
+          padding-left: $chart-icon-w * .9;
+
+          img {
+            height: $chart-icon-h * .9;
+            margin-left: $chart-icon-w * -1 * .9;
+            width: $chart-icon-w * .9;
+          }
+
+        }
+        td {
+          font-size: $chart-bold-fs * .8;
+        }
+      }
+
+      .chart__text--wrap {
+        // line-height: $chart-icon-h * .9;
+        min-height: $chart-icon-h * .9;
+        max-height: $chart-icon-h * .9;
+      }
+
+    } // .turkey-chart
+  }
+}
+
+@media (min-width: 522px) and (max-width: 600px) {
+  #{$wrap-class} {
+
+    .turkey-chart-wrap {
+      .pre-headline {
+        font-size: 40px * .8;
+        line-height: 50px * .8;
+      }
+      .headline {
+        font-size: 43px * .8;
+        line-height: 50px * .8;
+      }
+      .text {
+        font-size: 24px * .9;
+      }
+    }
+
+
+    .turkey-chart {
+      // background: purple;
+
+      tbody th,
+      strong {
+        font-size: $chart-bold-fs * .7;
+      }
+      span {
+        font-size: $chart-row-head-fs * .7;
+      }
+
+      // first row headings
+      thead {
+        th {
+          font-size: $chart-head-fs * .6;
+          padding: 20px 10px;
+        }
+      }
+
+      tbody {
+        th {
+
+          padding-left: $chart-icon-w * .7;
+
+          img {
+            height: $chart-icon-h * .7;
+            margin-left: ($chart-icon-w * -1) * .7;
+            width: $chart-icon-w * .7;
+          }
+
+        }
+        td {
+          font-size: $chart-bold-fs * .8;
+        }
+      }
+
+      .chart__text--wrap {
+        min-height: $chart-icon-h * .7;
+        max-height: $chart-icon-h * .7;
+      }
+
+    } // .turkey-chart
+  }
+}
+
+
+@media (max-width: 521px) {
+  #{$wrap-class} {
+
+    .turkey-chart-wrap {
+      .pre-headline {
+        font-size: 40px * .7;
+        line-height: 50px * .7;
+      }
+      .headline {
+        font-size: 43px * .7;
+        line-height: 50px * .7;
+      }
+      .text {
+        font-size: 24px * .8;
+      }
+    }
+
+
+    .turkey-chart {
+
+      // background: orange;
+
+      tbody th,
+      strong {
+        font-size: $chart-bold-fs * .6;
+      }
+      span {
+        font-size: $chart-row-head-fs * .6;
+      }
+
+      // first row headings
+      thead {
+        th {
+          font-size: $chart-head-fs * .5;
+          padding: 10px;
+        }
+      }
+
+      tbody {
+        th {
+          // font-size: $chart-row-head-fs * .8;
+          padding-left: $chart-icon-w * .6;
+
+          img {
+            height: $chart-icon-h * .6;
+            margin-left: ($chart-icon-w * -1) * .6;
+            width: $chart-icon-w * .6;
+          }
+
+        }
+        td {
+          font-size: $chart-bold-fs * .7;
+        }
+      }
+
+      .chart__text--wrap {
+        line-height: $chart-icon-h * .6;
+        min-height: $chart-icon-h * .6;
+        max-height: $chart-icon-h * .6;
+      }
+
+    } // .turkey-chart
+  }
+}
+
+@media (max-width: 450px) {
+  #{$wrap-class} {
+
+    .turkey-chart-wrap {
+      .pre-headline {
+        font-size: 40px * .6;
+        line-height: 50px * .6;
+      }
+      .headline {
+        font-size: 43px * .6;
+        line-height: 50px * .6;
+      }
+      .text {
+        font-size: 24px * .7;
+        line-height: 1.2;
+      }
+    }
+
+    .turkey-chart {
+      // background: green;
+
+      tbody th,
+      strong {
+        font-size: $chart-bold-fs * .45;
+      }
+      span {
+        font-size: $chart-row-head-fs * .45;
+      }
+
+      // first row headings
+      thead {
+        th {
+          font-size: $chart-head-fs * .4;
+          padding: 10px;
+        }
+      }
+
+      tbody {
+        th {
+          padding-left: $chart-icon-w * .5;
+
+          img {
+            height: $chart-icon-h * .5;
+            margin-left: ($chart-icon-w * -1) * .5;
+            width: $chart-icon-w * .5;
+          }
+
+        }
+        td {
+          font-size: $chart-bold-fs * .6;
+        }
+      }
+
+      .chart__text--wrap {
+        line-height: $chart-icon-h * .5;
+        min-height: $chart-icon-h * .5;
+        max-height: $chart-icon-h * .5;
+      }
+
+    } // .turkey-chart
+  }
+}
+@media (max-width: 380px) {
+  #{$wrap-class} {
+    .turkey-chart {
+      // background: cyan;
+      margin: 20px auto 0;
+
+      tbody {
+        th {
+          padding-left: $chart-icon-w * .4;
+
+          img {
+            height: $chart-icon-h * .4;
+            margin-left: ($chart-icon-w * -1) * .4;
+            width: $chart-icon-w * .4;
+          }
+
+        }
+        td {
+          // font-size: $chart-bold-fs * .6;
+        }
+      }
+
+      .chart__text--wrap {
+        line-height: $chart-icon-h * .4;
+        min-height: $chart-icon-h * .4;
+        max-height: $chart-icon-h * .4;
+      }
+
+    } // .turkey-chart
+  }
+}
+
+@media (max-width: 360px) {
+  #{$wrap-class} {
+    .turkey-chart {
+      // background: yellow;
+
+      width: 100%;
+      max-width: 100%;
+      margin: 10px -5px 0;
+
+      thead {
+        th {
+          padding: 5px;
+        }
+      }
+
+      tbody {
+        th {
+          padding-left: $chart-icon-w * .25;
+
+          img {
+            height: $chart-icon-h * .25;
+            margin-left: ($chart-icon-w * -1) * .25;
+            width: $chart-icon-w * .25;
+          }
+        }
+        td {
+          padding: 10px;
+        }
+      }
+
+      .chart__text--wrap {
+        line-height: $chart-icon-h * .25;
+        min-height: $chart-icon-h * .25;
+        max-height: $chart-icon-h * .25;
+      }
+
+    } // .turkey-chart
+  }
+}

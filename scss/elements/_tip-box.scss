@@ -3,7 +3,7 @@
 // vars
 
 // values from PSDs
-$tip-box-head-font-size: 50px;
+$tip-box-head-font-size: 30px;
 $tip-box-head-pad-top: 24px;
 $tip-box-head-pad-bot: 18px; // actually 16px on mobile, but that's stupid
 $tip-box-body-pad: 27px; // no bottom padding in PSDs, but it's needed!
@@ -18,7 +18,7 @@ $tip-box-body-pad: 27px; // no bottom padding in PSDs, but it's needed!
 
   // dark blue part that says "TIP"
   .tip-box__head {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     background-color: $blue;
     color: #fff;
     font-weight: bold;
