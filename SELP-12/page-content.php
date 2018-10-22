@@ -22,7 +22,6 @@ By keeping the grid directives in the definition of each page, page elements wil
   <header id="hero" class="hero--full-width">
     <div class="banner">
       <h1 class="text-align-center">
-        <!-- <span class="hero__headline"><?php echo $hero['h1'] ?></span> -->
         <?php element( 'picture', $hero ); ?>
       </h1>
     </div>
@@ -35,6 +34,10 @@ By keeping the grid directives in the definition of each page, page elements wil
 
   <!-- Articles -->
   <section class="thanksgiving-tips">
+    <div class="col-xs-12">
+      <hr>
+    </div>
+
 <?php foreach ( $articles as $index => $a ): ?>
 <?php
 /**
@@ -61,7 +64,7 @@ Don't use .container on the outer element because it makes it needlessly complic
     element( 'picture', $a );
     ?>
     <div class="padding-vert-lg">
-      <h3 class="headline font-36 font--primary2 lh-lg"><?php echo $a['h3'] ?></h3>
+      <h3 class="headline font-36 font--primary2 lh-lg font--400"><?php echo $a['h3'] ?></h3>
       <div class="text font--black lh-sm font-18"><?php echo $a['p'] ?></div>
     </div>
   </article>
@@ -72,12 +75,12 @@ Don't use .container on the outer element because it makes it needlessly complic
     </div>
   </div>
 
-  <?php if ( $index % 2 == 1 ): ?>
+  <?php if ( $index % 2 == 0 ): ?>
     <div class="xs--hide sm--hide md--block">
       <div class="col-xs-12">
         <hr>
       </div>
-    </div>
+    </div>    
   <?php endif; ?>
 
 <?php endforeach; ?>
@@ -142,11 +145,15 @@ This really only happens for the turkey
 */
 $c = array_shift( $row['cells'] );
 ?>
+<?php if (false): ?>
           <div class="chart__text--wrap">
-            <div class="chart__text">
+<?php endif; ?>
+          <div class="chart__text">
               <?php echo $c ?>
-            </div>
           </div>
+<?php if (false): ?>
+            </div>
+<?php endif; ?>
         </th>
   <?php foreach ( $row['cells'] as $c ): ?>
         <td><?php echo $c ?></td>

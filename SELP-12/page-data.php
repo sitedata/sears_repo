@@ -28,8 +28,10 @@ $hero = array(
 			'srcset' => 'hero_1550w.jpg',
 		),
 	),
-	'img' => 'hero_991w.jpg',
-	'h1' => 'Stress-free Thanksgiving Dinner Tips',
+	// make the wide one default because IE & Edge don't understand <picture>
+	'img' => 'hero_1550w.jpg',
+	'alt' => 'Stress-Free Thanksgiving Dinner Tips',
+	'h1' => 'Stress-Free Thanksgiving Dinner Tips',
 
 	'header' => array(
 		'h2' => 'Top 5 Tips for Cooking for a Crowd',
@@ -53,7 +55,7 @@ $articles = array(
 			),
 		),
 		'img' => 'stick-to-simple_943w.jpg',
-
+		'alt' => 'Hummus and pita points',
 
 		'h3' => '1. Stick to Simple',
 
@@ -76,6 +78,7 @@ $articles = array(
 			),
 		),
 		'img' => 'temperature-check_943w.jpg',
+		'alt' => 'A woman putting food in the oven',
 
 		'h3' => '2. Temperature Check',
 		'p' => 'Slow cookers come in handy for keeping side dishes warm and freeing up valuable stove space; you can also serve warm dips or even apple cider out of them. Don&rsquo;t forget your cooler can also keep your sides and even your bird warm. If you have a warming drawer, now is the perfect time to put it to good use to keep dishes at the perfect serving temperature.',
@@ -103,6 +106,7 @@ $articles = array(
 			),
 		),
 		'img' => 'save-space_943w.jpg',
+		'alt' => 'A father and child preparing food together',
 
 		'h3' => '3. Save Space',
 
@@ -129,6 +133,7 @@ $articles = array(
 			),
 		),
 		'img' => 'outsource_943w.jpg',
+		'alt' => 'Four people sharing a slice of cheesecake',
 
 
 		'h3' => '4. Outsource',
@@ -314,24 +319,6 @@ $brand_logos = array(
 		'freezers' => '/Refrigerators-Freezers/Freezers',
 	),
 
-
-	// 'logos' => array(
-	// 	'Kenmore' => array(
-	// 		'kenmore.png'
-	// 	),
-	// 	'Whirlpool' => array(
-	// 		'whirlpool.png',
-	// 	),
-	// 	'GE' => array(
-	// 		'ge.png'
-	// 	),
-	// 	'Samsung' => array(
-	// 		'samsung.png'
-	// 	),
-	// 	'Maytag' => array(
-	// 		'maytag.png'
-	// 	),
-	// ),
 //http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-10-25_Stress-Free-Thanksgiving-Dinner-Tips/turkey-tip_943w.jpg
 
 	'logo_dir' => 'http://hometown.sb3.production.netsuitestaging.com/assets/cms/purered/2018-10-25_Stress-Free-Thanksgiving-Dinner-Tips/brand-logos/',

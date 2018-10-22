@@ -273,8 +273,10 @@
   .SELP-12 .turkey-chart tbody th {
     font-size: 16px;
     font-weight: 400;
+    line-height: 98px;
     padding-left: 116px;
-    text-align: left; }
+    text-align: left;
+    vertical-align: middle; }
     .SELP-12 .turkey-chart tbody th img {
       float: left;
       height: 98px;
@@ -286,19 +288,11 @@
   .SELP-12 .turkey-chart .chart__icon--wrap {
     float: left;
     margin-left: -116px; }
-  .SELP-12 .turkey-chart .chart__text--wrap {
-    height: 100%;
-    min-height: 98px;
-    max-height: 98px;
-    position: relative;
-    vertical-align: middle; }
   .SELP-12 .turkey-chart .chart__text {
-    left: 50%;
+    display: inline-block;
     line-height: 1.2;
     padding-right: 1em;
-    position: relative;
-    top: 50%;
-    transform: translate(-50%, -50%); }
+    vertical-align: middle; }
 
 .SELP-12 .brand-logos .brand-logo {
   padding: 10px 0; }
@@ -349,6 +343,7 @@
     padding: 20px 10px; }
   .SELP-12 .turkey-chart tbody th {
     font-size: 12.8px;
+    line-height: 88.2px;
     padding-left: 104.4px; }
     .SELP-12 .turkey-chart tbody th img {
       height: 88.2px;
@@ -378,6 +373,7 @@
     font-size: 20.4px;
     padding: 20px 10px; }
   .SELP-12 .turkey-chart tbody th {
+    line-height: 68.6px;
     padding-left: 81.2px; }
     .SELP-12 .turkey-chart tbody th img {
       height: 68.6px;
@@ -407,6 +403,7 @@
     font-size: 17px;
     padding: 10px; }
   .SELP-12 .turkey-chart tbody th {
+    line-height: 58.8px;
     padding-left: 69.6px; }
     .SELP-12 .turkey-chart tbody th img {
       height: 58.8px;
@@ -438,6 +435,7 @@
     font-size: 13.6px;
     padding: 10px; }
   .SELP-12 .turkey-chart tbody th {
+    line-height: 49px;
     padding-left: 58px; }
     .SELP-12 .turkey-chart tbody th img {
       height: 49px;
@@ -454,6 +452,7 @@
   .SELP-12 .turkey-chart {
     margin: 20px auto 0; }
     .SELP-12 .turkey-chart tbody th {
+      line-height: 39.2px;
       padding-left: 46.4px; }
       .SELP-12 .turkey-chart tbody th img {
         height: 39.2px;

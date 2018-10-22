@@ -152,8 +152,11 @@ $chart-icon-h: 98px !default;
       th {
         font-size: $chart-row-head-fs;
         font-weight: 400;
+        line-height: $chart-icon-h;
         padding-left: $chart-icon-w;
         text-align: left;
+
+        vertical-align: middle;
 
         img {
           float: left;
@@ -174,21 +177,23 @@ $chart-icon-h: 98px !default;
       float: left;
       margin-left: $chart-icon-w * -1;
     }
-    .chart__text--wrap {
-      height: 100%;
-      // line-height: $chart-icon-h;
-      min-height: $chart-icon-h;
-      max-height: $chart-icon-h;
-      position: relative;
-      vertical-align: middle;
-    }
+    // .chart__text--wrap {
+    //   height: 100%;
+    //   // line-height: $chart-icon-h;
+    //   min-height: $chart-icon-h;
+    //   max-height: $chart-icon-h;
+    //   position: relative;
+    //   vertical-align: middle;
+    // }
     .chart__text {
-      left: 50%;
+      display: inline-block;
+      // left: 50%;
       line-height: 1.2;
       padding-right: 1em;
-      position: relative;
-      top: 50%;
-      transform: translate( -50%, -50% );
+      vertical-align: middle;
+      // position: relative;
+      // top: 50%;
+      // transform: translate( -50%, -50% );
     }
 
   } // .turkey-chart
@@ -320,6 +325,7 @@ $chart-icon-h: 98px !default;
       tbody {
         th {
           font-size: $chart-row-head-fs * .8;
+          line-height: $chart-icon-h * .9;
           padding-left: $chart-icon-w * .9;
 
           img {
@@ -384,6 +390,7 @@ $chart-icon-h: 98px !default;
       tbody {
         th {
 
+          line-height: $chart-icon-h * .7;
           padding-left: $chart-icon-w * .7;
 
           img {
@@ -449,6 +456,7 @@ $chart-icon-h: 98px !default;
       tbody {
         th {
           // font-size: $chart-row-head-fs * .8;
+          line-height: $chart-icon-h * .6;
           padding-left: $chart-icon-w * .6;
 
           img {
@@ -512,6 +520,7 @@ $chart-icon-h: 98px !default;
 
       tbody {
         th {
+          line-height: $chart-icon-h * .5;
           padding-left: $chart-icon-w * .5;
 
           img {
@@ -543,6 +552,7 @@ $chart-icon-h: 98px !default;
 
       tbody {
         th {
+          line-height: $chart-icon-h * .4;
           padding-left: $chart-icon-w * .4;
 
           img {
