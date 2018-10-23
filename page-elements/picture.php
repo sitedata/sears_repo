@@ -22,15 +22,16 @@ $_def = array(
 
 $data = array_merge( $_def, $data );
 
+
 $img_dir = get_image_dir();
 
 ?>
-<picture class="<?php echo $data['picture_class'] ?>" <?php echo $data['picture_attr'] ?>>
+<picture <?php echo $data['picture_attr'] ?> class="<?php echo $data['picture_class'] ?>">
 <?php foreach ($data['picture'] as $p): ?>
   <source media="<?php echo $p['media'] ?>" srcset="<?php echo $img_dir . $p['srcset'] ?>">
 <?php endforeach; ?>
   <img src="<?php echo $img_dir . $data['img'] ?>"
     alt="<?php echo $data['alt'] ?>"
-    class="<?php echo $data['img_class'] ?>"
-    <?php echo $data['img_attr'] ?>>
+    <?php echo $data['img_attr'] ?>
+    class="<?php echo $data['img_class'] ?>">
 </picture>

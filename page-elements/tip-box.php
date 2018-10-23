@@ -18,13 +18,19 @@ $data = array_merge( $_def, $data );
 
 ?>
 <aside class="tip-box">
-  <div class="tip-box__head font--white font-30 lh-sm"><?php echo $data['label'] ?></div>
+  <div class="tip-box__head font--white font-30 lh-sm">
+    <?php echo $data['label'] ?>
+  </div>
   <div class="tip-box__body font--black">
   <?php if ( !empty( $data['headline'] ) ): ?>
-    <div class="tip-box__body--headline font--700 font-18 lh-sm"><?php echo $data['headline'] ?></div>
+    <div class="tip-box__body--headline font--700 font-18 lh-sm">
+      <?php echo $data['headline'] ?>
+    </div>
   <?php endif; ?>
   <?php if ( !empty( $data['text'] ) ): ?>
-    <div class="tip-box__body--text font-31 lh-sm"><?php echo $data['text'] ?></div>
+    <div class="tip-box__body--text font-31 lh-sm">
+      <?php echo $data['text'] ?>
+    </div>
   <?php endif; ?>
   </div>
 </aside>

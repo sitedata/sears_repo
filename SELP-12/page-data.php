@@ -186,7 +186,7 @@ $turkey_tip = array(
 	'alt' => 'A turkey baking in the oven',
 
 	'label' => 'Did You Know?',
-	'headline' => 'An unstuffed, fully defrosted bird should cook for about 15 minutes per pound in a 325&deg;F oven. If you&rsquo;re cooking a frozen turkey, it will take at least 50 percent longer.',
+	'headline' => 'An unstuffed, fully defrosted bird should cook for about 15 minutes per pound in a 325&deg;F oven. If you&rsquo;re cooking a frozen turkey, it will take at least 50 percent longer.',
 );
 
 $chart = array(

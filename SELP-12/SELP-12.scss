@@ -30,6 +30,10 @@ $chart-icon-h: 98px !default;
 // my stuff here!
 #{$wrap-class} {
 
+  // article {
+  //   background-color: rgba( 187, 0, 187, 0.5 );
+  // }
+
   .hero--full-width {
 
     // .banner wraps a headline and image so that we can center it
@@ -88,14 +92,25 @@ $chart-icon-h: 98px !default;
   }
 
   .turkey-chart-wrap {
-    header {
+    .header {
+      margin: 0 auto;
       max-width: 96%;
+      // background: cyan;
     }
 
     .pre-headline {
       color: $russet;
       font-size: 40px;
       line-height: 50px;
+
+      br {
+        height: 1px;
+        line-height: 0;
+        font-size: 0;
+      }
+
+      // trying to figure out why the hell this element seems to extend up the page...
+      // background: pink;
     }
     .headline {
       color: $orange;
@@ -177,23 +192,12 @@ $chart-icon-h: 98px !default;
       float: left;
       margin-left: $chart-icon-w * -1;
     }
-    // .chart__text--wrap {
-    //   height: 100%;
-    //   // line-height: $chart-icon-h;
-    //   min-height: $chart-icon-h;
-    //   max-height: $chart-icon-h;
-    //   position: relative;
-    //   vertical-align: middle;
-    // }
+
     .chart__text {
       display: inline-block;
-      // left: 50%;
       line-height: 1.2;
       padding-right: 1em;
       vertical-align: middle;
-      // position: relative;
-      // top: 50%;
-      // transform: translate( -50%, -50% );
     }
 
   } // .turkey-chart

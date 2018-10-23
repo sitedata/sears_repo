@@ -16,6 +16,15 @@ By keeping the grid directives in the definition of each page, page elements wil
 */
 
 ?>
+<?php
+/**
+For laughs, going to close hanging divs to see if that helps....
+</div>
+</div>
+
+
+*/
+?>
 <main class="cms-content cms-content-html padding-vert-xl SEARS--landing-page <?php echo $slug ?>" id="cms-content-1920-1920">
 
   <!-- BEGIN #hero -->
@@ -24,20 +33,26 @@ By keeping the grid directives in the definition of each page, page elements wil
       <h1 class="text-align-center">
         <?php element( 'picture', $hero ); ?>
       </h1>
-    </div>
+    </div><!-- div.banner -->
     <div class="container padding-vert-xl padding-horiz-xl">
-      <h2 class="headline font-36 font--700 text-align-center font--primary2"><?php echo $hero['header']['h2'] ?></h2>
-      <div class="hero__text font-18 lh-sm"><?php echo $hero['header']['p'] ?></div>
-    </div>
+      <h2 class="headline font-36 font--700 text-align-center font--primary2">
+        <?php echo $hero['header']['h2'] ?>
+      </h2>
+      <div class="hero__text font-18 lh-sm">
+        <?php echo $hero['header']['p'] ?>
+      </div><!-- div.hero__text -->
+    </div><!-- div.container -->
   </header>
   <!-- END #hero -->
 
-  <!-- Articles -->
-  <section class="thanksgiving-tips">
+  <div class="row">
     <div class="col-xs-12">
       <hr>
     </div>
+  </div><!-- div.row -->
 
+  <!-- Articles -->
+<section class="thanksgiving-tips">
 <?php foreach ( $articles as $index => $a ): ?>
 <?php
 /**
@@ -45,43 +60,38 @@ if article has link url,
 check for substitution tokens in the article text
 */
 if ( isset( $a['links'] ) ) {
+
   foreach( $a['links'] as $search => $link ) {
     $link_tag = sprintf( $link_tmpl8, $link, $link, $search );
     // erp( compact( 'link_tag' ) );
     $a['p'] = preg_replace( '/' . $search . '/', $link_tag, $a['p'], 1 );
   }
-  // if has, replace them with link URL
-  // $a['text'] = sprintf( $a['text'], $a['link']['url'] );
+
 }
 ?>
-<?php
-/**
-Don't use .container on the outer element because it makes it needlessly complicated to make full-width!
-*/
-?>
-  <article class="col-xs-12 col-md-6 padding-vert-sm">
+  <article class="col-xs-12 col-md-6 padding-vert-sm tip-<?php echo $index + 1?>">
     <?php
     element( 'picture', $a );
     ?>
     <div class="padding-vert-lg">
-      <h3 class="headline font-36 font--primary2 lh-lg font--400"><?php echo $a['h3'] ?></h3>
-      <div class="text font--black lh-sm font-18"><?php echo $a['p'] ?></div>
-    </div>
-  </article>
+      <h3 class="headline font-36 font--primary2 lh-lg font--400">
+        <?php echo $a['h3'] ?>
+      </h3>
+      <div class="text font--black lh-sm font-18">
+        <?php echo $a['p'] ?>
+      </div><!-- div.text -->
+    </div><!-- div.padding-vert-lg -->
+  </article><!-- article.tip-<?php echo $index + 1 ?> -->
 
+<?php if ( $index % 2 == 0 ): ?>
   <div class="md--hide">
+<?php else: ?>
+  <div class="dont--hide">
+<?php endif; ?>
     <div class="col-xs-12">
       <hr>
     </div>
-  </div>
-
-  <?php if ( $index % 2 == 0 ): ?>
-    <div class="xs--hide sm--hide md--block">
-      <div class="col-xs-12">
-        <hr>
-      </div>
-    </div>    
-  <?php endif; ?>
+  </div><!-- div.md--hide or div.dont--hide -->
 
 <?php endforeach; ?>
   <!-- END Articles -->
@@ -89,23 +99,39 @@ Don't use .container on the outer element because it makes it needlessly complic
   <div class="turkey-tip col-xs-12 col-md-6 padding-vert-sm">
     <?php element( 'picture', $turkey_tip ); ?>
     <?php element( 'tip-box', $turkey_tip ); ?>
+  </div><!-- div.turkey-tip -->
+
+</section><!-- section.thanksgiving-tips -->
+
+<div class="container">
+  <div class="col-xs-12">
+    <hr>
   </div>
+</div><!-- div.container -->
 
-  <div class="dont-hide--desktop">
-    <div class="col-xs-12">
-      <hr>
-    </div>
-  </div>
+<section class="turkey-chart-wrap text-align-center">
+  <header class="header">
+    <div class="pre-headline">
+<?php
+/**
+The pre-headliine seems to stretch up the page for no apparent reason.
+However, it only causes problems in IE11 on Samarra's machine where the text
+starts on the previous line...
+The <br> is an attempt to prevent that since I can't seem to isolate the root
+cause.
+<br>
+*/
+?>
+      <?php echo $chart['pre-headline'] ?>
+    </div><!-- div.pre-headline -->
+    <h2 class="headline font--900">
+      <?php echo $chart['h2'] ?>
+    </h2><!-- h2.headline -->
+    <div class="text">
+      <?php echo $chart['p'] ?>
+    </div><!-- div.text -->
+  </header><!-- header.header -->
 
-</section>
-
-<article class="turkey-chart-wrap text-align-center">
-  <header>
-    <div class="pre-headline"><?php echo $chart['pre-headline'] ?></div>
-    <h2 class="headline font--900"><?php echo $chart['h2'] ?></h2>
-    <div class="text"><?php echo $chart['p'] ?></div>
-  </header>
-  <?php // erp( compact( 'chart' ) ); ?>
   <table class="turkey-chart">
     <thead>
       <tr>
@@ -145,15 +171,9 @@ This really only happens for the turkey
 */
 $c = array_shift( $row['cells'] );
 ?>
-<?php if (false): ?>
-          <div class="chart__text--wrap">
-<?php endif; ?>
           <div class="chart__text">
               <?php echo $c ?>
           </div>
-<?php if (false): ?>
-            </div>
-<?php endif; ?>
         </th>
   <?php foreach ( $row['cells'] as $c ): ?>
         <td><?php echo $c ?></td>
@@ -162,12 +182,9 @@ $c = array_shift( $row['cells'] );
 <?php endforeach; ?>
     </tbody>
   </table>
-</article>
+</section><!-- article.turkey-chart-wrap -->
 
 <?php
-/**
-No brand logos on main page!
-*/
 // use element to include reusable page-element snippet!
 element( 'brand-logos__kitchen-appliances',
   $brand_logos

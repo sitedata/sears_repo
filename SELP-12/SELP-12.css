@@ -225,13 +225,18 @@
 .SELP-12 .font--900 {
   font-weight: 900; }
 
-.SELP-12 .turkey-chart-wrap header {
+.SELP-12 .turkey-chart-wrap .header {
+  margin: 0 auto;
   max-width: 96%; }
 
 .SELP-12 .turkey-chart-wrap .pre-headline {
   color: #914f0b;
   font-size: 40px;
   line-height: 50px; }
+  .SELP-12 .turkey-chart-wrap .pre-headline br {
+    height: 1px;
+    line-height: 0;
+    font-size: 0; }
 
 .SELP-12 .turkey-chart-wrap .headline {
   color: #ec4e1b;
