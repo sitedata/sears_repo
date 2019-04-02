@@ -1,15 +1,558 @@
-<?php
-/**
-Put the variables storing the copy, et al, into a separate file.
-*/
-require_once( dirname( __FILE__ ) . '/page-data.php' );
+<style type="text/css">
+.banner {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+}
 
-/**
-IMPORTANT!
-HERO MUST BE OUTSIDE OF DIV.CONTAINER TO BE FULL WIDTH!
-*/
-?>
-<div class="cms-content cms-content-html padding-vert-xl SEARS--landing-page <?php echo $slug ?>" id="cms-content-1920-1920">
+.brand-headline {
+    font-size: 16px !important;
+}
+
+.brand-logos-section {
+    position: relative !important;
+    bottom: 27px !important;
+
+}
+
+.font-31 {
+    font-size: 18px !important;
+}
+
+.font-48 {
+    font-size: 48px !important;
+}
+
+.font-50 {
+    font-size: 50px !important;
+}
+
+.font-65 {
+    font-size: 65px !important;
+}
+
+
+.padding-vert-xl-top {
+    padding-top: 25px !important;
+}
+
+@media screen and (max-width: 767px) {
+    .font-48 {
+        font-size: 43.2px !important;
+    }
+
+    .font-50 {
+        font-size: 45px !important;
+    }
+
+    .font-65 {
+        font-size: 58.5px !important;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .font-40 {
+        font-size: 28px !important;
+    }
+
+    .font-48 {
+        font-size: 33.6px !important;
+    }
+
+    .font-50 {
+        font-size: 35px !important;
+    }
+
+    .font-65 {
+        font-size: 45.5px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .font-40 {
+        font-size: 20px !important;
+    }
+
+    .font-48 {
+        font-size: 24px !important;
+    }
+
+    .font-50 {
+        font-size: 25px !important;
+    }
+
+    .font-65 {
+        font-size: 32.5px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .sm--show {
+        display: unset;
+    }
+
+    .sm--hide {
+        display: none;
+    }
+
+    .md--show {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .md--show {
+        display: unset;
+    }
+
+    .sm--hide {
+        display: unset;
+    }
+
+    .md--hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .xs--show {
+        display: unset;
+    }
+
+    .xs--hide {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .xs--show {
+        display: none;
+    }
+
+    .xs--hide {
+        display: unset;
+    }
+}
+
+[class*=SEARS-] .headline .headline--copy {
+    font-size: 1.19em;
+    padding: 1.5em 2em 0.75em 2em;
+}
+
+[class*=SEARS-] h3 {
+    font-size: 2.44em;
+    line-height: 1.2em;
+    margin-top: 0;
+}
+
+[class*=SEARS-] hr {
+    border-color: #e0e0e0;
+}
+
+[class*=SEARS-] .fake-bottom-border {
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 10px;
+}
+
+[class*=SEARS-] .hero--full-width {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+[class*=SEARS-] .hero--full-width h1 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+[class*=SEARS-] .picture,
+[class*=SEARS-] .picture>img {
+    width: 100%;
+    max-width: 100%;
+}
+
+[class*=SEARS-] .brand-logos {
+    text-align: center;
+}
+
+[class*=SEARS-] .brand-logos .brand-logos--wrapper {
+    display: inline-block;
+    margin: 0 auto;
+    word-spacing: 0;
+    font-size: 0;
+    max-width: 1150px;
+}
+
+[class*=SEARS-] .brand-logos .brand-logo {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+[class*=SEARS-] .brand-logos .btn--shop-now {
+    background-color: #e92227;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 1.59em;
+    padding: 0 1.63em 0 0.815em;
+}
+
+[class*=SEARS-] .brand-logos .btn--shop-now span {
+    color: #fff;
+    font-weight: 600;
+}
+
+[class*=SEARS-] .brand-logos .btn--shop-now:after {
+    content: "";
+    position: absolute;
+    border-right: none;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 0.37em solid transparent;
+    border-left-color: #FFF;
+    border-left-width: 0.703em;
+    right: 0.259em;
+}
+
+@media screen and (min-width: 992px) {
+    [class*=SEARS-] .brand-logos {
+        text-align: center;
+    }
+
+    [class*=SEARS-] .brand-logos .brand-logo {
+        width: auto;
+    }
+
+    [class*=SEARS-] .brand-logos .btn--shop-now {
+        font-size: 1.198em;
+        padding-left: 0.715em;
+        padding-right: 1.431em;
+    }
+
+    [class*=SEARS-] .brand-logos .btn--shop-now :after {
+        border-width: 0.358em;
+        border-left-width: 0.596em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    [class*=SEARS-] .brand-logos .btn--shop-now {
+        background-color: #e92227;
+        border-radius: 0;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 27.18px;
+        position: relative;
+        width: 177.125px;
+        height: 43.19px;
+        line-height: 41.69px;
+        letter-spacing: 0.02em;
+        text-indent: -15px;
+    }
+
+    [class*=SEARS-] .brand-logos .btn--shop-now:after {
+        content: "";
+        position: absolute;
+        border-right: none;
+        top: 50%;
+        transform: translate(0, -50%);
+        border: 11px solid transparent;
+        border-left-color: #FFF;
+        border-left-width: 20px;
+        right: 0;
+    }
+}
+
+[class*=SEARS-] .tip-box {
+    margin-top: 25px;
+    text-align: center;
+}
+
+[class*=SEARS-] .tip-box__head {
+    background-color: #2159bb;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 24px;
+    padding-bottom: 18px;
+    vertical-align: middle;
+}
+
+[class*=SEARS-] .tip-box__body {
+    background-color: #dae2f1;
+    color: #000;
+    padding: 27px;
+    vertical-align: middle;
+    line-height: 1.6em;
+}
+
+[class*=SEARS-] .tip-box__body--headline {
+    font-weight: bold;
+}
+
+.SELP-28 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.SELP-28 .hr-adjust {
+    width: 99%;
+}
+
+.SELP-28 .no-pad {
+    /*padding: 0px;*/
+}
+
+.SELP-28 .no-margin-bottom {
+    margin-bottom: 0px !important;
+}
+
+.SELP-28 .padding-vert-xl-top {
+    padding-top: 25px;
+}
+
+.SELP-28 .width-adjust {
+    /*width: 100%;*/
+    padding: 0px;
+}
+
+.SELP-28 .headline--copy {
+    font-size: 1.3em;
+    padding: 1.5em 2em 0.75em 2em;
+}
+
+.SELP-28 .headline--copy br {
+    display: none;
+}
+
+.SELP-28 .first-line {
+    margin-top: 0px;
+}
+
+.SELP-28 ul {
+    margin-bottom: 0px;
+}
+
+.SELP-28 li span {
+    /* margin-left: -5px;*/
+}
+
+.SELP-28 ul li {
+    list-style-type: disc;
+    /*list-style-position: inside;*/
+    /* margin-left: -10px;*/
+}
+
+.SELP-28 .tip-box,
+.SELP-28 .tipBoxContainer {
+    min-height: 130px;
+    margin-top: 25px;
+    display: table;
+}
+
+.SELP-28 .tip-box__tall,
+.SELP-28 .tipBoxContainer2 {
+    min-height: 170px;
+}
+
+.SELP-28 .tip_box__left,
+.SELP-28 .tip_box__right {
+    display: table-cell;
+}
+
+.SELP-28 .tip-box__left,
+.SELP-28 .tipBoxDarkerBlue {
+    display: table-cell;
+    text-transform: uppercase;
+    background-color: #102869;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: inherit;
+    font-size: 1.47619em;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    vertical-align: middle;
+}
+
+.SELP-28 .tip-box__right,
+.SELP-28 .tipBoxLighterBlue {
+    display: table-cell;
+    background-color: #d2daee;
+    color: #000;
+    height: inherit;
+    padding: 25px;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 1.6em;
+}
+
+.SELP-28 .brand-logos {
+    text-align: left;
+}
+
+.SELP-28 .brand-logos .btn--shop-now {
+    background-color: #e0001e;
+    border-radius: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 1.59em;
+    padding: 0 0.815em;
+}
+
+.SELP-28 .brand-logos .btn--shop-now:after {
+    content: none;
+}
+
+.SELP-28 .brand-logos .brand-logos--wrapper {
+    display: table;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.SELP-28 .brand-logos .brand-logo {
+    display: table-cell;
+    padding: 10px 20px;
+    width: 25%;
+    text-align: center;
+}
+
+.SELP-28 .brand-logos .brand-logo img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.SELP-28 .fake-bottom-border {
+    margin: 10px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.SELP-28 .footer-ish--headline .fake-bottom-border {
+    padding: 0;
+    margin-left: -1em;
+}
+
+.SELP-28 .footer-ish--headline .fake-bottom-border hr {
+    width: 102.5%;
+}
+
+@media screen and (max-width: 991px) {
+    .SELP-28 .first-line {
+        margin-bottom: 0px;
+    }
+
+    .SELP-28 .four-pods:nth-child(1) {
+        margin-bottom: 25px;
+    }
+
+    .SELP-28 .four-pods:nth-child(2) {
+        margin-top: 25px;
+    }
+
+    .SELP-28 .four-pods p {
+        margin-bottom: 0px !important;
+    }
+
+    .SELP-28 .footer-ish--headline .headline--copy {
+        padding-top: 1em;
+        padding-left: 0;
+        padding-right: 0;
+        color: #000;
+        text-align: left;
+        font-size: 0.9em;
+    }
+
+    .SELP-28 .brand-logos .brand-logos--wrapper {
+        display: block !important;
+        width: 90%;
+    }
+
+    .SELP-28 .brand-logos .btn--shop-now {
+        font-size: 2.2em;
+    }
+
+    .SELP-28 .brand-logos .brand-logo {
+        padding: 0px !important;
+    }
+
+    .SELP-28 .img-hidden-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .SELP-28 .brand-logos .brand-logos--wrapper {
+        width: 100%;
+    }
+
+    .SELP-28 .brand-logos .btn--shop-now {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .SELP-28 .brand-logos .btn--shop-now {
+        width: 270px;
+        font-size: 1.5em;
+    }
+
+    .red-cta {
+        width: 95% !important;
+        font-size: 1.5em !important;
+        text-indent: 0px !important;
+        padding-top: 3px !important;
+
+    }
+
+    .last-img img {
+        width: 137px !important;
+        height: 30px !important;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .SELP-28 .headline--copy br {
+        display: block;
+    }
+
+    .SELP-28 p {
+        margin: 0px !important;
+    }
+
+    .SELP-28 .brand-logos .brand-logo {
+        width: auto;
+    }
+
+    .SELP-28 .brand-logos .brand-logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .SELP-28 .brand-logos .btn--shop-now {
+        font-size: 1.5em;
+        padding-left: 0.715em;
+        padding-right: 0.715em;
+    }
+
+    .SELP-28 .footer-ish--headline .headline--copy {
+        padding-top: 4.7619em;
+    }
+}
+
+</style>
+<div class="cms-content cms-content-html padding-vert-xl SEARS--landing-page SELP-28" id="cms-content-1920-1920">
 
 <!-- SEE SELP-28-FinalVersion.HTML !!!!!! I built this page with Victor's HTML-->
 <div class="cms-content cms-content-html padding-vert-xl-top SEARS--landing-page SELP-28" id="cms-content-1920-1920">

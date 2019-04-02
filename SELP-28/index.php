@@ -8,8 +8,8 @@ $page_content = dirname( __FILE__ ) . '/page-content.php';
 
 $options = array(
   'breadcrumb_text' => array(
-    'Laundry Essentials',
-    '10 Things You Can Wash',
+    'SELP 28',
+    'Home How to Take Care of Your Push Mower',
   ),
   'css' =>  get_relative_path( dirname( __FILE__ ) . '/' . $slug . '.css' ),
 );
